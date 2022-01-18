@@ -231,7 +231,7 @@ a, p a {
 .SearchIcon_TheSearchIcon {
     cursor: pointer;
     order: 3;
-    margin: 0px 0px 0px 24px;
+    margin-bottom: 6px;
     transition: stroke 600ms ease 0s;
     width: 18px;
     height: auto;
@@ -247,6 +247,7 @@ a, p a {
     height: 18px;
     cursor: pointer;
     align-items: flex-end;
+    margin-bottom: 6px;
 }
 
 .Nav_HamburgerSlice {
@@ -1036,9 +1037,14 @@ a .Fact_Details:hover {
     text-transform: uppercase;
 }
 
+@media (min-width: 640px) {
+    .InfiniteScrollSearchGrid_Container {
+        padding: 0 30px;
+    }
+}
+
 .InfiniteScrollSearchGrid_Container {
-    padding: 0px 90px;
-    /* min-height: calc(100vh - 90px); */
+    min-height: calc(100vh - 90px);
     width: 100%;
 }
 
@@ -1073,6 +1079,79 @@ a .Fact_Details:hover {
 
 .InfiniteScrollSearchGrid_BrandDescription a:hover {
     color: initial;
+}
+
+@media (min-width: 640px) {
+    .InfiniteScrollSearchGrid_ShowHideResults {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 252px;
+    }
+}
+
+.CollapseToggle_Wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 19px 0 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 1;
+    -webkit-touch-callout: none;
+}
+
+.CollapseToggle_Title {
+    font-size: 12px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    line-height: 16px;
+}
+
+.arrow {
+    transition: all .25s ease-in-out;
+}
+
+.pointer, .side-menu-items {
+    cursor: pointer;
+}
+
+.CollapseToggle_ArrowWrapper {
+    margin-left: 5px;
+    margin-bottom: 6px;
+    vertical-align: middle;
+}
+
+.CollapseToggle_ArrowSubtitleWrapper {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .SneakerApparelToggle_Container {
@@ -1177,6 +1256,11 @@ a .Fact_Details:hover {
     border-radius: 5px;
     max-width: 238px;
     z-index: 60;
+}
+
+.DropdownMenu_Scroll.goat-scroll::-webkit-scrollbar-thumb {
+    color: #b0b0b0;
+    background-color: #b0b0b0;
 }
 
 .DropdownMenu_DropdownButton {
@@ -1389,8 +1473,7 @@ a .Fact_Details:hover {
 
 .ProductCard a:hover {
     color: initial;
-    text-decoration:none;
-
+    text-decoration: none;
 }
 
 .Grid_Wrapper {
@@ -1469,6 +1552,9 @@ a .Fact_Details:hover {
     align-items: center;
     width: 100%;
     height: 100%;
+}
+
+.DropdownMenu_DropdownListItemButton_Selected {
     font-weight: bold;
 }
 
@@ -1480,6 +1566,10 @@ a .Fact_Details:hover {
     color: rgb(129, 129, 129);
     font-family: Plain;
     margin-left: 18px;
+}
+
+.DropdownMenu_DropdownListItemButtonLabel:hover {
+    font-weight: bold;
 }
 
 .DropdownMenu_DropdownListItemButtonIcon {
@@ -2259,7 +2349,8 @@ a .Fact_Details:hover {
     border-top: 1px solid rgb(222, 222, 222);
     padding: 0px;
 }
-.CollectionHeader_CollectionHeaderWrapper{
+
+.CollectionHeader_CollectionHeaderWrapper {
     -webkit-box-align: center;
     align-items: center;
     position: relative;
@@ -2271,14 +2362,16 @@ a .Fact_Details:hover {
     justify-content: center;
     padding: 6em 0px 8em;
 }
-.CollectionHeader_CollectionHeaderInfo{
+
+.CollectionHeader_CollectionHeaderInfo {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
     flex-direction: column;
     padding: 4em;
 }
-.CollectionHeader_CollectionHeadOne{
+
+.CollectionHeader_CollectionHeadOne {
     max-width: 640px;
     font-size: 32px;
     font-family: Plain;
@@ -2287,7 +2380,8 @@ a .Fact_Details:hover {
     font-weight: 400;
     font-variant-numeric: lining-nums;
 }
-.CollectionHeader_CollectionDescription{
+
+.CollectionHeader_CollectionDescription {
     margin-top: 0px;
     padding: 0px 4.8% 0px 4.5%;
     max-width: 640px;
@@ -2298,10 +2392,12 @@ a .Fact_Details:hover {
     line-height: 16px;
     letter-spacing: 0px;
 }
-.CollectionHeader_CollectionHeaderContentImageDesktop{
+
+.CollectionHeader_CollectionHeaderContentImageDesktop {
     display: none;
 }
-.CollectionHeader_CollectionHeaderContentImageMobile{
+
+.CollectionHeader_CollectionHeaderContentImageMobile {
     display: block;
     min-width: 30%;
     max-width: 37%;

@@ -1,30 +1,478 @@
-<form novalidate="">
-    <div class="Hero__HeroPane LoginForm__HeroPane">
-        <div class="Hero__HeroPaneContent LoginForm__HeroPaneContent">
-            <header class="LoginForm__Header">
-                <h1 class="LoginForm__Title">Log In</h1>
-                <p class="LoginForm__Subtitle">You need to be logged in
-                    to continue.</p><a class="LoginForm__CreateAccountButton"
-                    href="#">Sign Up</a>
-            </header>
-            <main class="LoginForm__Main">
-                <div class="MaterialInput__Content"><label class="MaterialInput__Label"><input
-                             id="username" label="Email or Username" name="username" type="email"
-                            autocomplete="" aria-label="Email or Username" class="MaterialInput__Input"
-                            value=""><span class="MaterialInput__LabelCopy">Email or Username</span></label></div>
-                <div class="LoginForm__InputWrapper">
-                    <div class="MaterialInput__Content"><label class="MaterialInput__Label"><input
-                                 id="password" label="Password" name="password" type="password"
-                                autocomplete="" aria-label="Password" class="MaterialInput__Input"
-                                value=""><span class="MaterialInput__LabelCopy">Password</span></label></div><button
-                        type="button" class="LoginForm__ForgotPasswordButton"><span
-                           >Forgot</span></button>
-                </div>
-            </main>
-        </div>
-        <div class="LoginForm__Error"></div>
-        <nav class="Hero__HeroPaneLoginActions"><span class="Hero__Border"><button
-                    disabled="" type="submit"  class="GoatButton__Wrapper Hero__Button">Log
-                    In</button></span></nav>
+<aside class="GridFilters__Wrapper-sc-1phw74w-0 lkKuZy filter-wrapper false ">
+  <div class="GridFilters__MobileFilterTop-sc-1phw74w-1 ftKVtw">
+    <div class="GridFilters__FilterReset-sc-1phw74w-5 kbqZDW"></div>
+    <span>Filter</span
+    ><button class="GridFilters__CloseButton-sc-1phw74w-4 kFEZZf">
+      <span>Close</span
+      ><svg
+        data-qa="btn-pdp-dismiss-size-list"
+        width="10px"
+        height="10px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 9 9"
+        class="pointer"
+        data-dismiss-on-click="true"
+        style="stroke: transparent; vertical-align: middle;"
+      >
+        <line
+          x1="7.16"
+          y1="1"
+          x2="1"
+          y2="7.16"
+          fill="none"
+          stroke="black"
+          stroke-miterlimit="10"
+          stroke-width="1"
+          style="stroke: black;"
+        ></line>
+        <line
+          x1="7.16"
+          y1="7.16"
+          x2="1"
+          y2="1"
+          fill="none"
+          stroke="black"
+          stroke-miterlimit="10"
+          stroke-width="1"
+          style="stroke: black;"
+        ></line>
+      </svg>
+    </button>
+  </div>
+  <div
+    class="CollapseBox__Wrapper-ijtqqs-0 jQzwym"
+    data-qa="collapse-box-wrapper"
+  >
+    <label
+      for="Category"
+      data-qa="toggle-filters-category"
+      class="CollapseToggle__Wrapper-sc-1rsdln9-0 ipYUsA"
+      ><span
+        data-qa="category"
+        class="CollapseToggle__Title-sc-1rsdln9-1 bDwwmA"
+        >Category</span
+      ><span class="CollapseToggle__ArrowSubtitleWrapper-sc-1rsdln9-2 bgwwUm"
+        ><span class="CollapseToggle__ArrowWrapper-sc-1rsdln9-4 iEuksq"
+          ><svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8.33 5"
+            width="10px"
+            height="10px"
+            class="arrow pointer "
+            style="transform: rotate(-180deg);"
+          >
+            <polyline
+              points="1.17 4.25 4.17 1.25 7.17 4.25"
+              fill="none"
+              stroke="#0b0b0b"
+              stroke-miterlimit="10"
+              stroke-width="1.5"
+            ></polyline></svg></span></span
+    ></label>
+    <div class="CollapseBox__Contents-ijtqqs-1 kzSgjD">
+      <div
+        class="MediumInstantSearchFilterList__ButtonGroup-sc-1c8cvst-0 dRjDVR"
+      >
+        <button
+          class="goat-button secondary align-center-justify-center MediumFilterButton__CategoryButton-sc-11vc4jr-0 jQSkYf"
+          type="button"
+          data-qa="men-sizes"
+          style="display: block;"
+        >
+          <span></span>men</button
+        ><button
+          class="goat-button secondary align-center-justify-center MediumFilterButton__CategoryButton-sc-11vc4jr-0 jQSkYf"
+          type="button"
+          data-qa="women-sizes"
+          style="display: block;"
+        >
+          <span></span>women
+        </button>
+      </div>
     </div>
-</form>
+  </div>
+  <div
+    class="CollapseBox__Wrapper-ijtqqs-0 jQzwym"
+    data-qa="collapse-box-wrapper"
+  >
+    <label
+      for="US-Sizes"
+      data-qa="toggle-filters-sizes"
+      class="CollapseToggle__Wrapper-sc-1rsdln9-0 ipYUsA"
+      ><span
+        data-qa="us-sizes"
+        class="CollapseToggle__Title-sc-1rsdln9-1 bDwwmA"
+        >US Sizes</span
+      ><span class="CollapseToggle__ArrowSubtitleWrapper-sc-1rsdln9-2 bgwwUm"
+        ><span class="CollapseToggle__ArrowWrapper-sc-1rsdln9-4 iEuksq"
+          ><svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8.33 5"
+            width="10px"
+            height="10px"
+            class="arrow pointer "
+            style="transform: rotate(-180deg);"
+          >
+            <polyline
+              points="1.17 4.25 4.17 1.25 7.17 4.25"
+              fill="none"
+              stroke="#0b0b0b"
+              stroke-miterlimit="10"
+              stroke-width="1.5"
+            ></polyline></svg></span></span
+    ></label>
+    <div class="CollapseBox__Contents-ijtqqs-1 kzSgjD">
+      <div class="filter--sizes-grid">
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          3
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          3.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          4
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          4.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          5.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          6
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          6.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          7
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          7.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          8
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          8.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          9
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          9.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          10
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          10.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          11
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          11.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          12
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          12.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          13
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          13.5
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          14
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          15
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          16
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          17
+        </div>
+        <div
+          data-qa="size-cell"
+          class="SizeGridFilterGrid__SizeCell-sc-17x1ia4-0 YNdPZ square"
+          aria-pressed="false"
+          role="button"
+          tabindex="0"
+        >
+          18
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="CollapseBox__Wrapper-ijtqqs-0 jQzwym"
+    data-qa="collapse-box-wrapper"
+  >
+    <label
+      for="Condition"
+      data-qa="toggle-filters-condition"
+      class="CollapseToggle__Wrapper-sc-1rsdln9-0 ipYUsA"
+      ><span
+        data-qa="condition"
+        class="CollapseToggle__Title-sc-1rsdln9-1 bDwwmA"
+        >Condition</span
+      ><span class="CollapseToggle__ArrowSubtitleWrapper-sc-1rsdln9-2 bgwwUm"
+        ><span class="CollapseToggle__ArrowWrapper-sc-1rsdln9-4 iEuksq"
+          ><svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 8.33 5"
+            width="10px"
+            height="10px"
+            class="arrow pointer "
+            style="transform: rotate(-180deg);"
+          >
+            <polyline
+              points="1.17 4.25 4.17 1.25 7.17 4.25"
+              fill="none"
+              stroke="#0b0b0b"
+              stroke-miterlimit="10"
+              stroke-width="1.5"
+            ></polyline></svg></span></span
+    ></label>
+    <div class="CollapseBox__Contents-ijtqqs-1 kzSgjD">
+      <div
+        class="ConditionInstantSearchFilterList__ButtonGroup-e3866o-0 jcOYOy"
+      >
+        <button
+          class="goat-button secondary align-center-justify-center LargeFilterButton__CategoryButton-sc-13g5uy4-0 hsZbzR"
+          type="button"
+          data-qa="filter-condition-new"
+          style="display: block;"
+        >
+          <span></span>New</button
+        ><button
+          class="goat-button secondary align-center-justify-center LargeFilterButton__CategoryButton-sc-13g5uy4-0 hsZbzR"
+          type="button"
+          data-qa="filter-condition-used"
+          style="display: block;"
+        >
+          <span></span>Used</button
+        ><button
+          class="goat-button secondary align-center-justify-center LargeFilterButton__CategoryButton-sc-13g5uy4-0 hsZbzR"
+          type="button"
+          data-qa="filter-condition-new-with-defects"
+          style="display: block;"
+        >
+          <span></span>New with Defects
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="GridFilters__FixedFilter-sc-1phw74w-3 ibGqes">
+    <div
+      class="CollapseBox__Wrapper-ijtqqs-0 jkuGlT"
+      data-qa="collapse-box-wrapper"
+    >
+      <label
+        for="Icon"
+        data-qa="toggle-filters-category"
+        class="CollapseToggle__Wrapper-sc-1rsdln9-0 ipYUsA"
+        ><span data-qa="icon" class="CollapseToggle__Title-sc-1rsdln9-1 bDwwmA"
+          >Icon</span
+        ><span class="CollapseToggle__ArrowSubtitleWrapper-sc-1rsdln9-2 bgwwUm"
+          ><span class="CollapseToggle__ArrowWrapper-sc-1rsdln9-4 iEuksq"
+            ><svg
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 8.33 5"
+              width="10px"
+              height="10px"
+              class="arrow pointer "
+              style="transform: rotate(-180deg);"
+            >
+              <polyline
+                points="1.17 4.25 4.17 1.25 7.17 4.25"
+                fill="none"
+                stroke="#0b0b0b"
+                stroke-miterlimit="10"
+                stroke-width="1.5"
+              ></polyline></svg></span></span
+      ></label>
+      <div class="CollapseBox__Contents-ijtqqs-1 gmLYyM">
+        <div
+          class="MediumInstantSearchFilterList__ButtonGroup-sc-1c8cvst-0 dRjDVR"
+        ></div>
+      </div>
+    </div>
+  </div>
+  <button
+    data-qa="btn-show-results"
+    class="GridFilters__ShowResults-sc-1phw74w-2 kTtVln"
+  >
+    Show Results
+  </button>
+</aside>
