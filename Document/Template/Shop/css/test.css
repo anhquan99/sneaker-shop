@@ -1,57 +1,232 @@
-.hide-scroll::-webkit-scrollbar {
-    width: 0;
-    overflow: overlay;
-    background: transparant
+.filter-wrapper {
+    width: 100%;
 }
 
-.hide-scroll::-webkit-resizer, .hide-scroll::-webkit-scrollbar-corner {
-    display: none
+@media (min-width: 640px) {
+    .GridFilters_Wrapper {
+        position: relative;
+        width: 252px;
+        margin-right: 60px;
+        margin-top: 10px;
+        z-index: 1;
+        overflow: visible;
+        padding-top: 0;
+    }
 }
 
-.hide-scroll::-webkit-resizer, .hide-scroll::-webkit-scrollbar-button, .hide-scroll::-webkit-scrollbar-corner {
-    display: none
+.GridFilters_Wrapper {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 99999;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: scroll;
 }
 
-.hide-scroll::-webkit-scrollbar-track-piece {
-    background: transparent
+@media (min-width: 640px) {
+    .GridFilters_MobileFilterTop {
+        display: none;
+    }
 }
 
-.hide-scroll::-webkit-scrollbar-thumb {
-    max-height: 0
+.GridFilters_MobileFilterTop {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dedede;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 50px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1003;
+    font-size: 14px;
+    font-family: Plain;
+    line-height: 16px;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
 }
 
-.goat-scroll, .hide-x-scroll {
-    overflow-x: hidden
+.GridFilters_FilterReset {
+    min-width: 31px;
 }
 
-.goat-scroll {
-    overflow-y: scroll;
-    padding-left: 3px;
-    -webkit-overflow-scrolling: touch
+.GridFilters_CloseButton {
+    border: none;
+    background-color: white;
+    outline: none;
+    font-size: 12px;
+    font-family: Plain;
+    line-height: 12px;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
 }
 
-.goat-scroll::-webkit-scrollbar {
-    width: 3px;
-    overflow: overlay;
-    background: transparant
+.CollapseBox_Wrapper {
+    display: block;
+    max-width: 320px;
+    margin: auto;
+    visibility: visible;
+    background-color: #ffffff;
+    pointer-events: auto;
+    opacity: 1;
 }
 
-.goat-scroll::-webkit-resizer, .goat-scroll::-webkit-scrollbar-corner {
-    display: none
+.CollapseToggle_Wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 19px 0 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 1;
+    -webkit-touch-callout: none;
 }
 
-.goat-scroll::-webkit-scrollbar-thumb {
-    border-radius: 0;
-    box-shadow: inset 0 0 12px transparent;
-    max-height: 16;
+.CollapseToggle_Title {
+    font-size: 12px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    text-transform: capitalize;
+    line-height: 16px;
+}
+
+.CollapseToggle_ArrowSubtitleWrapper {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.CollapseToggle_ArrowWrapper {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.CollapseBox_Contents {
+    max-height: 99999px;
+    padding: 0 0 20px;
+    overflow: inherit;
+    visibility: hidden;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.MediumInstantSearchFilterList_ButtonGroup {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.goat-button.primary, .goat-button.primary.inverted, .goat-button.selected {
+    background-color: #000;
+    color: #fff;
+}
+
+.goat-button.primary.inverted {
+    border: 1px solid #fff;
+}
+
+.secondary {
+    background-color: #fff;
     color: #000;
-    background-color: #000
 }
 
-.goat-scroll::-webkit-scrollbar-track-piece {
-    background: transparent
+/* sc-component-id: CollapseBox__Wrapper-ijtqqs-0 */
+
+.jQzwym {
+    display: block;
+    max-width: 320px;
+    margin: auto;
+    visibility: visible;
+    background-color: #ffffff;
+    pointer-events: auto;
+    opacity: 1;
 }
 
-.goat-scroll::-webkit-resizer, .goat-scroll::-webkit-scrollbar-button, .goat-scroll::-webkit-scrollbar-corner {
-    display: none
+.jkuGlT {
+    display: block;
+    max-width: 320px;
+    margin: auto;
+    visibility: hidden;
+    background-color: #ffffff;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* sc-component-id: GridFilters__Wrapper-sc-1phw74w-0 */
+
+.lkKuZy {
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 99999;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: scroll;
+}
+
+@media (min-width:640px) {
+    .lkKuZy {
+        position: relative;
+        width: 252px;
+        margin-right: 60px;
+        margin-top: 10px;
+        z-index: 1;
+        overflow: visible;
+        padding-top: 0;
+    }
 }
