@@ -1068,7 +1068,28 @@ a .Fact_Details:hover {
     color: #0b0b0b;
     text-transform: uppercase;
 }
+@media (min-width: 769px){
+    .Heading-sc {
+        font-size: 32px;
+        font-family: Plain;
+        line-height: 1.38;
+        -webkit-letter-spacing: 0.1px;
+        -moz-letter-spacing: 0.1px;
+        -ms-letter-spacing: 0.1px;
+        letter-spacing: 0.1px;
+    }
+}
 
+.Heading-sc{
+    font-size: 24px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    line-height: 46px;
+}
 @media (min-width: 640px) {
     .InfiniteScrollSearchGrid_Container {
         padding: 0 30px;
