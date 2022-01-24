@@ -238,6 +238,29 @@ a, p a {
     stroke: rgb(119, 119, 119);
 }
 
+.CartIcon_Button {
+    order: 4;
+    border: 0;
+    background: transparent;
+}
+
+.CartIcon {
+    width: 23px;
+    height: auto;
+    cursor: pointer;
+    transition: stroke 600ms ease 0s;
+    stroke: rgb(119, 119, 119);
+    margin: 0px 0px 8px 24px;
+}
+
+/* .CartIcon_Number {
+    height: auto;
+    widows: auto;
+    border-radius: 100%;
+    border: 2px solid black;
+    position: absolute;
+} */
+
 .Nav_Hamburger {
     display: flex;
     flex-direction: column;
