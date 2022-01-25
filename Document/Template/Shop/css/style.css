@@ -3285,3 +3285,11 @@ a .Fact_Details:hover {
 .SearchSection_Arrow {
     right: 25px;
 }
+
+.Sneaker_Recent {
+    display: block;
+}
+
+.Apparel_Recent {
+    display: none;
+}

@@ -52,8 +52,8 @@ function showForm(currentFormId, hiddenFormId) {
   var hiddenForm = document.getElementById(hiddenFormId);
   currentForm.style.display = "none";
   hiddenForm.style.display = "block";
-  console.log(1);
 }
-function showAside(asideId) {
-  var aside = document.getElementById(asideId);
+function showRecentSearchType(recentOptionId, otherRecentOptionId) {
+  document.getElementById(recentOptionId).style.display = "block";
+  document.getElementById(otherRecentOptionId).style.display = "none";
 }

@@ -1,221 +1,399 @@
-<link rel="stylesheet" href="./css/style.css" />
-<nav class="SearchMenu_SlidingNav">
-  <div class="SearchBar_Form">
-    <button class="InstantSearchBox_SearchButton">
-      <svg
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="0 0 15 15"
-        xml:space="preserve"
-        data-qa="search_icon"
-        class="SearchIcon_TheSearchIcon InstantSearchBox_SearchIcon"
-        aria-label="search"
-      >
-        <g id="HOME-HERO-NEW">
-          <g
-            id="HOMEPAGE-HERO-WITH-PLACEHOLDER-FOR-VISUAL---MOBILE-Copy-2"
-            transform="translate(-331.000000, -51.000000)"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="./css/style.css" />
+    <nav class="SearchMenu_SlidingNav">
+      <div class="SearchBar_Form">
+        <button class="InstantSearchBox_SearchButton">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 15 15"
+            xml:space="preserve"
+            data-qa="search_icon"
+            class="SearchIcon_TheSearchIcon InstantSearchBox_SearchIcon"
+            aria-label="search"
           >
-            <g
-              id="Group"
-              transform="translate(338.522463, 58.619673) rotate(-45.000000) translate(-338.522463, -58.619673) translate(330.022463, 48.619673)"
-            >
-              <g id="Group-3">
-                <path
-                  id="Path-4"
-                  d="M8.6,12.9v7"
-                  fill="none"
-                  stroke-width="1.5"
-                ></path>
+            <g id="HOME-HERO-NEW">
+              <g
+                id="HOMEPAGE-HERO-WITH-PLACEHOLDER-FOR-VISUAL---MOBILE-Copy-2"
+                transform="translate(-331.000000, -51.000000)"
+              >
                 <g
-                  id="search"
-                  transform="translate(8.532978, 8.188775) rotate(-315.000000) translate(-8.532978, -8.188775) translate(3.032978, 2.688775)"
+                  id="Group"
+                  transform="translate(338.522463, 58.619673) rotate(-45.000000) translate(-338.522463, -58.619673) translate(330.022463, 48.619673)"
                 >
-                  <path
-                    id="Stroke-4"
-                    fill="none"
-                    stroke-width="1.5"
-                    stroke-linejoin="round"
-                    d="M5.2,10.3C2.3,10.3,0,8,0,5.2S2.3,0,5.2,0s5.2,2.3,5.2,5.2S8,10.3,5.2,10.3z"
-                  ></path>
+                  <g id="Group-3">
+                    <path
+                      id="Path-4"
+                      d="M8.6,12.9v7"
+                      fill="none"
+                      stroke-width="1.5"
+                    ></path>
+                    <g
+                      id="search"
+                      transform="translate(8.532978, 8.188775) rotate(-315.000000) translate(-8.532978, -8.188775) translate(3.032978, 2.688775)"
+                    >
+                      <path
+                        id="Stroke-4"
+                        fill="none"
+                        stroke-width="1.5"
+                        stroke-linejoin="round"
+                        d="M5.2,10.3C2.3,10.3,0,8,0,5.2S2.3,0,5.2,0s5.2,2.3,5.2,5.2S8,10.3,5.2,10.3z"
+                      ></path>
+                    </g>
+                  </g>
                 </g>
               </g>
             </g>
-          </g>
-        </g>
-      </svg></button
-    ><input
-      placeholder="TYPE TO SEARCH"
-      type="search"
-      class="InstantSearchBox_Input"
-      value=""
-    /><button class="InstantSearchBox_MobileCancelButton">
-      Cancel
-    </button>
-  </div>
-  <div class="SearchSneakerApparelToggle_Container">
-    <button class="SearchSneakerApparelToggle_Option_Left">
-      Sneakers</button
-    ><button
-      data-qa="apparel-toggle"
-      class="SearchSneakerApparelToggle_Option_Right"
-    >
-      Apparel
-    </button>
-  </div>
-  <div class="SearchSection_Container">
-    <h3 class="SearchSection_Header">Recent Searches</h3>
-    <a href="/search?query=sakura"
-      ><button
-        data-qa="recent-search-link-sakura"
-        value="sakura"
-        class="SearchSection_Item"
-      >
-        <span title="sakura" class="SearchSection_ItemText">sakura</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
+          </svg></button
+        ><input
+          placeholder="TYPE TO SEARCH"
+          type="search"
+          class="InstantSearchBox_Input"
+          value=""
+        /><button class="InstantSearchBox_MobileCancelButton">
+          Cancel
+        </button>
+      </div>
+      <div class="SearchSneakerApparelToggle_Container">
+        <button
+          class="SearchSneakerApparelToggle_Option_Left"
+          onclick="showRecentSearchType('Sneaker_Recent','Apparel_Recent')"
         >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button></a
-    ><a href="/search?query=lebron"
-      ><button
-        data-qa="recent-search-link-lebron"
-        value="lebron"
-        class="SearchSection_Item"
-      >
-        <span title="lebron" class="SearchSection_ItemText">lebron</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
+          Sneakers</button
+        ><button
+          data-qa="apparel-toggle"
+          class="SearchSneakerApparelToggle_Option_Right"
+          onclick="showRecentSearchType('Apparel_Recent','Sneaker_Recent')"
         >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button></a
-    ><a href="/search?query=jordan 4"
-      ><button
-        data-qa="recent-search-link-jordan 4"
-        value="jordan 4"
-        class="SearchSection_Item"
-      >
-        <span title="jordan 4" class="SearchSection_ItemText">jordan 4</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
-        >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button
-    ></a>
-  </div>
-  <div data-qa="popular-searches-section" class="SearchSection_Container">
-    <h3 class="SearchSection_Header">Popular Searches</h3>
-    <a href="/search?query=Nike"
-      ><button
-        data-qa="popular-search-link-nike"
-        value="Nike"
-        class="SearchSection_Item"
-      >
-        <span title="Nike" class="SearchSection_ItemText">Nike</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
-        >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button></a
-    ><a href="/search?query=Air Jordan"
-      ><button
-        data-qa="popular-search-link-air-jordan"
-        value="Air Jordan"
-        class="SearchSection_Item"
-      >
-        <span title="Air Jordan" class="SearchSection_ItemText">Air Jordan</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
-        >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button></a
-    ><a href="/search?query=Adidas"
-      ><button
-        data-qa="popular-search-link-adidas"
-        value="Adidas"
-        class="SearchSection_Item"
-      >
-        <span title="Adidas" class="SearchSection_ItemText">Adidas</span
-        ><svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 8.33 5"
-          width="10px"
-          height="10px"
-          class="arrow pointer SearchSection_Arrow"
-          style="transform: rotate(-270deg);"
-        >
-          <polyline
-            points="1.17 4.25 4.17 1.25 7.17 4.25"
-            fill="none"
-            stroke="#0b0b0b"
-            stroke-miterlimit="10"
-            stroke-width="1.5"
-          ></polyline>
-        </svg></button
-    ></a>
-  </div>
-</nav>
+          Apparel
+        </button>
+      </div>
+      <div id="Sneaker_Recent" class="Sneaker_Recent">
+        <div class="SearchSection_Container">
+          <h3 class="SearchSection_Header">Recent Searches</h3>
+          <a href="/search?query=sakura"
+            ><button
+              data-qa="recent-search-link-sakura"
+              value="sakura"
+              class="SearchSection_Item"
+            >
+              <span title="sakura" class="SearchSection_ItemText">sakura</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=lebron"
+            ><button
+              data-qa="recent-search-link-lebron"
+              value="lebron"
+              class="SearchSection_Item"
+            >
+              <span title="lebron" class="SearchSection_ItemText">lebron</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=jordan 4"
+            ><button
+              data-qa="recent-search-link-jordan 4"
+              value="jordan 4"
+              class="SearchSection_Item"
+            >
+              <span title="jordan 4" class="SearchSection_ItemText"
+                >jordan 4</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button
+          ></a>
+        </div>
+        <div data-qa="popular-searches-section" class="SearchSection_Container">
+          <h3 class="SearchSection_Header">Popular Searches</h3>
+          <a href="/search?query=Nike"
+            ><button
+              data-qa="popular-search-link-nike"
+              value="Nike"
+              class="SearchSection_Item"
+            >
+              <span title="Nike" class="SearchSection_ItemText">Nike</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=Air Jordan"
+            ><button
+              data-qa="popular-search-link-air-jordan"
+              value="Air Jordan"
+              class="SearchSection_Item"
+            >
+              <span title="Air Jordan" class="SearchSection_ItemText"
+                >Air Jordan</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=Adidas"
+            ><button
+              data-qa="popular-search-link-adidas"
+              value="Adidas"
+              class="SearchSection_Item"
+            >
+              <span title="Adidas" class="SearchSection_ItemText">Adidas</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button
+          ></a>
+        </div>
+      </div>
+      <div id="Apparel_Recent" class="Apparel_Recent">
+        <div class="SearchSection_Container">
+          <h3 class="SearchSection_Header">Recent Searches</h3>
+          <a href="/search?query=sakura"
+            ><button
+              data-qa="recent-search-link-sakura"
+              value="sakura"
+              class="SearchSection_Item"
+            >
+              <span title="sakura" class="SearchSection_ItemText"
+                >Heron Preston</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=lebron"
+            ><button
+              data-qa="recent-search-link-lebron"
+              value="lebron"
+              class="SearchSection_Item"
+            >
+              <span title="lebron" class="SearchSection_ItemText"
+                >Heron Preston</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=jordan 4"
+            ><button
+              data-qa="recent-search-link-jordan 4"
+              value="jordan 4"
+              class="SearchSection_Item"
+            >
+              <span title="jordan 4" class="SearchSection_ItemText"
+                >John Elliott</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button
+          ></a>
+        </div>
+        <div data-qa="popular-searches-section" class="SearchSection_Container">
+          <h3 class="SearchSection_Header">Popular Searches</h3>
+          <a href="/search?query=Nike"
+            ><button
+              data-qa="popular-search-link-nike"
+              value="Nike"
+              class="SearchSection_Item"
+            >
+              <span title="Nike" class="SearchSection_ItemText">Off-White</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=Air Jordan"
+            ><button
+              data-qa="popular-search-link-air-jordan"
+              value="Air Jordan"
+              class="SearchSection_Item"
+            >
+              <span title="Air Jordan" class="SearchSection_ItemText"
+                >Air Jordan</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button></a
+          ><a href="/search?query=Adidas"
+            ><button
+              data-qa="popular-search-link-adidas"
+              value="Adidas"
+              class="SearchSection_Item"
+            >
+              <span title="Adidas" class="SearchSection_ItemText">Adidas</span
+              ><svg
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8.33 5"
+                width="10px"
+                height="10px"
+                class="arrow pointer SearchSection_Arrow"
+                style="transform: rotate(-270deg);"
+              >
+                <polyline
+                  points="1.17 4.25 4.17 1.25 7.17 4.25"
+                  fill="none"
+                  stroke="#0b0b0b"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                ></polyline>
+              </svg></button
+          ></a>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="./js/function.js"></script>
+</html>
