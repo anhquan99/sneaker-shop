@@ -71,6 +71,50 @@
               </li>
             </ul>
           </nav>
+          <!--search nav-->
+          <nav class="Menu_SlidingNav hide-scroll" id="SearchNav">
+            <ul class="UnorderedList">
+              <li class="MenuItem_ListItem">
+                <label class="Label">
+                  <span class="AnimatedUnderlineText"><a href="#" id="">Discover</a></span>
+                </label>
+              </li>
+              <li class="MenuItem_ListItem">
+                <label class="Label">
+                  <span class="AnimatedUnderlineText"><a href="#" id="">Shop All</a></span>
+                </label>
+              </li>
+              <!-- Nested item -->
+
+              <li class="MenuItem_ListItemNestedMenu">
+                <div><label class="Label " onclick="openNav('SlidingBrandNav')">Brands</label></div>
+                <nav class="Menu_SlidingNav" id="SlidingBrandNav">
+                  <ul class="UnorderedList">
+                    <li class="MenuItem_ListItem">
+                      <div><label class="Label MenuHeader_Label" onclick="closeNav('SlidingBrandNav')"><svg version="1.1"
+                            xlmns="http://www.w3.org/2000/svg" xlmnsxlink="http://www.w3.org/1999/xlink" class="MenuHeader__BackArrow"
+                            width="21px" height="18px" viewBox="0 0 23 16">
+                            <title>Left Arrow</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                              <g id="arrow" transform="translate(-1086.000000, -20.000000)" fill="#0B0B0B" fill-rule="nonzero"
+                                stroke="#0b0b0b" stroke-width="0.3">
+                                <polygon transform="translate(1096.500000, 29.000000) rotate(-180.000000) translate(-1096.500000, -29.000000) "
+                                  points="1098.1601 20 1096.96429 21.1933481 1103.79863 28.1518847 1086 28.1518847 1086 29.8481153 1103.79863 29.8481153 1096.96429 36.8056541 1098.1601 38 1107 29"></polygon>
+                              </g>
+                            </g>
+                          </svg>
+                          <h3 class="MenuHeader_Title">Brands</h3>
+                        </label></div>
+                    </li>
+                    <li class="MenuItem_ListItem Label">
+                      <div class="AnimatedUnderlineText "><a href="#"><label><span></span>Acne Studios</span></label></a></div>
+                    </li>
+                    <li class="MenuItem_ListItem Label">
+                      <div class="AnimatedUnderlineText "><a href="#"><label><span></span>Adidas</span></label></a></div>
+                    </li>
+              </li>
+            </ul>
+          </nav>
           </li>
 
           <li class="MenuItem_ListItem ">

@@ -2990,3 +2990,298 @@ a .Fact_Details:hover {
 .checkOut_Button span {
     color: black !important;
 }
+
+.SearchMenu_SlidingNav {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 640px;
+    max-width: 100%;
+    padding: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -webkit-transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: auto;
+    z-index: 1;
+    opacity: 1;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+@media (min-width: 40em) {
+    .SearchMenu_SlidingNav {
+        right: 0;
+        left: initial;
+        width: 375px;
+        max-width: 70%;
+        padding: 0;
+        -webkit-transform: none translate3d(0, 0, 0);
+        -ms-transform: none translate3d(0, 0, 0);
+        transform: none translate3d(0, 0, 0);
+    }
+}
+
+.SearchBar_Form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: 60px;
+    padding: 0 0 0 24px;
+    border-bottom: 1px solid #dedede;
+}
+
+@media (min-width: 40em) {
+    .SearchBar_Form {
+        min-height: 75px;
+        padding: 24px;
+    }
+}
+
+.InstantSearchBox_SearchButton {
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border: none;
+    stroke: #0b0b0b;
+}
+
+@media (min-width: 40em) {
+    .InstantSearchBox_SearchButton {
+        display: block;
+    }
+}
+
+.InstantSearchBox_SearchIcon {
+    margin: 0;
+}
+
+.SearchIcon_TheSearchIcon {
+    width: 18px;
+    height: auto;
+    stroke: #0b0b0b;
+}
+
+@media (min-width: 40em) {
+    .SearchIcon_TheSearchIcon {
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        margin: 0 0 0 24px;
+        -webkit-transition: 600ms stroke;
+        transition: 600ms stroke;
+        stroke: #777777;
+    }
+}
+
+.InstantSearchBox_Input {
+    border: 0;
+    color: #0b0b0b;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    margin: 0 0 0 24px;
+    font-size: 18px;
+    font-family: Plain-Medium;
+    line-height: 1.5;
+    -webkit-letter-spacing: 1px;
+    -moz-letter-spacing: 1px;
+    -ms-letter-spacing: 1px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+    overflow: scroll;
+    -webkit-appearance: none;
+}
+
+.InstantSearchBox_MobileCancelButton {
+    display: block;
+    height: 35px;
+    padding: 0px 22px;
+    border: none;
+    border-left: 1px solid #dedede;
+    font-size: 10px;
+    font-family: Plain-Medium;
+    line-height: 1.5;
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: transparent;
+}
+
+@media (min-width: 40em) {
+    .InstantSearchBox_MobileCancelButton {
+        display: none;
+    }
+}
+
+.SearchSneakerApparelToggle_Container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 200px;
+    height: 60px;
+    background-color: #ffffff;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: none;
+    max-width: 100%;
+    width: 100%;
+}
+
+.SearchSneakerApparelToggle_Option_Left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    height: 58px;
+    width: 50%;
+    background-color: #ffffff;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid #0b0b0b;
+    border-bottom: 4px solid #0b0b0b;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.SearchSneakerApparelToggle_Option_Right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+    -webkit-justify-content: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    color: #818181;
+    height: 58px;
+    width: 50%;
+    background-color: #ffffff;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-bottom: 1px solid #0b0b0b;
+}
+
+.SearchSection_Container {
+    width: 100%;
+    padding: 0 24px;
+}
+
+.SearchSection_Header {
+    border-bottom: 1px solid #dedede;
+    font-size: 16px;
+    font-family: Plain;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    color: #818181;
+    padding: 17px 0px 14px 0px;
+    margin-bottom: 0;
+}
+
+.SearchSection_Item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    color: #0b0b0b;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 11px;
+    font-family: Plain-Medium;
+    line-height: 1.5;
+    -webkit-letter-spacing: 0px;
+    -moz-letter-spacing: 0px;
+    -ms-letter-spacing: 0px;
+    letter-spacing: 0px;
+    line-height: 1;
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+    padding: 20px 0px;
+    text-transform: uppercase;
+    width: 100%;
+    cursor: pointer;
+}
+
+.SearchSection_ItemText {
+    max-width: 280px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.SearchSection_Arrow {
+    right: 25px;
+}
