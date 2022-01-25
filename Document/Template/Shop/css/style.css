@@ -3079,7 +3079,7 @@ a .Fact_Details:hover {
         -webkit-order: 3;
         -ms-flex-order: 3;
         order: 3;
-        margin: 0 0 0 24px;
+        margin: 0 0 8px 0px;
         -webkit-transition: 600ms stroke;
         transition: 600ms stroke;
         stroke: #777777;
@@ -3182,8 +3182,6 @@ a .Fact_Details:hover {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    border-bottom: 1px solid #0b0b0b;
-    border-bottom: 4px solid #0b0b0b;
     -webkit-text-decoration: none;
     text-decoration: none;
 }
@@ -3218,7 +3216,6 @@ a .Fact_Details:hover {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    border-bottom: 1px solid #0b0b0b;
 }
 
 .SearchSection_Container {
@@ -3292,4 +3289,10 @@ a .Fact_Details:hover {
 
 .Apparel_Recent {
     display: none;
+}
+#apparelBtn{
+    border-bottom: 1px solid #0b0b0b;
+}
+#sneakerBtn{
+    border-bottom: 4px solid #0b0b0b;
 }

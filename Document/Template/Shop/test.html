@@ -8,7 +8,7 @@
   </head>
   <body>
     <link rel="stylesheet" href="./css/style.css" />
-    <nav class="SearchMenu_SlidingNav">
+    <nav class="SearchMenu_SlidingNav" id="SearchMenu">
       <div class="SearchBar_Form">
         <button class="InstantSearchBox_SearchButton">
           <svg
@@ -68,13 +68,15 @@
       <div class="SearchSneakerApparelToggle_Container">
         <button
           class="SearchSneakerApparelToggle_Option_Left"
-          onclick="showRecentSearchType('Sneaker_Recent','Apparel_Recent')"
+          id="sneakerBtn"
+          onclick="showRecentSearchType('Sneaker_Recent','Apparel_Recent','sneakerBtn','apparelBtn')"
         >
           Sneakers</button
         ><button
           data-qa="apparel-toggle"
           class="SearchSneakerApparelToggle_Option_Right"
-          onclick="showRecentSearchType('Apparel_Recent','Sneaker_Recent')"
+          id="apparelBtn"
+          onclick="showRecentSearchType('Apparel_Recent','Sneaker_Recent','apparelBtn','sneakerBtn')"
         >
           Apparel
         </button>

@@ -1,14 +1,13 @@
 function openNav(navId) {
   var slideBar = document.getElementById(navId);
+  console.log(slideBar);
   slideBar.style.zIndex = "1";
   slideBar.style.opacity = "1";
   slideBar.style.transform = "none";
   slideBar.style.transition = "transform 0.3s ease-in-out 0s";
-  if (navId == "SlidingNav") {
-    var shadow = document.getElementById("ShadowLayer");
-    shadow.style.opacity = "1";
-    shadow.style.pointerEvents = "auto";
-  }
+  var shadow = document.getElementById("ShadowLayer");
+  shadow.style.opacity = "1";
+  shadow.style.pointerEvents = "auto";
 }
 function closeNav(navId) {
   var slideBar = document.getElementById(navId);
@@ -53,7 +52,11 @@ function showForm(currentFormId, hiddenFormId) {
   currentForm.style.display = "none";
   hiddenForm.style.display = "block";
 }
-function showRecentSearchType(recentOptionId, otherRecentOptionId) {
-  document.getElementById(recentOptionId).style.display = "block";
-  document.getElementById(otherRecentOptionId).style.display = "none";
+function showRecentSearchType(recentOptionId, otherRecentOptionId, recentBtnId, otherRecentBtnId) {
+  var recentOption = document.getElementById(recentOptionId);
+  var otherRecentOption = document.getElementById(otherRecentOptionId);
+  recentOption.style.display = "block";
+  otherRecentOption.style.display = "none";
+  document.getElementById(recentBtnId).style.borderBottom = "4px solid #0b0b0b";
+  document.getElementById(otherRecentBtnId).style.borderBottom = "1px solid #0b0b0b";
 }
