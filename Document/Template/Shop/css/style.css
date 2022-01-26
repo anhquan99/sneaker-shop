@@ -3296,3 +3296,6 @@ a .Fact_Details:hover {
 #sneakerBtn{
     border-bottom: 4px solid #0b0b0b;
 }
+#checkOut_Form{
+    display: none;
+}

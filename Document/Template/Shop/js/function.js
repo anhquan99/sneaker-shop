@@ -60,3 +60,8 @@ function showRecentSearchType(recentOptionId, otherRecentOptionId, recentBtnId, 
   document.getElementById(recentBtnId).style.borderBottom = "4px solid #0b0b0b";
   document.getElementById(otherRecentBtnId).style.borderBottom = "1px solid #0b0b0b";
 }
+function showCheckOutForm(formId){
+  var form = document.getElementById(formId);
+  form.scrollIntoView();
+  form.style.display = "block";
+}
