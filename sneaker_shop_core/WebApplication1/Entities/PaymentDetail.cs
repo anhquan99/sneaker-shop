@@ -1,0 +1,14 @@
+﻿namespace WebApplication1.Entities
+{
+    public class PaymentDetail
+    {
+        public int Id { get; set; }
+        public Order Order { get; set; }    
+        public int Amount { get; set; }
+        public string Method { get; set; }
+        public string Provider { get; set; }
+        public string Status { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime ? ModifiedAt { get; set; }
+    }
+}
