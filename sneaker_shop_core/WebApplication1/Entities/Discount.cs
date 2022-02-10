@@ -8,6 +8,7 @@
         public double DiscountPercent { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ? ModifiedAt { get; set; }
+        public List<Product> Products { get; set; }
 
     }
 }

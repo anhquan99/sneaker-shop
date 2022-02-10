@@ -7,5 +7,6 @@
         public double Total { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ? ModifiedAt { get; set; }
+        public List<CardItem> Items { get; set; }
     }
 }

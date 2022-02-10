@@ -14,6 +14,10 @@
         public DateTime CreatedAt { get; set; }
         public DateTime ? ModifiedAt { get; set; }
         public BrandSilhouette BrandSilhouette { get; set; }
-        public Discount Discount  { get; set; }
+        public List<Discount> Discount  { get; set; }
+        public List<ProductImage> ProductImages { get; set; }
+        public ProductInventory ProductInventory { get; set; }
+        public List<CardItem> CardItems { get; set; }   
+        public List<OrderItem> OrderItems { get; set; }
     }
 }
