@@ -13,11 +13,12 @@
         public string UserType { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ? ModifiedAt { get; set; }
-        public BrandSilhouette BrandSilhouette { get; set; }
-        public List<Discount> Discount  { get; set; }
-        public List<ProductImage> ProductImages { get; set; }
-        public ProductInventory ProductInventory { get; set; }
-        public List<CardItem> CardItems { get; set; }   
-        public List<OrderItem> OrderItems { get; set; }
+        public string BrandSilhouetteID { get; set; }
+        public virtual BrandSilhouette BrandSilhouette { get; set; }
+        public virtual List<Discount> Discount  { get; set; }
+        public virtual List<ProductImage> ProductImages { get; set; }
+        public virtual ProductInventory ProductInventory { get; set; }
+        public virtual List<CartItem> CardItems { get; set; }   
+        public virtual List<OrderItem> OrderItems { get; set; }
     }
 }

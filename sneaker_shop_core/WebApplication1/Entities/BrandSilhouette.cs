@@ -2,10 +2,10 @@
 {
     public class BrandSilhouette
     {
-        public string NameID { get; set; }
+        public string NameId { get; set; }
         public string ? Story { get; set; }
         public string Icon { get; set; }
-        public List<Product> Products { get; set; }
+        public virtual List<Product> Products { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ? ModifiedAt { get; set; }
 

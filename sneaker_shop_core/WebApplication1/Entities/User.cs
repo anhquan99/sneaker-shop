@@ -4,9 +4,11 @@ namespace WebApplication1.Entities
 {
     public class User : IdentityUser<Guid>
     {
-        public List<Order> orders { get; set; } 
-        public List<CardSession> sessions { get; set; }
-        public List<UserPayment> userPayments { get; set; }
-        public List<UserShippingAddress> shippingAddresses { get; set; }
+        public virtual List<Order> orders { get; set; } 
+        public virtual List<CartSession> sessions { get; set; }
+        public virtual List<UserPayment> userPayments { get; set; }
+        public virtual List<UserShippingAddress> shippingAddresses { get; set; }
+        public virtual CartSession CartSession { get; set; }
+        public virtual List<Product> WantedProducts { get; set; }
     }
 }

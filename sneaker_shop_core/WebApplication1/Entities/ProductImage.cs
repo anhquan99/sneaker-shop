@@ -2,7 +2,8 @@
 {
     public class ProductImage
     {
-        public Product Product { get; set; }    
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }    
         public string Image { get; set; }
     }
 }

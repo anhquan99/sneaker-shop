@@ -3,7 +3,8 @@
     public class PaymentDetail
     {
         public int Id { get; set; }
-        public Order Order { get; set; }    
+        public int OrderId { get; set; }
+        public virtual Order Order { get; set; }    
         public int Amount { get; set; }
         public string Method { get; set; }
         public string Provider { get; set; }

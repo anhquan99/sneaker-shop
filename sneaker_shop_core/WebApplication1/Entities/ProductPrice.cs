@@ -2,7 +2,7 @@
 {
     public class ProductPrice
     {
-        public ProductInventory ProductInventory { get; set; }
+        public virtual ProductInventory ProductInventory { get; set; }
         public double Price { get; set; }   
         public DateTime EffectTime { get; set; }
         public DateTime CreatedAt { get; set; }
