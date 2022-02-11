@@ -7,6 +7,6 @@
         public string PaymentType { get; set; }
         public string ? Provider { get; set; }
         public string ? AccountNumber { get; set; }
-        public DateOnly ? Expiry { get; set; }
+        public DateTime ? Expiry { get; set; }
     }
 }

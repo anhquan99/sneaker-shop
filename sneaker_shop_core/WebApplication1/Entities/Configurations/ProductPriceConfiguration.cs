@@ -8,8 +8,9 @@ namespace WebApplication1.Entities.Configurations
         public void Configure(EntityTypeBuilder<ProductPrice> builder)
         {
             builder.ToTable("ProductPrices");
-            builder.HasKey(x => new { x.ProductInventory, x.EffectTime });
-            builder.HasOne(x => x.ProductInventory).WithMany(x => x.Price);
+            builder.HasKey(x => new { x.ProductInventoryId, x.EffectTime });
+            builder.HasOne(x => x.ProductInventory).WithMany(x => x.Price)
+                .HasForeignKey(x => x.ProductInventoryId);    
         }
     }
 }

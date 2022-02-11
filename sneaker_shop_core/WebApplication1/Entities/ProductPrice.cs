@@ -2,6 +2,7 @@
 {
     public class ProductPrice
     {
+        public int ProductInventoryId { get; set; }
         public virtual ProductInventory ProductInventory { get; set; }
         public double Price { get; set; }   
         public DateTime EffectTime { get; set; }

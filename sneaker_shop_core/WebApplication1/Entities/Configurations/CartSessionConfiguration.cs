@@ -10,10 +10,9 @@ namespace WebApplication1.Entities.Configurations
             builder.ToTable("CartSessions");
             builder.HasKey(x => x.Id);
 
-            builder.HasMany(x => x.Items).WithOne(x => x.Session)
-                .HasForeignKey(x => x.CartSessionId); ;
-            builder.HasOne(x => x.User).WithOne(x => x.CartSession)
-                .HasForeignKey<CartSession>(x => x.UserId);
+            //builder.HasOne(x => x.User).WithOne(x => x.CartSession)
+            //    .HasForeignKey<CartSession>(x => x.UserId);
+            builder.HasMany(x => x.Items).WithOne(x => x.Session);
 
         }
     }

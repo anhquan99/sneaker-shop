@@ -9,6 +9,6 @@ namespace WebApplication1.Entities
         public virtual List<UserPayment> userPayments { get; set; }
         public virtual List<UserShippingAddress> shippingAddresses { get; set; }
         public virtual CartSession CartSession { get; set; }
-        public virtual List<Product> WantedProducts { get; set; }
+        public virtual List<WantedProduct>  WantedProducts { get; set; }
     }
 }

@@ -10,9 +10,11 @@ namespace WebApplication1.Entities.Configurations
             builder.ToTable("Orders");
             builder.HasKey(x => x.Id);
 
-            builder.HasOne(x => x.User).WithMany(x => x.orders).HasForeignKey(x => x.UserId);
+            builder.HasOne(x => x.User).WithMany(x => x.orders)
+                .HasForeignKey(x => x.UserId);
             builder.HasMany(x => x.Items).WithOne(x => x.Order);
-            builder.HasOne(x => x.PaymentDetail).WithOne(x => x.Order).HasForeignKey(x => x.OrderId);
+            builder.HasOne(x => x.PaymentDetail).WithOne(x => x.Order)
+                .HasForeignKey<Order>(x => x.PaymentDetailId);
 
         }
     }

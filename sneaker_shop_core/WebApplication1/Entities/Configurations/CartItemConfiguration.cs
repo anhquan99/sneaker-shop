@@ -8,7 +8,7 @@ namespace WebApplication1.Entities.Configurations
         public void Configure(EntityTypeBuilder<CartItem> builder)
         {
             builder.ToTable("CartItems");
-            builder.HasKey(x => new {x.ProductId, x.CartSessionId});
+            builder.HasKey(x => new { x.ProductId, x.CartSessionId });
 
             builder.HasOne(x => x.Product).WithMany(x => x.CardItems)
                 .HasForeignKey(x => x.ProductId);
