@@ -8,7 +8,7 @@ namespace WebApplication1.Entities.Configurations
         public void Configure(EntityTypeBuilder<UserPayment> builder)
         {
             builder.ToTable("UserPayments");
-            builder.HasKey(x => new { x.PaymentType, x.AccountNumber });
+            builder.HasKey(x => new { x.AccountNumber, x.UserId });
 
             builder.HasOne(x => x.User).WithMany(x => x.userPayments)
                 .HasForeignKey(x => x.UserId);
