@@ -16,6 +16,10 @@ namespace WebApplication1.Entities.Configurations
             builder.HasOne(x => x.PaymentDetail).WithOne(x => x.Order)
                 .HasForeignKey<Order>(x => x.PaymentDetailId);
 
+            builder.Property(x => x.UserId).IsRequired();
+            builder.Property(x => x.Total).IsRequired();
+            builder.Property(x => x.PaymentDetailId).IsRequired();
+            builder.Property(x => x.status).IsRequired();
         }
     }
 }

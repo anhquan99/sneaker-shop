@@ -12,6 +12,8 @@ namespace WebApplication1.Entities.Configurations
 
             builder.HasOne(x => x.Product).WithMany(x => x.OrderItems)
                 .HasForeignKey(x => x.ProductId);
+
+            builder.Property(x => x.CreatedAt).IsRequired();
         }
     }
 }

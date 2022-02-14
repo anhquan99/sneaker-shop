@@ -8,7 +8,7 @@
         public string Size { get; set; }
         public int Quantity { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime ? ModifiledAt { get; set; }
+        public DateTime ModifiledAt { get; set; }
         public virtual List<ProductPrice> Price { get; set; } 
     }
 }

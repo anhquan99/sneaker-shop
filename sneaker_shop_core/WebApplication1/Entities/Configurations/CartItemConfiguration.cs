@@ -12,6 +12,10 @@ namespace WebApplication1.Entities.Configurations
 
             builder.HasOne(x => x.Product).WithMany(x => x.CardItems)
                 .HasForeignKey(x => x.ProductId);
+            
+            builder.Property(x => x.Quantity).IsRequired();
+            builder.Property(x => x.CreatedAt).IsRequired();
+            builder.Property(x => x.ModifiedAt).IsRequired();
         }
     }
 }

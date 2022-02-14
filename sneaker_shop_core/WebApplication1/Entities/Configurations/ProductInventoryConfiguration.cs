@@ -10,7 +10,12 @@ namespace WebApplication1.Entities.Configurations
             builder.ToTable("ProductInventory");
             builder.HasKey(x => new { x.Id });
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.HasIndex(x => new {x.ProductId, x.Size}).IsUnique();
+            builder.HasIndex(x => new { x.ProductId, x.Size }).IsUnique();
+
+            builder.Property(x => x.ProductId).IsRequired();
+            builder.Property(x => x.Size).IsRequired();
+            builder.Property(x => x.Quantity).IsRequired();
+            builder.Property(x => x.CreatedAt).IsRequired();
         }
     }
 }

@@ -10,6 +10,8 @@ namespace WebApplication1.Entities.Configurations
             builder.ToTable("BrandSilhouttes");
             builder.HasKey(x => x.NameId);
 
+            builder.Property(x => x.Icon).IsRequired();
+            builder.Property(x => x.CreatedAt).IsRequired();
         }
     }
 }

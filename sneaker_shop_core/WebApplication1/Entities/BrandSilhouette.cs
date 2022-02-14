@@ -7,7 +7,7 @@
         public string Icon { get; set; }
         public virtual List<Product> Products { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime ? ModifiedAt { get; set; }
+        public DateTime ModifiedAt { get; set; }
 
     }
 }

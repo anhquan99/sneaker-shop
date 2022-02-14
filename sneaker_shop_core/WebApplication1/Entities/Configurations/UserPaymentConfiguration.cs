@@ -12,6 +12,9 @@ namespace WebApplication1.Entities.Configurations
 
             builder.HasOne(x => x.User).WithMany(x => x.userPayments)
                 .HasForeignKey(x => x.UserId);
+
+            builder.Property(x => x.UserId).IsRequired();
+            builder.Property(x => x.PaymentType).IsRequired();
         }
     }
 }

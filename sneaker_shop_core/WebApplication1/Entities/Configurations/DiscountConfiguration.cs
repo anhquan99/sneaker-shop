@@ -9,6 +9,10 @@ namespace WebApplication1.Entities.Configurations
         {
             builder.ToTable("Discounts");
             builder.HasKey(x => x.Id); ;
+
+            builder.Property(x => x.Name).IsRequired();
+            builder.Property(x => x.DiscountPercent).IsRequired();  
+            builder.Property(x => x.CreatedAt).IsRequired();
         }
     }
 }

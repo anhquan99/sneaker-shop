@@ -14,6 +14,8 @@ namespace WebApplication1.Entities.Configurations
             //    .HasForeignKey<CartSession>(x => x.UserId);
             builder.HasMany(x => x.Items).WithOne(x => x.Session);
 
+            builder.Property(x => x.CreatedAt).IsRequired();
+
         }
     }
 }

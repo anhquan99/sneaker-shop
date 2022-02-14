@@ -9,6 +9,9 @@ namespace WebApplication1.Entities.Configurations
         {
             builder.ToTable("ProductImages");
             builder.HasKey(x => new { x.ProductId, x.Image });
+
+            builder.Property(x => x.ProductId).IsRequired();
+            builder.Property(x => x.Image).IsRequired();
         }
     }
 }
