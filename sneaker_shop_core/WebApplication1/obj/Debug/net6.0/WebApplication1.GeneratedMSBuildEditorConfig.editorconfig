@@ -15,16 +15,36 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplication1
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Pages/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Pages/Privacy.cshtml]
@@ -45,6 +65,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Work/Project/RebootNashTechProject/sneaker-shop/sneaker_shop_core/WebApplication1/Pages/Shared/_Layout.cshtml]
