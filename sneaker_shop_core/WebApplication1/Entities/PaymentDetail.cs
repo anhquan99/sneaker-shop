@@ -7,6 +7,7 @@
         public virtual Order Order { get; set; }    
         public int Amount { get; set; }
         public string Method { get; set; }
+        public string AccountNumber { get; set; }
         public string Provider { get; set; }
         public string Status { get; set; }
         public DateTime CreatedAt { get; set; }

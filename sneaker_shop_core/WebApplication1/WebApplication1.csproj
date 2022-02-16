@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponents\" />
     <Folder Include="Service\" />
+    <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\font\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
