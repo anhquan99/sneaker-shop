@@ -17,6 +17,7 @@ namespace WebApplication1.Entities.Configurations
 
             builder.Property(x => x.UserId).IsRequired();
             builder.Property(x => x.ProductId).IsRequired();
+            builder.Property(x => x.Size).IsRequired();
         }
     }
 }
