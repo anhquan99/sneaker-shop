@@ -52,16 +52,26 @@ function showForm(currentFormId, hiddenFormId) {
   currentForm.style.display = "none";
   hiddenForm.style.display = "block";
 }
-function showRecentSearchType(recentOptionId, otherRecentOptionId, recentBtnId, otherRecentBtnId) {
+function showRecentSearchType(
+  recentOptionId,
+  otherRecentOptionId,
+  recentBtnId,
+  otherRecentBtnId
+) {
   var recentOption = document.getElementById(recentOptionId);
   var otherRecentOption = document.getElementById(otherRecentOptionId);
   recentOption.style.display = "block";
   otherRecentOption.style.display = "none";
   document.getElementById(recentBtnId).style.borderBottom = "4px solid #0b0b0b";
-  document.getElementById(otherRecentBtnId).style.borderBottom = "1px solid #0b0b0b";
+  document.getElementById(otherRecentBtnId).style.borderBottom =
+    "1px solid #0b0b0b";
 }
-function showCheckOutForm(formId){
-  var form = document.getElementById(formId);
-  form.scrollIntoView();
-  form.style.display = "block";
+
+function showFormWithAnimation(current, next) {
+  var currentForm = document.getElementById(current);
+  var nextForm = document.getElementById(next);
+  nextForm.style.animation = "slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1)";
+  currentForm.style.animation = "slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1)";
+  currentForm.style.display = "none";
+  nextForm.style.display = "block";
 }

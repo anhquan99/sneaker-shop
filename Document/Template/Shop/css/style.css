@@ -730,13 +730,17 @@ a, p a {
     pointer-events: none;
 }
 
-.ProductTitlePaneActions_LeftHeroButton .ProductTitlePaneActions_RightHeroButton {
+.ProductPriceBtn {
     text-align: center;
     text-transform: capitalize;
     font-size: 12px;
     font-family: Plain;
     line-height: 14px;
     letter-spacing: 0px;
+}
+
+.ProductPriceBtn:hover {
+    background-color: #000;
 }
 
 .ProductTitlePaneActions_ButtonTextWrapper {
@@ -751,9 +755,8 @@ a, p a {
     text-transform: capitalize;
 }
 
-.ProductTitlePaneActions_ButtonTextWrapper a {
-    color: #0b0b0b !important;
-    line-height: 24px !important;
+.ProductPriceBtn:hover .ProductTitlePaneActions_ButtonTextWrapper a {
+    color: white;
 }
 
 .DetailsArrow_Wrapper {
@@ -2404,7 +2407,6 @@ a .Fact_Details:hover {
     width: 100%;
     height: 0.1em;
     background-color: rgb(11, 11, 11);
-    ;
     opacity: 0;
     transition: opacity 300ms, transform 300ms;
 }
@@ -2431,7 +2433,7 @@ a .Fact_Details:hover {
     transform: translate3d(-100%, 0, 0);
 }
 
-.AnimatedUnderlineText a:hover::after, .AnimatedUnderlineText span:hover::after, .AnimatedUnderlineText a:focus::after, .AnimatedUnderlineText span:focus::after {
+.AnimatedUnderlineText:hover a::after, .AnimatedUnderlineText span:hover::after, .AnimatedUnderlineText a:focus::after, .AnimatedUnderlineText span:focus::after {
     transform: translate3d(0, 0, 0);
 }
 
@@ -2902,7 +2904,7 @@ a .Fact_Details:hover {
     right: 0px;
     text-transform: capitalize;
     top: 11px;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     z-index: 1;
 }
 
@@ -3290,12 +3292,68 @@ a .Fact_Details:hover {
 .Apparel_Recent {
     display: none;
 }
-#apparelBtn{
+
+#apparelBtn {
     border-bottom: 1px solid #0b0b0b;
 }
-#sneakerBtn{
+
+#sneakerBtn {
     border-bottom: 4px solid #0b0b0b;
 }
-#checkOut_Form{
+
+#checkOut_Form {
+    width: 100%;
     display: none;
+}
+
+@keyframes slideIn {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        margin-left: -320px;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        margin-left: -320px;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        margin-left: 320px;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        margin-left: 0px;
+    }
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+        opacity: 0;
+        margin-left: 320px;
+    }
+    100% {
+        filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+        opacity: 1;
+        margin-left: 0px;
+    }
 }
