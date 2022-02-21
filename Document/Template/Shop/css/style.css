@@ -659,16 +659,12 @@ a, p a {
     padding: 24px;
 }
 
-#ProductTitlePane_Container {
-    display: block;
-}
-
 #ProductSizeListPane_Container {
     display: none;
 }
 
 .ProductSizeList {
-    width: 90%;
+    width: 97%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -677,6 +673,7 @@ a, p a {
     overflow-x: auto;
     padding: 1vw 0;
     min-height: 11vw;
+    margin: 0 1vw;
 }
 
 .ProductSizeList .card {
@@ -703,7 +700,7 @@ a, p a {
 
 .SeletedProductListInfo {
     min-height: 60%;
-    padding: 1vw 0;
+    padding-top: 1vw;
     justify-content: flex-start;
     align-items: center;
     display: flex;
@@ -737,9 +734,16 @@ a, p a {
     line-height: 1.38;
     letter-spacing: 0.1px;
     padding: 0px 0px 5px;
-    max-width: 300px;
+}
+
+.ProductTitlePane_Title.ProductTitlePane_SizeTitle {
+    width: 100%;
     text-align: center;
     margin: 0px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: #efefef;
 }
 
 .Hero_HeroPaneActions {
@@ -3072,6 +3076,7 @@ a .Fact_Details:hover {
 .CartItemMenuList .Hero_HeroPaneActions {
     position: sticky;
     bottom: 0;
+    gap: 0;
 }
 
 .CartMenu_TitleBar {

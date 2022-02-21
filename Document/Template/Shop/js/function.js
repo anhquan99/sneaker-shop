@@ -75,3 +75,11 @@ function showFormWithAnimation(current, next) {
   currentForm.style.display = "none";
   nextForm.style.display = "block";
 }
+function showFormWithAnimationFlex(current, next) {
+  var currentForm = document.getElementById(current);
+  var nextForm = document.getElementById(next);
+  nextForm.style.animation = "slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1)";
+  currentForm.style.animation = "slideIn 0.4s cubic-bezier(0.37, 0.82, 0.2, 1)";
+  currentForm.style.display = "none";
+  nextForm.style.display = "flex";
+}
