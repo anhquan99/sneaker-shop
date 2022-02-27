@@ -2,14 +2,14 @@
     ViewData["Title"] = "Index";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }  
-<div class="PageLayout_PageAlignment">
+  <div class="PageLayout_PageAlignment">
     <div class="ShopAllGrid_Container">
       <div class="full-width border-box relative text-align-center hide-scroll PageHeader_PageHeaderBox">
         <h1 class="PageHeader_Title">
           Check Out
         </h1>
       </div>
-      <div class="table-responsive-xxl">
+      <div class="table-responsive-xxl" id="productTable">
         <table class="table table-hover checkOut_table">
           <thead class="table-dark">
             <tr>
@@ -114,14 +114,14 @@
               <td></td>
               <td>Total:</td>
               <td>10000</td>
-              <td><button onclick="showCheckOutForm('checkOut_Form')"
+              <td><button onclick="event.preventDefault(); showFormWithAnimation('productTable', 'checkOut_Form' )"
                   class="AnimatedUnderlineText checkOut_Button nashButton_Wrapper Hero_Button"><span>Continue</span></button>
               </td>
             </tr>
           </tfoot>
         </table>
       </div>
-      <form id="checkOut_Form" style="border: 1px solid black; margin-bottom: 5vw">
+      <form id="checkOut_Form" style="border: 1px solid black">
         <div class="Hero_HeroPaneContent LoginForm_HeroPaneContent">
           <header class="LoginForm_Header">
             <h1 class="LoginForm_Title">Your information</h1>
@@ -176,8 +176,11 @@
           </main>
         </div>
         <div class="LoginForm_Error"></div>
-        <nav class="Hero_HeroPaneLoginActions" style="border: 0;"><span class="Hero_Border"><button type="submit"
-              class="GoatButton_Wrapper Hero_Button">Confirm order</button></span></nav>
+        <nav class="Hero_HeroPaneLoginActions" style="border: 0;"><span class="Hero_Border"><button onclick="event.preventDefault(); showFormWithAnimation('checkOut_Form', 'productTable' )"
+              class="GoatButton_Wrapper Hero_Button">Back</button></span>
+              <span class="Hero_Border"><button type="submit"
+                class="GoatButton_Wrapper Hero_Button">Confirm order</button></span>
+            </nav>
       </form>
     </div>
 
