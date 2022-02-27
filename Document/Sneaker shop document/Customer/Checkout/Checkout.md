@@ -1,0 +1,1 @@
+- [ ] Checkout: list all selected items then make payment link to paypal

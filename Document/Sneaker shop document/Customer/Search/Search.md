@@ -1,0 +1,2 @@
+- [ ] Search by sneaker [[SearchBySneaker]]
+- [ ] Search by apparel [[SearchByApparel]]

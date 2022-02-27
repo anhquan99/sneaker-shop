@@ -1,0 +1,13 @@
+- [ ] Burger tab:
+	- [ ] Brand: Category menu
+	- [ ] Login/Logout/Register
+	- [ ] Wants: User wanted product
+	- [ ] Shop all: List product by release date
+	- [ ] Discover: List product by most wanted
+- [ ] Search tab:
+	- [ ] Search by sneaker
+	- [ ] Search by apparel
+	- [ ] Save last search
+	- [ ] Suggest popular search
+- [ ] Cart item tab:
+	- [ ] List selected item
