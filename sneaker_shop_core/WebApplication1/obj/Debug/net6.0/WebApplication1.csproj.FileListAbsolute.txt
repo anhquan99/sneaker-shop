@@ -338,3 +338,4 @@ E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplicat
 E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplication1\obj\Debug\net6.0\ref\WebApplication1.dll
 E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplication1\obj\Debug\net6.0\WebApplication1.pdb
 E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplication1\obj\Debug\net6.0\WebApplication1.genruntimeconfig.cache
+E:\Work\Project\RebootNashTechProject\sneaker-shop\sneaker_shop_core\WebApplication1\obj\Debug\net6.0\WebApplication1.csproj.AssemblyReference.cache

@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Infrastructure\Common\Enums\" />
     <Folder Include="Repository\" />
     <Folder Include="Service\" />
     <Folder Include="Views\Shared\" />
