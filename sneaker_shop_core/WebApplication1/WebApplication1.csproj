@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Common\Enums\" />
+    <Folder Include="Infrastructure\ViewModels\" />
+    <Folder Include="Infrastructure\RequestModels\" />
     <Folder Include="Repository\" />
     <Folder Include="Service\" />
     <Folder Include="Views\Shared\" />

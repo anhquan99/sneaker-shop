@@ -2,11 +2,11 @@
 
 namespace WebApplication1.Infrastructure.Enums
 {
-    public enum Categories
+    public enum ProductTypesEnum
     {
         [Description("Sneaker")]
-        Sneaker = 1;
+        Sneaker = 1,
         [Description("Apparel")]
-        Apparel = 2;
+        Apparel = 2
     }
 }

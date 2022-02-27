@@ -11,6 +11,7 @@
         public string Color { get; set; }
         public string Category { get; set; }
         public string UserType { get; set; }
+        public string Type { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public string BrandSilhouetteID { get; set; }

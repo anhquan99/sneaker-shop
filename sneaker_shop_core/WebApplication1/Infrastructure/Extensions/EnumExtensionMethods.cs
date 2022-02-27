@@ -2,7 +2,7 @@
 
 namespace WebApplication1.Infrastructure.Extensions
 {
-    public class EnumExtensionMethods
+    public static class EnumExtensionMethods
     {
         public static string getEnumDescription(this Enum enumValue)
         {

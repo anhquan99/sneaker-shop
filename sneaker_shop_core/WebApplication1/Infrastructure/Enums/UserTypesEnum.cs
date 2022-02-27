@@ -2,13 +2,13 @@
 
 namespace WebApplication1.Infrastructure.Enums
 {
-    public enum UserTypes
+    public enum UserTypesEnum
     {
         [Description("Men")]
-        Men = 1;
+        Men = 1,
         [Description("Women")]
-        Women = 2;
+        Women = 2,
         [Description("Youth")]
-        Youth = 3;
+        Youth = 3
     }
 }
