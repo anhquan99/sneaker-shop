@@ -2,7 +2,7 @@
 
 namespace WebApplication1.Infrastructure.Enums
 {
-    public enum CategoriesEnum
+    public enum SneakerCategoriesEnum
     {
         [Description("Boots")]
         Boots = 1,
@@ -13,6 +13,8 @@ namespace WebApplication1.Infrastructure.Enums
         [Description("Sandal")]
         Sandals = 4,
         [Description("Skateboarding")]
-        Skateboarding = 5
+        Skateboarding = 5,
+        [Description("Basketball")]
+        Basketball = 6
     }
 }
