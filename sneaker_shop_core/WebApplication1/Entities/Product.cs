@@ -18,7 +18,7 @@
         public virtual BrandSilhouette BrandSilhouette { get; set; }
         public virtual List<Discount> Discount  { get; set; }
         public virtual List<ProductImage> ProductImages { get; set; }
-        public virtual ProductInventory ProductInventory { get; set; }
+        public virtual List<ProductInventory> ProductInventory { get; set; }
         public virtual List<CartItem> CardItems { get; set; }   
         public virtual List<OrderItem> OrderItems { get; set; }
         public virtual List<WantedProduct> WantedProducts { get; set; }
