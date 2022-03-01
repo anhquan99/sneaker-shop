@@ -1,4 +1,6 @@
-﻿using WebApplication1.Entities;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Entities;
 using WebApplication1.Infrastructure.Enums;
 using WebApplication1.Infrastructure.Extensions;
 
@@ -7,10 +9,10 @@ namespace WebApplication1.Data.Seeding
     public static class DataModelSeedingExtensions
     {
         //private const string datetimeFormat = "dd-mm-yyyy";
-        public static void Seed(this ApplicationDbContext dbContext)
+        public static void Seed(this ModelBuilder modelBuilder)
         {
-            var brands = new List<BrandSilhouette>
-            {
+            #region brandsilhoutte
+            modelBuilder.Entity<BrandSilhouette>().HasData(
                 new BrandSilhouette()
                 {
                     CreatedAt = DateTime.Now,
@@ -53,9 +55,10 @@ namespace WebApplication1.Data.Seeding
                     Icon = "",
                     Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding."
                 }
-            };
-            var products = new List<Product>()
-            {
+            );
+            #endregion
+            #region product
+            modelBuilder.Entity<Product>().HasData(
                 new Product()
                 {
                     Name = "Yeezy Boost 700 V2 'Mauve'",
@@ -108,7 +111,7 @@ namespace WebApplication1.Data.Seeding
                                 {
                                     Price = 385,
                                     CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now, 
+                                    EffectTime = DateTime.Now,
                                 }
                             }
                         },
@@ -586,7 +589,7 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "",
                     Description = "The 2021 reissue of the Air Jordan 5 Retro ‘Raging Bull’ brings back a beloved colorway originally released as one-half of 2009’s Air Jordan 5 Raging Bulls Pack. The shoe’s defining feature is a plush Varsity Red suede upper, equipped with black eyelets and a Jumpman-branded reflective silver tongue. The heel overlay displays a second Jumpman logo and an embroidered 23 on the lateral side. A visible Nike Air heel unit enhances the polyurethane midsole, accented with red-tipped shark tooth detailing and supported by an icy translucent outsole.",
                     Id = 8,
-                    ProductImages= new List<ProductImage>()
+                    ProductImages = new List<ProductImage>()
                     {
                         new ProductImage(){ Image = "air-jordan-5-retro-gs-raging-bull-2021-1.jpeg"},
                         new ProductImage(){ Image = "air-jordan-5-retro-gs-raging-bull-2021-2.jpeg"},
@@ -1907,7 +1910,7 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "",
                     Description = "",
                     Id = 25,
-                    ProductImages= new List<ProductImage>()
+                    ProductImages = new List<ProductImage>()
                     {
                         new ProductImage{Image = "supreme-x-the-north-face-s-logo-mountain-jacket-black-1.jpeg"},
                         new ProductImage{Image = "supreme-x-the-north-face-s-logo-mountain-jacket-black-2.jpeg"},
@@ -2247,8 +2250,122 @@ namespace WebApplication1.Data.Seeding
                             }
                         }
                     },
+                }
+            );
+            #endregion
+            #region user
+            var superAdminGuid = new Guid();
+            var adminGuid = new Guid();
+            var defaultUserGuid = new Guid();
+            var customer1Guid = new Guid();
+            var customer2Guid = new Guid();
+            var customer3Guid = new Guid();
+            var hasher = new PasswordHasher<User>();
+            modelBuilder.Entity<User>().HasData(
+                new User()
+                {
+                    Id = superAdminGuid,
+                    UserName = "superAdmin",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "superadmin@superadmin.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
                 },
-            };
+                new User()
+                {
+                    Id = adminGuid,
+                    UserName = "admin",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "admin@admin.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                },
+                new User()
+                {
+                    Id = defaultUserGuid,
+                    UserName = "defaultuser",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "user@user.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                },
+                new User()
+                {
+                    Id = customer1Guid,
+                    UserName = "customer1",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "customer1@customer1.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                },
+                new User()
+                {
+                    Id = customer2Guid,
+                    UserName = "customer2",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "customer2@customer2.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                },
+                new User()
+                {
+                    Id = customer3Guid,
+                    UserName = "customer3",
+                    PasswordHash = hasher.HashPassword(null, "password"),
+                    Email = "customer3@customer3.com",
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                });
+            #endregion
+            #region role
+            var superAdminRoleGuid = new Guid();
+            var adminRoleGuid = new Guid();
+            var userRoleGuid = new Guid();
+            modelBuilder.Entity<IdentityRole<Guid>>().HasData(
+                new IdentityRole<Guid>
+                {
+                    Id = superAdminRoleGuid,
+                    Name = "SuperAdmin",
+                    NormalizedName = "superadmin"
+                },
+                new IdentityRole<Guid>
+                {
+                    Id = adminRoleGuid,
+                    Name = "admin",
+                    NormalizedName = "admin"
+                },
+                new IdentityRole<Guid>
+                {
+                    Id = userRoleGuid,
+                    Name = "user",
+                    NormalizedName = "user"
+                }
+            );
+            #endregion
+            #region user with role
+            modelBuilder.Entity<IdentityUserRole<Guid>>().HasData(
+                new IdentityUserRole<Guid>
+                {
+                    RoleId = superAdminRoleGuid,
+                    UserId = superAdminGuid
+                },
+                new IdentityUserRole<Guid>
+                {
+                    RoleId = adminRoleGuid,
+                    UserId = adminGuid
+                },
+                new IdentityUserRole<Guid>
+                {
+                    RoleId = userRoleGuid,
+                    UserId = customer1Guid
+                },
+                new IdentityUserRole<Guid>
+                {
+                    RoleId = userRoleGuid,
+                    UserId = customer2Guid
+                },
+                new IdentityUserRole<Guid>
+                {
+                    RoleId = userRoleGuid,
+                    UserId = customer3Guid
+                }
+            );
+            #endregion
+
         }
     }
 }
