@@ -72,55 +72,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "yeezy-boost-700-mauve-1.jpeg",
                     Description = "The adidas Yeezy Boost 700 V2 ‘Mauve’ brings back a popular colorway first seen on a Yeezy Boost 700 release from 2018. The sneaker’s titular hue is executed on a textured mesh upper with arcing no-sew skins along the quarter panel and greenish-grey suede overlays throughout. Responsive cushioning comes courtesy of a full-length drop-in Boost midsole, housed within a sculpted polyurethane carrier. Underfoot, a herringbone-traction rubber outsole provides optimal grip.",
                     Id = 1,
-
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  350,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 385,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 326,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -135,55 +86,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "yeezy-knit-runner-sulfur-1.jpeg",
                     Description = "The adidas Yeezy Knit Runner ‘Sulfur’ delivers the debut colorway of Kanye West’s sock-like silhouette, which launched exclusively through the artist’s Yeezy Supply site. The fully knit build, rendered in a neutral tan shade with a contrasting mustard yellow finish throughout the majority of the upper, utilizes slip-on construction devoid of exterior branding. Embellishments are limited to sizing information stamped on the lateral collar. The sneaker rides on a durable rubber outsole in a matching yellow finish, featuring a modified herringbone tread and adidas branding under the heel.",
                     Id = 2,
-
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  540,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 675,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 568,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -198,55 +100,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "yeezy-foam-runner-ochre-1.jpg",
                     Description = "The adidas Yeezy Foam Runner ‘Ochre’ complements its futuristic aesthetic with a subdued, monochromatic finish. A dark beige hue suffuses the one-piece foam build, featuring ventilation ports of varying shapes and dimensions that enhance breathability while adding depth to the slip-on’s flowing lines. ‘FOAM RNNR’ is debossed on the interior collar, alongside the shoe size and ‘Made in USA’ branding. Underfoot, the outsole features a wavy traction pattern for reliable grip.",
                     Id = 3,
-
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  229,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 221,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 223,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -261,55 +114,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "yeezy-450-dark-slate-1.jpeg",
                     Description = "The adidas Yeezy 450 ‘Dark Slate’ delivers a blacked-out iteration of Kanye West’s boundary-pushing silhouette. Stripped of color and exterior branding, the knit upper is secured with an integrated lacing system and topped with an elastic, sock-like cuff. In lieu of a traditional midsole, the rubber outsole sprouts tapered appendages that wrap up the heel and side panels of the deconstructed build, providing support and enhanced durability within its grasp.",
                     Id = 4,
-
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  342,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 311,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 280,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -324,55 +128,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Yeezy-Boost-350-V2-Mono-Cinder-1.jpeg",
                     Description = "Launching as part of a four-piece ‘Mono’ pack, the adidas Yeezy Boost 350 V2 ‘Mono Cinder’ applies a black-out finish to the lifestyle sneaker. The revised design features an upper crafted from monofilament mesh, reinforced with an interior cage and accented with a tonal lateral side stripe. A webbing pull tab at the heel allows the sock-like build to be easily slipped on and off. The stealthy palette extends to the midsole, featuring wrapped Boost cushioning that runs the length of the rubber outsole. This shoe released exclusively on Yeezy Supply.",
                     Id = 5,
-
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  319,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 318,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 318,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -387,55 +142,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-1-retro-high-og-university-blue-1.jpeg",
                     Description = "The Air Jordan 1 Retro High OG ‘University Blue’ makes use of a familiar palette that gives the nod to Michael Jordan’s UNC alma mater. The all-leather upper features a white base with powder blue overlays and a black signature Swoosh. Matching black accents make their way to the collar, tongue tag and printed Wings logo on the lateral collar flap. A brighter shade of blue is applied to the standard AJ1 outsole, featuring multi-directional traction and a pivot point under the forefoot.",
                     Id = 6,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  325,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 331,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 300,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -450,55 +156,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-4-retro-lightning-2021-1.jpeg",
                     Description = "The 2021 edition of the Air Jordan 4 Retro ‘Lightning’ resurrects a highly coveted colorway that originally launched in 2006 alongside an accompanying ‘Thunder’ colorway, both of which were inspired by Michael Jordan’s Motorsports team. A bright yellow hue floods the nubuck upper, contrasted by black netting and dark grey structural wings. Matching grey accents land on the woven tongue tag, interior tongue and Jumpman branding at the heel. A white PU midsole, enhanced with visible Air sole cushioning, rides on a dark grey herringbone rubber outsole.",
                     Id = 7,
-                   
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  222,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 236,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 240,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -513,55 +170,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-5-retro-gs-raging-bull-2021-1.jpeg",
                     Description = "The 2021 reissue of the Air Jordan 5 Retro ‘Raging Bull’ brings back a beloved colorway originally released as one-half of 2009’s Air Jordan 5 Raging Bulls Pack. The shoe’s defining feature is a plush Varsity Red suede upper, equipped with black eyelets and a Jumpman-branded reflective silver tongue. The heel overlay displays a second Jumpman logo and an embroidered 23 on the lateral side. A visible Nike Air heel unit enhances the polyurethane midsole, accented with red-tipped shark tooth detailing and supported by an icy translucent outsole.",
                     Id = 8,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  145,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 166,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 141,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -576,55 +184,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-11-retro-bred-1.jpeg",
                     Description = "The Air Jordan 11 Retro 'Bred' 2019 brings back an original colorway initially debuted in 1995. The Tinker Hatfield-designed silhouette features Chicago Bulls colors, with black mesh on the upper sitting atop shiny black patent leather. A white midsole melds nicely with a translucent Varsity Red outsole, and is the same colorway that Michael Jordan wore during the 1996 NBA championship playoff run. This retro was distributed in December 2019 with OG detailing, including high-cut patent leather, signature Jumpman branding and MJ's number 23 stamped on the heel.",
                     Id = 9,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  110,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 200,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 200,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -639,55 +198,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-1-retro-high-og-ps-seafoam-1",
                     Description = "Crafted for little kids, the Air Jordan 1 Retro High OG PS ‘Seafoam’ updates the iconic silhouette with a two-tone palette geared for the warm weather months. The upper is constructed from clean white leather with contrasting nubuck overlays in a pale green finish. The same pastel hue is repeated on the signature Swoosh, Nike branded tongue tag and durable rubber outsole. Woven white laces are outlined in reddish bronze for an unexpected pop of contrasting color.",
                     Id = 10,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "10.5",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  189,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "11",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 110,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "11.5",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 110,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -702,55 +212,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "air-jordan-1-retro-high-og-dark-marina-blue-1.jpeg",
                     Description = "The Air Jordan 1 Retro High OG ‘Dark Marina Blue’ dresses the iconic silhouette in classic two-tone color blocking. The all-leather upper features a black base with contrasting dark blue overlays along the forefoot, heel, collar and eyestay. A matching blue Swoosh is accompanied by a Jordan Wings logo stamped in black on the lateral collar flap. Atop the nylon tongue, a woven Nike Air tag nods to the shoe’s retro cushioning technology: an Air-sole unit encapsulated in polyurethane nestled in the heel of the rubber cupsole.",
                     Id = 11,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  209,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 210,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 210,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -765,55 +226,7 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Travis-Scott-x-Air-Jordan-6-Retro-'British-Khaki'-1.jpeg",
                     Description = "The stash pouch makes a repeat appearance on the lateral collar, while new zippered detailing is added to the medial side. Mismatched Nike Air and Cactus Jack branding adorns the heel of the left and right shoe, with additional graphics on the midsole, outsole, tongue and lace lock.",
                     Id = 12,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  390,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 466,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 100,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 410,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
+                  
                 },
                 new Product()
                 {
@@ -828,55 +241,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Ultra-4D-OG-1.jpeg",
                     Description = "The adidas Ultra 4D ‘OG’ borrows a familiar color scheme initially featured on the UltraBoost release from 2015. This pair replaces the signature Boost cushioning of the original with a futuristic adidas 4D midsole, using a lattice structure made with a blend of liquid resin, light and oxygen. Up top, a matching black knit build is reinforced with a tonal midfoot cage and contrasting purple heel counter marked with Ultra 4D branding.",
                     Id = 13,
-                   
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  146,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 140,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 410,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -891,55 +255,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "ultra-4d-5-0-carbon-1.jpeg",
                     Description = "The adidas Ultra 4D 5.0 ‘Carbon’ delivers a monotone take on a performance runner built on the brand’s revolutionary 3D-printed midsole, featuring a unique lattice structure crafted from a blend of light, oxygen and liquid resin. Up top, breathable Primeknit weaves together black and grey fibers to create unique patterns around the toe box and collar. Three-stripe branding is integrated into the midfoot cage, which works in tandem with a molded heel counter to provide added stability and support.",
                     Id = 14,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  209,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 198,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 226,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -954,65 +269,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "ultra-4d-grey-pink-gradient-1.jpeg",
                     Description = "",
                     Id = 15,
-                    ProductImages = new List<ProductImage>()
-                    {
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-1.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-2.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-3.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-4.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-5.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-6.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-7.jpeg", ProductId = 15},
-                        new ProductImage(){ Image = "ultra-4d-grey-pink-gradient-8.jpeg", ProductId = 15},
-                    },
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  177,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 140,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 166,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1027,55 +283,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Ultra-4D-Chalk-White-1.jpeg",
                     Description = "",
                     Id = 16,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  150,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 102,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 229,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1090,55 +297,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "ultra-4d-lemon-twist.png",
                     Description = "",
                     Id = 17,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  280,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 280,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 280,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1153,55 +311,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "atmos-x-LeBron 18-Low-'Sakura'-1.jpeg",
                     Description = "Designed in partnership with the influential Tokyo-based retailer, the atmos x Nike LeBron 18 Low ‘Cherry Blossom’ showcases a spring-ready design, highlighted by a Swoosh formed with pink embroidered florals. The pastel hue is repeated on the sneaker’s molded eyelets and TPU heel counter, as well as a multicolor geometric print that enlivens the textile upper. The low-top sits on a cushy React foam midsole with a large-volume Max Air unit nestled under the heel.",
                     Id = 18,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  237,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 202,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 185,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1216,55 +325,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Little-Posite-One-GS-Twilight-Pulse-1.png",
                     Description = "The Nike Little Posite One GS ‘Twilight Pulse’ dresses Penny Hardaway’s signature shoe with a matte black finish on the molded synthetic upper. Metallic blue accents deliver contrasting color on the eyestay and collar trim, as does the bright orange shank plate integrated into the translucent sole unit. A mesh tongue and heel inlay provide breathable comfort while the attached pull loops are included for easy on and off.",
                     Id = 19,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "3",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  120,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "3.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 75,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 100,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1279,55 +339,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "little-posite-one-xx-royal-1.png",
                     Description = "Nike released a grade school exclusive to celebrate the 20th-anniversary of the Nike Air Foamposite One. The Little Posite One XX GS 'Royal' features a shiny Royal Blue Foamposite shell with black suede details on the eyestay and collar. The sneaker also boasts a carbon fiber midfoot arch, a mini white Swoosh on the forefoot, an icy blue translucent outsole, and a mesh inner sleeve for breathability and comfort.",
                     Id = 20,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "3",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  259,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "3.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 244,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 250,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1342,55 +353,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "kyrie-5-ep-have-a-nike-day-1.png",
                     Description = "A special edition of Kyrie Irving’s fifth model in his signature line, the Nike Kyrie 5 basketball shoe was one of the sneakers selected to be part of Nike’s celebratory 'Have A Nike Day' collection. Released in June 2019, the shoe is comprised of an engineered mesh upper for breathable, natural movement. The exterior is fitted with denim overlays, multicolored accents and Nike’s retro smiley face logo.",
                     Id = 21,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  483,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 415,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 110,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 564,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1405,55 +367,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "zoom-kd-12-wolf-grey-1.jpeg",
                     Description = "Doused in a 'Wolf Grey' colorway, the July 2019 Nike's Zoom KD 12 features a breathable and lightweight mesh upper with Flywire for lock-down, emulating the 'worn-in' feel NBA star Kevin Durant prefers. The shoe eliminates the more-typical strobel layer between the upper by stitching an iridescent, full-length Zoom Air unit directly to the upper increasing energy-return and spring on the court.",
                     Id = 22,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  200,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 230,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "9",
-                            Quantity = 155,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 155,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1468,55 +381,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "supreme-x-the-north-face-faux-fur-nuptse-jacket-red-1.jpeg",
                     Description = "",
                     Id = 23,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "M",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  745,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "L",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 740,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "XL",
-                            Quantity = 155,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 1718,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1531,55 +395,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "supreme-x-nike-half-zip-hooded-sweatshirt-white-2.jpeg",
                     Description = "",
                     Id = 24,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "M",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  250,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "L",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 200,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "XL",
-                            Quantity = 155,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 360,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1594,55 +409,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "supreme-saint-michael-fleece-jacket-white-1.jpeg",
                     Description = "",
                     Id = 25,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "M",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  235,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "L",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 300,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "XL",
-                            Quantity = 155,
-                            Price= new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 384,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1657,40 +423,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "supreme-x-the-north-face-cargo-jacket-gold.jpeg",
                     Description = "",
                     Id = 26,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "M",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  775,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "L",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 2000,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1705,55 +437,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "supreme-x-the-north-face-s-logo-mountain-jacket-black-1.jpeg",
                     Description = "",
                     Id = 27,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "M",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  780,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "L",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 729,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "XL",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 895,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1768,40 +451,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "fear-of-god-essentials-kids-short-sleeve-polo-stretch-limo.jpeg",
                     Description = "",
                     Id = 28,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  100,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "10",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 100,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1816,55 +465,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "fear-of-god-essentials-kids-pullover-hoodie-stretch-limo.jpeg",
                     Description = "",
                     Id = 29,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "2/3",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  150,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 159,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4.5",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 137,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1879,55 +479,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "fear-of-god-essentials-kids-sweatpant-stretch-limo.jpeg",
                     Description = "",
                     Id = 30,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "2/3",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  150,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 124,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "6",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 120,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 },
                 new Product()
                 {
@@ -1942,25 +493,6 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "fear-of-god-essentials-rc-9fifty-cap-black-1.jpeg",
                     Description = "",
                     Id = 31,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "One Size",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  69,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         }
-                    },
                 },
                 new Product()
                 {
@@ -1975,58 +507,1441 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "fear-of-god-essentials-x-mr-porter-exclusive-hoodie-vicunia.jpeg",
                     Description = "",
                     Id = 32,
-                    
-                    ProductInventory = new List<ProductInventory>()
-                    {
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "4",
-                            Quantity = 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price =  203,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                         },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "6",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 201,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        },
-                        new ProductInventory()
-                        {
-                            CreatedAt = DateTime.Now,
-                            Size = "8",
-                            Quantity= 100,
-                            Price = new List<ProductPrice>()
-                            {
-                                new ProductPrice()
-                                {
-                                    Price = 194,
-                                    CreatedAt = DateTime.Now,
-                                    EffectTime = DateTime.Now,
-                                }
-                            }
-                        }
-                    },
                 }
             );
             #endregion
+            //#region product inventory
+            //modelBuilder.Entity<ProductInventory>().HasData(
+            //    new ProductInventory()
+            //    {
+            //        Id = 1,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 1,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 2,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 1,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 3,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 1,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 4,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 2,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 5,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 2,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 6,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 2,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 7,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 3,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 8,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 3,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 9,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 3,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 10,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 4,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 11,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 4,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 12,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 4,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 13,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 5,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 14,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 5,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 15,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 5,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 16,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //        ProductId = 6,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 17,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //        ProductId = 6,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 18,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //        ProductId = 6,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 19,
+            //        ProductId = 7,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 20,
+            //        ProductId = 7,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 21,
+            //        ProductId = 7,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 22,
+            //        ProductId = 8,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 23,
+            //        ProductId = 8,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 24,
+            //        ProductId = 8,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 25,
+            //        ProductId = 9,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 26,
+            //        ProductId = 9,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 27,
+            //        ProductId = 9,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 28,
+            //        ProductId = 10,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "10.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 29,
+            //        ProductId = 10,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "11",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 30,
+            //        ProductId = 10,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "11.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 31,
+            //        ProductId = 11,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 32,
+            //        ProductId = 11,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 33,
+            //        ProductId = 11,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 34,
+            //        ProductId = 12,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 35,
+            //        ProductId = 12,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 36,
+            //        ProductId = 12,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 100,
+            //    },
+            //     new ProductInventory()
+            //     {
+            //         Id = 37,
+            //         ProductId = 13,
+            //         CreatedAt = DateTime.Now,
+            //         Size = "8",
+            //         Quantity = 100,
+            //     },
+            //    new ProductInventory()
+            //    {
+            //        Id = 38,
+            //        ProductId = 13,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 39,
+            //        ProductId = 13,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 40,
+            //        ProductId = 14,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 41,
+            //        ProductId = 14,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 42,
+            //        ProductId = 14,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 43,
+            //        ProductId = 15,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 44,
+            //        ProductId = 15,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 45,
+            //        ProductId = 15,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 46,
+            //        ProductId = 16,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 47,
+            //        ProductId = 16,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 48,
+            //        ProductId = 16,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 49,
+            //        ProductId = 17,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 50,
+            //        ProductId = 17,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 51,
+            //        ProductId = 17,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 52,
+            //        ProductId = 18,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 53,
+            //        ProductId = 18,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 54,
+            //        ProductId = 18,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 55,
+            //        ProductId = 19,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "3",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 56,
+            //        ProductId = 19,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "3.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 57,
+            //        ProductId = 19,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 58,
+            //        ProductId = 20,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "3",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 59,
+            //        ProductId = 20,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "3.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 60,
+            //        ProductId = 20,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4",
+            //        Quantity = 110,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 61,
+            //        ProductId = 21,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 62,
+            //        ProductId = 21,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 63,
+            //        ProductId = 21,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 110,
+            //    },
+            //   new ProductInventory()
+            //   {
+            //       Id = 64,
+            //       ProductId = 22,
+            //       CreatedAt = DateTime.Now,
+            //       Size = "8",
+            //       Quantity = 100,
+            //   },
+            //    new ProductInventory()
+            //    {
+            //        Id = 65,
+            //        ProductId = 22,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 66,
+            //        ProductId = 22,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "9",
+            //        Quantity = 155,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 67,
+            //        ProductId = 23,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "M",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 68,
+            //        ProductId = 23,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "L",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 69,
+            //        ProductId = 23,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "XL",
+            //        Quantity = 155,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 70,
+            //        ProductId = 24,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "M",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 71,
+            //        ProductId = 24,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "L",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 72,
+            //        ProductId = 24,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "XL",
+            //        Quantity = 155,
+            //    },
+            //   new ProductInventory()
+            //   {
+            //       Id = 73,
+            //       ProductId = 25,
+            //       CreatedAt = DateTime.Now,
+            //       Size = "M",
+            //       Quantity = 100,
+            //   },
+            //    new ProductInventory()
+            //    {
+            //        Id = 74,
+            //        ProductId = 25,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "L",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 75,
+            //        ProductId = 25,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "XL",
+            //        Quantity = 155,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 76,
+            //        ProductId = 26,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "M",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 77,
+            //        ProductId = 26,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "L",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 78,
+            //        ProductId = 27,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "M",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 79,
+            //        ProductId = 27,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "L",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 80,
+            //        ProductId = 27,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "XL",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 81,
+            //        ProductId = 28,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 82,
+            //        ProductId = 28,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "10",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 83,
+            //        ProductId = 29,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "2/3",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 84,
+            //        ProductId = 29,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 85,
+            //        ProductId = 29,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4.5",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 86,
+            //        ProductId = 30,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "2/3",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 87,
+            //        ProductId = 30,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 88,
+            //        ProductId = 30,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "6",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 89,
+            //        ProductId = 31,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "One Size",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 90,
+            //        ProductId = 32,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "4",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 91,
+            //        ProductId = 32,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "6",
+            //        Quantity = 100,
+            //    },
+            //    new ProductInventory()
+            //    {
+            //        Id = 92,
+            //        ProductId = 32,
+            //        CreatedAt = DateTime.Now,
+            //        Size = "8",
+            //        Quantity = 100,
+            //    }
+            //);
+            //#endregion
+            //#region product price
+            //modelBuilder.Entity<ProductPrice>().HasData(
+            //    new ProductPrice()
+            //    {
+            //        Price = 350,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 1,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 385,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 2,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 326,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 3,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 540,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 4,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 675,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 5
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 568,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 6,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 229,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 7,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 221,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 8
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 223,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 9,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 342,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 10,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 311,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 11,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 280,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 12,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 319,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 13,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 318,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 14,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 318,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 15,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 325,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 16,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 331,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 17,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 300,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 18,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 222,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 19,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 236,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 20,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 240,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 21,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 145,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 22,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 166,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 23,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 141,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 24,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 110,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 25,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 200,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 26,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 200,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 27,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 189,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 28,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 110,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 29,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 110,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 30,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 209,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 31,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 210,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 32,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 210,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 33,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 390,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 34,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 466,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 35,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 410,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 36,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 146,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 37,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 140,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 38,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 410,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //        ProductInventoryId = 39,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 209,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 40,
+            //        Price =  209,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 41,
+            //        Price = 198,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 42,
+            //        Price = 226,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 43,
+            //        Price =  177,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 44,
+            //        Price = 140,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 45,
+            //        Price = 166,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+
+            //    new ProductPrice()
+            //    {
+            //        Price =  150,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        Price = 102,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 48,
+            //        Price = 229,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 49,
+            //        Price =  280,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 50,
+            //        Price = 280,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 51,
+            //        Price = 280,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 52,
+            //        Price =  237,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId= 53,
+            //        Price = 202,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 54,
+            //        Price = 185,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 55,
+            //        Price =  120,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 56,
+            //        Price = 75,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 57,
+            //        Price = 100,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 58,
+            //        Price =  259,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 59,
+            //        Price = 244,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 60,
+            //        Price = 250,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 61,
+            //        Price =  483,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 62,
+            //        Price = 415,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 63,
+            //        Price = 564,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 64,
+            //        Price =  200,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 65,
+            //        Price = 230,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 66,
+            //        Price = 155,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 67,
+            //        Price =  745,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 68,
+            //        Price = 740,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 69,
+            //        Price = 1718,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId= 70,
+            //        Price =  250,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 71,
+            //        Price = 200,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 72,
+            //        Price = 360,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 73,
+            //        Price =  235,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 74,
+            //        Price = 300,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 75,
+            //        Price = 384,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 76,
+            //        Price =  775,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 77,
+            //        Price = 2000,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 78,
+            //        Price =  780,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 79,
+            //        Price = 729,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 80,
+            //        Price = 895,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 81,
+            //        Price =  100,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 82,
+            //        Price = 100,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 83,
+            //        Price =  150,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 84,
+            //        Price = 159,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 85,
+            //        Price = 137,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 86,
+            //        Price =  150,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 87,
+            //        Price = 124,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 88,
+            //        Price = 120,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 89,
+            //        Price = 69,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 90,
+            //        Price =  203,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 91,
+            //        Price = 201,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    },
+
+            //    new ProductPrice()
+            //    {
+            //        ProductInventoryId = 92,
+            //        Price = 194,
+            //        CreatedAt = DateTime.Now,
+            //        EffectTime = DateTime.Now,
+            //    }
+            //);
+            //#endregion
             #region product image
             modelBuilder.Entity<ProductImage>().HasData(
               new ProductImage()

@@ -12,6 +12,8 @@ namespace WebApplication1.Entities.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.HasIndex(x => new { x.ProductId, x.Size }).IsUnique();
 
+            builder.HasMany(x => x.Price).WithOne(x => x.ProductInventory).HasForeignKey(x => x.ProductInventoryId);
+
             builder.Property(x => x.ProductId).IsRequired();
             builder.Property(x => x.Size).IsRequired();
             builder.Property(x => x.Quantity).IsRequired();
