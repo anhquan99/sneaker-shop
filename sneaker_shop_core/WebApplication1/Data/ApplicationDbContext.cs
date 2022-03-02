@@ -44,7 +44,7 @@ namespace WebApplication1.Data
             builder.ApplyConfiguration(new UserShippingAddressConfiguration());
             builder.ApplyConfiguration(new WantedProductConfiguration());
 
-            builder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new {x.UserId, x.RoleId});
+            builder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new { x.UserId, x.RoleId });
             builder.Seed();
         }
     }

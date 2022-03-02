@@ -510,1438 +510,1434 @@ namespace WebApplication1.Data.Seeding
                 }
             );
             #endregion
-            //#region product inventory
-            //modelBuilder.Entity<ProductInventory>().HasData(
-            //    new ProductInventory()
-            //    {
-            //        Id = 1,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 1,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 2,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 1,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 3,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 1,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 4,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 2,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 5,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 2,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 6,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 2,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 7,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 3,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 8,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 3,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 9,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 3,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 10,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 4,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 11,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 4,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 12,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 4,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 13,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 5,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 14,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 5,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 15,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 5,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 16,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //        ProductId = 6,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 17,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //        ProductId = 6,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 18,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //        ProductId = 6,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 19,
-            //        ProductId = 7,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 20,
-            //        ProductId = 7,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 21,
-            //        ProductId = 7,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 22,
-            //        ProductId = 8,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 23,
-            //        ProductId = 8,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 24,
-            //        ProductId = 8,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 25,
-            //        ProductId = 9,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 26,
-            //        ProductId = 9,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 27,
-            //        ProductId = 9,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 28,
-            //        ProductId = 10,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "10.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 29,
-            //        ProductId = 10,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "11",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 30,
-            //        ProductId = 10,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "11.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 31,
-            //        ProductId = 11,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 32,
-            //        ProductId = 11,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 33,
-            //        ProductId = 11,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 34,
-            //        ProductId = 12,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 35,
-            //        ProductId = 12,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 36,
-            //        ProductId = 12,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 100,
-            //    },
-            //     new ProductInventory()
-            //     {
-            //         Id = 37,
-            //         ProductId = 13,
-            //         CreatedAt = DateTime.Now,
-            //         Size = "8",
-            //         Quantity = 100,
-            //     },
-            //    new ProductInventory()
-            //    {
-            //        Id = 38,
-            //        ProductId = 13,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 39,
-            //        ProductId = 13,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 40,
-            //        ProductId = 14,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 41,
-            //        ProductId = 14,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 42,
-            //        ProductId = 14,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 43,
-            //        ProductId = 15,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 44,
-            //        ProductId = 15,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 45,
-            //        ProductId = 15,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 46,
-            //        ProductId = 16,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 47,
-            //        ProductId = 16,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 48,
-            //        ProductId = 16,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 49,
-            //        ProductId = 17,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 50,
-            //        ProductId = 17,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 51,
-            //        ProductId = 17,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 52,
-            //        ProductId = 18,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 53,
-            //        ProductId = 18,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 54,
-            //        ProductId = 18,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 55,
-            //        ProductId = 19,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "3",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 56,
-            //        ProductId = 19,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "3.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 57,
-            //        ProductId = 19,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 58,
-            //        ProductId = 20,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "3",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 59,
-            //        ProductId = 20,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "3.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 60,
-            //        ProductId = 20,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4",
-            //        Quantity = 110,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 61,
-            //        ProductId = 21,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 62,
-            //        ProductId = 21,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 63,
-            //        ProductId = 21,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 110,
-            //    },
-            //   new ProductInventory()
-            //   {
-            //       Id = 64,
-            //       ProductId = 22,
-            //       CreatedAt = DateTime.Now,
-            //       Size = "8",
-            //       Quantity = 100,
-            //   },
-            //    new ProductInventory()
-            //    {
-            //        Id = 65,
-            //        ProductId = 22,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 66,
-            //        ProductId = 22,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "9",
-            //        Quantity = 155,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 67,
-            //        ProductId = 23,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "M",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 68,
-            //        ProductId = 23,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "L",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 69,
-            //        ProductId = 23,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "XL",
-            //        Quantity = 155,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 70,
-            //        ProductId = 24,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "M",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 71,
-            //        ProductId = 24,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "L",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 72,
-            //        ProductId = 24,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "XL",
-            //        Quantity = 155,
-            //    },
-            //   new ProductInventory()
-            //   {
-            //       Id = 73,
-            //       ProductId = 25,
-            //       CreatedAt = DateTime.Now,
-            //       Size = "M",
-            //       Quantity = 100,
-            //   },
-            //    new ProductInventory()
-            //    {
-            //        Id = 74,
-            //        ProductId = 25,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "L",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 75,
-            //        ProductId = 25,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "XL",
-            //        Quantity = 155,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 76,
-            //        ProductId = 26,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "M",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 77,
-            //        ProductId = 26,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "L",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 78,
-            //        ProductId = 27,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "M",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 79,
-            //        ProductId = 27,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "L",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 80,
-            //        ProductId = 27,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "XL",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 81,
-            //        ProductId = 28,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 82,
-            //        ProductId = 28,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "10",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 83,
-            //        ProductId = 29,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "2/3",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 84,
-            //        ProductId = 29,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 85,
-            //        ProductId = 29,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4.5",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 86,
-            //        ProductId = 30,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "2/3",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 87,
-            //        ProductId = 30,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 88,
-            //        ProductId = 30,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "6",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 89,
-            //        ProductId = 31,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "One Size",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 90,
-            //        ProductId = 32,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "4",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 91,
-            //        ProductId = 32,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "6",
-            //        Quantity = 100,
-            //    },
-            //    new ProductInventory()
-            //    {
-            //        Id = 92,
-            //        ProductId = 32,
-            //        CreatedAt = DateTime.Now,
-            //        Size = "8",
-            //        Quantity = 100,
-            //    }
-            //);
-            //#endregion
-            //#region product price
-            //modelBuilder.Entity<ProductPrice>().HasData(
-            //    new ProductPrice()
-            //    {
-            //        Price = 350,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 1,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 385,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 2,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 326,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 3,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 540,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 4,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 675,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 5
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 568,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 6,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 229,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 7,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 221,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 8
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 223,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 9,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 342,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 10,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 311,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 11,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 280,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 12,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 319,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 13,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 318,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 14,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 318,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 15,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 325,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 16,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 331,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 17,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 300,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 18,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 222,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 19,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 236,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 20,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 240,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 21,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 145,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 22,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 166,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 23,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 141,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 24,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 110,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 25,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 200,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 26,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 200,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 27,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 189,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 28,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 110,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 29,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 110,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 30,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 209,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 31,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 210,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 32,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 210,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 33,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 390,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 34,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 466,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 35,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 410,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 36,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 146,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 37,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 140,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 38,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 410,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //        ProductInventoryId = 39,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 209,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 40,
-            //        Price =  209,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 41,
-            //        Price = 198,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 42,
-            //        Price = 226,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 43,
-            //        Price =  177,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 44,
-            //        Price = 140,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 45,
-            //        Price = 166,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+            #region product inventory
+            modelBuilder.Entity<ProductInventory>().HasData(
+                new ProductInventory()
+                {
+                    Id = 1,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 1,
+                },
+                new ProductInventory()
+                {
+                    Id = 2,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 1,
+                },
+                new ProductInventory()
+                {
+                    Id = 3,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 1,
+                },
+                new ProductInventory()
+                {
+                    Id = 4,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 2,
+                },
+                new ProductInventory()
+                {
+                    Id = 5,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 2,
+                },
+                new ProductInventory()
+                {
+                    Id = 6,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 2,
+                },
+                new ProductInventory()
+                {
+                    Id = 7,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 3,
+                },
+                new ProductInventory()
+                {
+                    Id = 8,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 3,
+                },
+                new ProductInventory()
+                {
+                    Id = 9,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 3,
+                },
+                new ProductInventory()
+                {
+                    Id = 10,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 4,
+                },
+                new ProductInventory()
+                {
+                    Id = 11,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 4,
+                },
+                new ProductInventory()
+                {
+                    Id = 12,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 4,
+                },
+                new ProductInventory()
+                {
+                    Id = 13,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 5,
+                },
+                new ProductInventory()
+                {
+                    Id = 14,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 5,
+                },
+                new ProductInventory()
+                {
+                    Id = 15,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 5,
+                },
+                new ProductInventory()
+                {
+                    Id = 16,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                    ProductId = 6,
+                },
+                new ProductInventory()
+                {
+                    Id = 17,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                    ProductId = 6,
+                },
+                new ProductInventory()
+                {
+                    Id = 18,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                    ProductId = 6,
+                },
+                new ProductInventory()
+                {
+                    Id = 19,
+                    ProductId = 7,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 20,
+                    ProductId = 7,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 21,
+                    ProductId = 7,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 22,
+                    ProductId = 8,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 23,
+                    ProductId = 8,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 24,
+                    ProductId = 8,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 25,
+                    ProductId = 9,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 26,
+                    ProductId = 9,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 27,
+                    ProductId = 9,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 28,
+                    ProductId = 10,
+                    CreatedAt = DateTime.Now,
+                    Size = "10.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 29,
+                    ProductId = 10,
+                    CreatedAt = DateTime.Now,
+                    Size = "11",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 30,
+                    ProductId = 10,
+                    CreatedAt = DateTime.Now,
+                    Size = "11.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 31,
+                    ProductId = 11,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 32,
+                    ProductId = 11,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 33,
+                    ProductId = 11,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 34,
+                    ProductId = 12,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 35,
+                    ProductId = 12,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 36,
+                    ProductId = 12,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 100,
+                },
+                 new ProductInventory()
+                 {
+                     Id = 37,
+                     ProductId = 13,
+                     CreatedAt = DateTime.Now,
+                     Size = "8",
+                     Quantity = 100,
+                 },
+                new ProductInventory()
+                {
+                    Id = 38,
+                    ProductId = 13,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 39,
+                    ProductId = 13,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 40,
+                    ProductId = 14,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 41,
+                    ProductId = 14,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 42,
+                    ProductId = 14,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 43,
+                    ProductId = 15,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 44,
+                    ProductId = 15,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 45,
+                    ProductId = 15,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 46,
+                    ProductId = 16,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 47,
+                    ProductId = 16,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 48,
+                    ProductId = 16,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 49,
+                    ProductId = 17,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 50,
+                    ProductId = 17,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 51,
+                    ProductId = 17,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 52,
+                    ProductId = 18,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 53,
+                    ProductId = 18,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 54,
+                    ProductId = 18,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 55,
+                    ProductId = 19,
+                    CreatedAt = DateTime.Now,
+                    Size = "3",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 56,
+                    ProductId = 19,
+                    CreatedAt = DateTime.Now,
+                    Size = "3.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 57,
+                    ProductId = 19,
+                    CreatedAt = DateTime.Now,
+                    Size = "4",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 58,
+                    ProductId = 20,
+                    CreatedAt = DateTime.Now,
+                    Size = "3",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 59,
+                    ProductId = 20,
+                    CreatedAt = DateTime.Now,
+                    Size = "3.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 60,
+                    ProductId = 20,
+                    CreatedAt = DateTime.Now,
+                    Size = "4",
+                    Quantity = 110,
+                },
+                new ProductInventory()
+                {
+                    Id = 61,
+                    ProductId = 21,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 62,
+                    ProductId = 21,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 63,
+                    ProductId = 21,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 110,
+                },
+               new ProductInventory()
+               {
+                   Id = 64,
+                   ProductId = 22,
+                   CreatedAt = DateTime.Now,
+                   Size = "8",
+                   Quantity = 100,
+               },
+                new ProductInventory()
+                {
+                    Id = 65,
+                    ProductId = 22,
+                    CreatedAt = DateTime.Now,
+                    Size = "8.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 66,
+                    ProductId = 22,
+                    CreatedAt = DateTime.Now,
+                    Size = "9",
+                    Quantity = 155,
+                },
+                new ProductInventory()
+                {
+                    Id = 67,
+                    ProductId = 23,
+                    CreatedAt = DateTime.Now,
+                    Size = "M",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 68,
+                    ProductId = 23,
+                    CreatedAt = DateTime.Now,
+                    Size = "L",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 69,
+                    ProductId = 23,
+                    CreatedAt = DateTime.Now,
+                    Size = "XL",
+                    Quantity = 155,
+                },
+                new ProductInventory()
+                {
+                    Id = 70,
+                    ProductId = 24,
+                    CreatedAt = DateTime.Now,
+                    Size = "M",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 71,
+                    ProductId = 24,
+                    CreatedAt = DateTime.Now,
+                    Size = "L",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 72,
+                    ProductId = 24,
+                    CreatedAt = DateTime.Now,
+                    Size = "XL",
+                    Quantity = 155,
+                },
+               new ProductInventory()
+               {
+                   Id = 73,
+                   ProductId = 25,
+                   CreatedAt = DateTime.Now,
+                   Size = "M",
+                   Quantity = 100,
+               },
+                new ProductInventory()
+                {
+                    Id = 74,
+                    ProductId = 25,
+                    CreatedAt = DateTime.Now,
+                    Size = "L",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 75,
+                    ProductId = 25,
+                    CreatedAt = DateTime.Now,
+                    Size = "XL",
+                    Quantity = 155,
+                },
+                new ProductInventory()
+                {
+                    Id = 76,
+                    ProductId = 26,
+                    CreatedAt = DateTime.Now,
+                    Size = "M",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 77,
+                    ProductId = 26,
+                    CreatedAt = DateTime.Now,
+                    Size = "L",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 78,
+                    ProductId = 27,
+                    CreatedAt = DateTime.Now,
+                    Size = "M",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 79,
+                    ProductId = 27,
+                    CreatedAt = DateTime.Now,
+                    Size = "L",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 80,
+                    ProductId = 27,
+                    CreatedAt = DateTime.Now,
+                    Size = "XL",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 81,
+                    ProductId = 28,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 82,
+                    ProductId = 28,
+                    CreatedAt = DateTime.Now,
+                    Size = "10",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 83,
+                    ProductId = 29,
+                    CreatedAt = DateTime.Now,
+                    Size = "2/3",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 84,
+                    ProductId = 29,
+                    CreatedAt = DateTime.Now,
+                    Size = "4",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 85,
+                    ProductId = 29,
+                    CreatedAt = DateTime.Now,
+                    Size = "4.5",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 86,
+                    ProductId = 30,
+                    CreatedAt = DateTime.Now,
+                    Size = "2/3",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 87,
+                    ProductId = 30,
+                    CreatedAt = DateTime.Now,
+                    Size = "4",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 88,
+                    ProductId = 30,
+                    CreatedAt = DateTime.Now,
+                    Size = "6",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 89,
+                    ProductId = 31,
+                    CreatedAt = DateTime.Now,
+                    Size = "One Size",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 90,
+                    ProductId = 32,
+                    CreatedAt = DateTime.Now,
+                    Size = "4",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 91,
+                    ProductId = 32,
+                    CreatedAt = DateTime.Now,
+                    Size = "6",
+                    Quantity = 100,
+                },
+                new ProductInventory()
+                {
+                    Id = 92,
+                    ProductId = 32,
+                    CreatedAt = DateTime.Now,
+                    Size = "8",
+                    Quantity = 100,
+                }
+            );
+            #endregion
+            #region product price
+            modelBuilder.Entity<ProductPrice>().HasData(
+                new ProductPrice()
+                {
+                    Price = 350,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 1,
+                },
+                new ProductPrice()
+                {
+                    Price = 385,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 2,
+                },
+                new ProductPrice()
+                {
+                    Price = 326,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 3,
+                },
+                new ProductPrice()
+                {
+                    Price = 540,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 4,
+                },
+                new ProductPrice()
+                {
+                    Price = 675,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 5
+                },
+                new ProductPrice()
+                {
+                    Price = 568,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 6,
+                },
+                new ProductPrice()
+                {
+                    Price = 229,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 7,
+                },
+                new ProductPrice()
+                {
+                    Price = 221,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 8
+                },
+                new ProductPrice()
+                {
+                    Price = 223,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 9,
+                },
+                new ProductPrice()
+                {
+                    Price = 342,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 10,
+                },
+                new ProductPrice()
+                {
+                    Price = 311,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 11,
+                },
+                new ProductPrice()
+                {
+                    Price = 280,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 12,
+                },
+                new ProductPrice()
+                {
+                    Price = 319,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 13,
+                },
+                new ProductPrice()
+                {
+                    Price = 318,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 14,
+                },
+                new ProductPrice()
+                {
+                    Price = 318,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 15,
+                },
+                new ProductPrice()
+                {
+                    Price = 325,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 16,
+                },
+                new ProductPrice()
+                {
+                    Price = 331,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 17,
+                },
+                new ProductPrice()
+                {
+                    Price = 300,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 18,
+                },
+                new ProductPrice()
+                {
+                    Price = 222,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 19,
+                },
+                new ProductPrice()
+                {
+                    Price = 236,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 20,
+                },
+                new ProductPrice()
+                {
+                    Price = 240,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 21,
+                },
+                new ProductPrice()
+                {
+                    Price = 145,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 22,
+                },
+                new ProductPrice()
+                {
+                    Price = 166,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 23,
+                },
+                new ProductPrice()
+                {
+                    Price = 141,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 24,
+                },
+                new ProductPrice()
+                {
+                    Price = 110,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 25,
+                },
+                new ProductPrice()
+                {
+                    Price = 200,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 26,
+                },
+                new ProductPrice()
+                {
+                    Price = 200,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 27,
+                },
+                new ProductPrice()
+                {
+                    Price = 189,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 28,
+                },
+                new ProductPrice()
+                {
+                    Price = 110,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 29,
+                },
+                new ProductPrice()
+                {
+                    Price = 110,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 30,
+                },
+                new ProductPrice()
+                {
+                    Price = 209,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 31,
+                },
+                new ProductPrice()
+                {
+                    Price = 210,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 32,
+                },
+                new ProductPrice()
+                {
+                    Price = 210,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 33,
+                },
+                new ProductPrice()
+                {
+                    Price = 390,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 34,
+                },
+                new ProductPrice()
+                {
+                    Price = 466,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 35,
+                },
+                new ProductPrice()
+                {
+                    Price = 410,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 36,
+                },
+                new ProductPrice()
+                {
+                    Price = 146,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 37,
+                },
+                new ProductPrice()
+                {
+                    Price = 140,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 38,
+                },
+                new ProductPrice()
+                {
+                    Price = 410,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                    ProductInventoryId = 39,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 40,
+                    Price =  209,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 41,
+                    Price = 198,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 42,
+                    Price = 226,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 43,
+                    Price =  177,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 44,
+                    Price = 140,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 45,
+                    Price = 166,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
 
-            //    new ProductPrice()
-            //    {
-            //        Price =  150,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        Price = 102,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 48,
-            //        Price = 229,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 46,
+                    Price =  150,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 47,
+                    Price = 102,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 48,
+                    Price = 229,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 49,
-            //        Price =  280,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 49,
+                    Price =  280,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 50,
-            //        Price = 280,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 51,
-            //        Price = 280,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 52,
-            //        Price =  237,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId= 53,
-            //        Price = 202,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 54,
-            //        Price = 185,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 55,
-            //        Price =  120,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 56,
-            //        Price = 75,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 57,
-            //        Price = 100,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 58,
-            //        Price =  259,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 59,
-            //        Price = 244,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 60,
-            //        Price = 250,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 50,
+                    Price = 280,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 51,
+                    Price = 280,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 61,
-            //        Price =  483,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 52,
+                    Price =  237,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 62,
-            //        Price = 415,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId= 53,
+                    Price = 202,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 54,
+                    Price = 185,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 63,
-            //        Price = 564,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 55,
+                    Price =  120,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 64,
-            //        Price =  200,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 56,
+                    Price = 75,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 65,
-            //        Price = 230,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 66,
-            //        Price = 155,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 57,
+                    Price = 100,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 67,
-            //        Price =  745,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 58,
+                    Price =  259,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 68,
-            //        Price = 740,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 59,
+                    Price = 244,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 69,
-            //        Price = 1718,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 60,
+                    Price = 250,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId= 70,
-            //        Price =  250,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 71,
-            //        Price = 200,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 72,
-            //        Price = 360,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 61,
+                    Price =  483,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 73,
-            //        Price =  235,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 62,
+                    Price = 415,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 74,
-            //        Price = 300,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 63,
+                    Price = 564,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 75,
-            //        Price = 384,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 64,
+                    Price =  200,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 76,
-            //        Price =  775,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 65,
+                    Price = 230,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 66,
+                    Price = 155,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 77,
-            //        Price = 2000,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 67,
+                    Price =  745,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 78,
-            //        Price =  780,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 79,
-            //        Price = 729,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 80,
-            //        Price = 895,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 68,
+                    Price = 740,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 81,
-            //        Price =  100,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 69,
+                    Price = 1718,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 82,
-            //        Price = 100,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId= 70,
+                    Price =  250,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 71,
+                    Price = 200,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 83,
-            //        Price =  150,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 72,
+                    Price = 360,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 84,
-            //        Price = 159,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 73,
+                    Price =  235,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 85,
-            //        Price = 137,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 74,
+                    Price = 300,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 86,
-            //        Price =  150,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 87,
-            //        Price = 124,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 88,
-            //        Price = 120,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 89,
-            //        Price = 69,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 75,
+                    Price = 384,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 90,
-            //        Price =  203,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 76,
+                    Price =  775,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 91,
-            //        Price = 201,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 77,
+                    Price = 2000,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
 
-            //    new ProductPrice()
-            //    {
-            //        ProductInventoryId = 92,
-            //        Price = 194,
-            //        CreatedAt = DateTime.Now,
-            //        EffectTime = DateTime.Now,
-            //    }
-            //);
-            //#endregion
+                new ProductPrice()
+                {
+                    ProductInventoryId = 78,
+                    Price =  780,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 79,
+                    Price = 729,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 80,
+                    Price = 895,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 81,
+                    Price =  100,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 82,
+                    Price = 100,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 83,
+                    Price =  150,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 84,
+                    Price = 159,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 85,
+                    Price = 137,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 86,
+                    Price =  150,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 87,
+                    Price = 124,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 88,
+                    Price = 120,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+                new ProductPrice()
+                {
+                    ProductInventoryId = 89,
+                    Price = 69,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 90,
+                    Price =  203,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 91,
+                    Price = 201,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                },
+
+                new ProductPrice()
+                {
+                    ProductInventoryId = 92,
+                    Price = 194,
+                    CreatedAt = DateTime.Now,
+                    EffectTime = DateTime.Now,
+                }
+            );
+            #endregion
             #region product image
             modelBuilder.Entity<ProductImage>().HasData(
               new ProductImage()
