@@ -3,19 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication1.Data;
 
 #nullable disable
 
-namespace WebApplication1.Data.Migrations
+namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220302155601_seed-data-1")]
-    partial class seeddata1
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,10 +37,11 @@ namespace WebApplication1.Data.Migrations
                     b.ToTable("DiscountProduct");
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
@@ -64,46 +63,26 @@ namespace WebApplication1.Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("IdentityRole<Guid>");
 
                     b.HasData(
                         new
                         {
                             Id = new Guid("b610dd6a-d83e-4937-9e7c-700512654ca2"),
-                            ConcurrencyStamp = "fcb72d10-4339-4170-a89c-3fcbd4cbf6e1",
+                            ConcurrencyStamp = "8f3b9fe6-30e9-4059-8cce-9b41d6a40ea8",
                             Name = "SuperAdmin",
                             NormalizedName = "superadmin"
                         },
                         new
                         {
                             Id = new Guid("0151bf94-13d6-4cb7-a815-43cdb359413b"),
-                            ConcurrencyStamp = "f92fe452-cf35-4ca0-b6cf-e3f11aea099d",
+                            ConcurrencyStamp = "40ea5d74-d817-4946-8e5c-686e914ff1ac",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
                             Id = new Guid("bb64cbe4-5757-40ea-8533-980a148e3369"),
-                            ConcurrencyStamp = "032de5a7-5356-44d0-b1ce-9c7503f550dc",
+                            ConcurrencyStamp = "2a7d7876-8a4a-4f0d-b431-a08e27065872",
                             Name = "user",
                             NormalizedName = "user"
                         });
@@ -124,79 +103,35 @@ namespace WebApplication1.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("RoleId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -214,8 +149,29 @@ namespace WebApplication1.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -225,6 +181,25 @@ namespace WebApplication1.Data.Migrations
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128)
@@ -237,9 +212,8 @@ namespace WebApplication1.Data.Migrations
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("LoginProvider", "ProviderKey");
 
@@ -258,9 +232,7 @@ namespace WebApplication1.Data.Migrations
 
                     b.HasKey("UserId", "RoleId");
 
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetUserRoles", (string)null);
+                    b.ToTable("UserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
@@ -273,7 +245,9 @@ namespace WebApplication1.Data.Migrations
 
                     b.HasKey("UserId", "RoleId");
 
-                    b.ToTable("UserRoles", (string)null);
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
 
                     b.HasData(
                         new
@@ -307,6 +281,25 @@ namespace WebApplication1.Data.Migrations
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("UserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128)
@@ -350,7 +343,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Adidas",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9573),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(117),
                             Icon = "adidas.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Adi Dassler founded adidas in 1949 in Herzogenaurach, Germany. Building on the reputation of the brand’s spiked running shoes and football cleats, Dassler turned adidas into a global icon, redefining sneakers and apparel in the process. Today, adidas is considered one of the world’s most influential brands, responsible for the Stan Smith, Yeezy sneakers and more."
@@ -358,7 +351,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Nike",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9585),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(126),
                             Icon = "nike.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Founded by Bill Bowerman and Phil Knight in 1964, Nike is synonymous with performance and innovation. Alongside its apparel offerings, the sportswear giant is responsible for a number of iconic sneakers, including the Air Force 1, the Air Max franchise and more. Today, Nike is among the world’s most recognized brands, identified by its wordmark and Swoosh logo."
@@ -366,7 +359,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Air Jordan",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9586),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(127),
                             Icon = "jordan.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In 1984, Nike unveiled the Air Jordan 1, a basketball sneaker designed by Peter Moore for a young Michael Jordan. The iconic silhouette transcended sneakers and sports, altering the trajectory of style forever. Today, Michael Jordan’s namesake brand continues to inspire sportswear and style movements around the world through new releases, retro drops and unexpected collaborations."
@@ -374,7 +367,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Supreme",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9587),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(127),
                             Icon = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Founded by James Jebbia in 1994, Supreme is a New York-based skate brand known for its subcultural references and controversial graphics. Today, Supreme is considered one of style’s most influential voices, blurring the lines between streetwear and luxury through collaborations with artists, fashion houses and sneaker brands."
@@ -382,7 +375,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Yeezy",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9588),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(128),
                             Icon = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In late 2013, Kanye West and adidas announced their forthcoming partnership. In 2015, the two delivered on this news, arriving in the form of Yeezy Season 1, a collection of sneakers and apparel debuted at New York Fashion Week. Since the first collection, Yeezy has influenced style movements worldwide."
@@ -390,7 +383,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             NameId = "Fear of God Essentials",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 418, DateTimeKind.Local).AddTicks(9589),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(129),
                             Icon = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding."
@@ -639,7 +632,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Boots",
                             Color = "Tan",
                             CoverImage = "yeezy-boost-700-mauve-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(31),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(306),
                             Description = "The adidas Yeezy Boost 700 V2 ‘Mauve’ brings back a popular colorway first seen on a Yeezy Boost 700 release from 2018. The sneaker’s titular hue is executed on a textured mesh upper with arcing no-sew skins along the quarter panel and greenish-grey suede overlays throughout. Responsive cushioning comes courtesy of a full-length drop-in Boost midsole, housed within a sculpted polyurethane carrier. Underfoot, a herringbone-traction rubber outsole provides optimal grip.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Boost 700 V2 'Mauve'",
@@ -654,7 +647,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Sulfur",
                             CoverImage = "yeezy-knit-runner-sulfur-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(468),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(666),
                             Description = "The adidas Yeezy Knit Runner ‘Sulfur’ delivers the debut colorway of Kanye West’s sock-like silhouette, which launched exclusively through the artist’s Yeezy Supply site. The fully knit build, rendered in a neutral tan shade with a contrasting mustard yellow finish throughout the majority of the upper, utilizes slip-on construction devoid of exterior branding. Embellishments are limited to sizing information stamped on the lateral collar. The sneaker rides on a durable rubber outsole in a matching yellow finish, featuring a modified herringbone tread and adidas branding under the heel.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Knit Runner 'Sulfur'",
@@ -669,7 +662,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Yellow",
                             CoverImage = "yeezy-foam-runner-ochre-1.jpg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(685),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(755),
                             Description = "The adidas Yeezy Foam Runner ‘Ochre’ complements its futuristic aesthetic with a subdued, monochromatic finish. A dark beige hue suffuses the one-piece foam build, featuring ventilation ports of varying shapes and dimensions that enhance breathability while adding depth to the slip-on’s flowing lines. ‘FOAM RNNR’ is debossed on the interior collar, alongside the shoe size and ‘Made in USA’ branding. Underfoot, the outsole features a wavy traction pattern for reliable grip.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Foam Runner 'Ochre'",
@@ -684,7 +677,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Black",
                             CoverImage = "yeezy-450-dark-slate-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(755),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(805),
                             Description = "The adidas Yeezy 450 ‘Dark Slate’ delivers a blacked-out iteration of Kanye West’s boundary-pushing silhouette. Stripped of color and exterior branding, the knit upper is secured with an integrated lacing system and topped with an elastic, sock-like cuff. In lieu of a traditional midsole, the rubber outsole sprouts tapered appendages that wrap up the heel and side panels of the deconstructed build, providing support and enhanced durability within its grasp.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy 450 'Dark Slate'",
@@ -699,7 +692,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Black",
                             CoverImage = "Yeezy-Boost-350-V2-Mono-Cinder-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(804),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(854),
                             Description = "Launching as part of a four-piece ‘Mono’ pack, the adidas Yeezy Boost 350 V2 ‘Mono Cinder’ applies a black-out finish to the lifestyle sneaker. The revised design features an upper crafted from monofilament mesh, reinforced with an interior cage and accented with a tonal lateral side stripe. A webbing pull tab at the heel allows the sock-like build to be easily slipped on and off. The stealthy palette extends to the midsole, featuring wrapped Boost cushioning that runs the length of the rubber outsole. This shoe released exclusively on Yeezy Supply.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Boost 350 V2 'Mono Cinder'",
@@ -714,7 +707,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Blue",
                             CoverImage = "air-jordan-1-retro-high-og-university-blue-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(854),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(945),
                             Description = "The Air Jordan 1 Retro High OG ‘University Blue’ makes use of a familiar palette that gives the nod to Michael Jordan’s UNC alma mater. The all-leather upper features a white base with powder blue overlays and a black signature Swoosh. Matching black accents make their way to the collar, tongue tag and printed Wings logo on the lateral collar flap. A brighter shade of blue is applied to the standard AJ1 outsole, featuring multi-directional traction and a pivot point under the forefoot.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Air Jordan 1 Retro High OG 'University Blue'",
@@ -729,7 +722,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Yellow",
                             CoverImage = "air-jordan-4-retro-lightning-2021-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(902),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(993),
                             Description = "The 2021 edition of the Air Jordan 4 Retro ‘Lightning’ resurrects a highly coveted colorway that originally launched in 2006 alongside an accompanying ‘Thunder’ colorway, both of which were inspired by Michael Jordan’s Motorsports team. A bright yellow hue floods the nubuck upper, contrasted by black netting and dark grey structural wings. Matching grey accents land on the woven tongue tag, interior tongue and Jumpman branding at the heel. A white PU midsole, enhanced with visible Air sole cushioning, rides on a dark grey herringbone rubber outsole.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Air Jordan 4 Retro 'Lightning' 2021'",
@@ -744,7 +737,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Red",
                             CoverImage = "air-jordan-5-retro-gs-raging-bull-2021-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(950),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1041),
                             Description = "The 2021 reissue of the Air Jordan 5 Retro ‘Raging Bull’ brings back a beloved colorway originally released as one-half of 2009’s Air Jordan 5 Raging Bulls Pack. The shoe’s defining feature is a plush Varsity Red suede upper, equipped with black eyelets and a Jumpman-branded reflective silver tongue. The heel overlay displays a second Jumpman logo and an embroidered 23 on the lateral side. A visible Nike Air heel unit enhances the polyurethane midsole, accented with red-tipped shark tooth detailing and supported by an icy translucent outsole.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Air Jordan 5 Retro 'Raging Bull' 2021'",
@@ -759,7 +752,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Red",
                             CoverImage = "air-jordan-11-retro-bred-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(997),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1089),
                             Description = "The Air Jordan 11 Retro 'Bred' 2019 brings back an original colorway initially debuted in 1995. The Tinker Hatfield-designed silhouette features Chicago Bulls colors, with black mesh on the upper sitting atop shiny black patent leather. A white midsole melds nicely with a translucent Varsity Red outsole, and is the same colorway that Michael Jordan wore during the 1996 NBA championship playoff run. This retro was distributed in December 2019 with OG detailing, including high-cut patent leather, signature Jumpman branding and MJ's number 23 stamped on the heel.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Air Jordan 11 Retro 'Bred' 2019",
@@ -774,7 +767,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Green",
                             CoverImage = "air-jordan-1-retro-high-og-ps-seafoam-1",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1045),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1136),
                             Description = "Crafted for little kids, the Air Jordan 1 Retro High OG PS ‘Seafoam’ updates the iconic silhouette with a two-tone palette geared for the warm weather months. The upper is constructed from clean white leather with contrasting nubuck overlays in a pale green finish. The same pastel hue is repeated on the signature Swoosh, Nike branded tongue tag and durable rubber outsole. Woven white laces are outlined in reddish bronze for an unexpected pop of contrasting color.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = " ",
@@ -789,7 +782,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Blue",
                             CoverImage = "air-jordan-1-retro-high-og-dark-marina-blue-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1118),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1208),
                             Description = "The Air Jordan 1 Retro High OG ‘Dark Marina Blue’ dresses the iconic silhouette in classic two-tone color blocking. The all-leather upper features a black base with contrasting dark blue overlays along the forefoot, heel, collar and eyestay. A matching blue Swoosh is accompanied by a Jordan Wings logo stamped in black on the lateral collar flap. Atop the nylon tongue, a woven Nike Air tag nods to the shoe’s retro cushioning technology: an Air-sole unit encapsulated in polyurethane nestled in the heel of the rubber cupsole.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Air Jordan 1 Retro High OG 'Dark Marina Blue'",
@@ -804,7 +797,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "LifeStyle",
                             Color = "Tan",
                             CoverImage = "Travis-Scott-x-Air-Jordan-6-Retro-'British-Khaki'-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1243),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1257),
                             Description = "The stash pouch makes a repeat appearance on the lateral collar, while new zippered detailing is added to the medial side. Mismatched Nike Air and Cactus Jack branding adorns the heel of the left and right shoe, with additional graphics on the midsole, outsole, tongue and lace lock.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Travis Scott x Air Jordan 6 Retro 'British Khaki'",
@@ -819,7 +812,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Running",
                             Color = "Black",
                             CoverImage = "Ultra-4D-OG-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1292),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1304),
                             Description = "The adidas Ultra 4D ‘OG’ borrows a familiar color scheme initially featured on the UltraBoost release from 2015. This pair replaces the signature Boost cushioning of the original with a futuristic adidas 4D midsole, using a lattice structure made with a blend of liquid resin, light and oxygen. Up top, a matching black knit build is reinforced with a tonal midfoot cage and contrasting purple heel counter marked with Ultra 4D branding.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ultra 4D 'OG'",
@@ -834,7 +827,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Running",
                             Color = "Black",
                             CoverImage = "ultra-4d-5-0-carbon-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1365),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1410),
                             Description = "The adidas Ultra 4D 5.0 ‘Carbon’ delivers a monotone take on a performance runner built on the brand’s revolutionary 3D-printed midsole, featuring a unique lattice structure crafted from a blend of light, oxygen and liquid resin. Up top, breathable Primeknit weaves together black and grey fibers to create unique patterns around the toe box and collar. Three-stripe branding is integrated into the midfoot cage, which works in tandem with a molded heel counter to provide added stability and support.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ultra 4D 5.0 'Carbon'",
@@ -849,7 +842,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Running",
                             Color = "Grey",
                             CoverImage = "ultra-4d-grey-pink-gradient-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1414),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1459),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ultra 4D 'Grey Pink Gradient'",
@@ -864,7 +857,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Running",
                             Color = "White",
                             CoverImage = "Ultra-4D-Chalk-White-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1461),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1507),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ultra 4D 'Chalk White'",
@@ -879,7 +872,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Running",
                             Color = "Cream",
                             CoverImage = "ultra-4d-lemon-twist.png",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1509),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1554),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Ultra 4D 'Lemon Twist'",
@@ -894,7 +887,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Basketball",
                             Color = "Cream",
                             CoverImage = "atmos-x-LeBron 18-Low-'Sakura'-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1556),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1602),
                             Description = "Designed in partnership with the influential Tokyo-based retailer, the atmos x Nike LeBron 18 Low ‘Cherry Blossom’ showcases a spring-ready design, highlighted by a Swoosh formed with pink embroidered florals. The pastel hue is repeated on the sneaker’s molded eyelets and TPU heel counter, as well as a multicolor geometric print that enlivens the textile upper. The low-top sits on a cushy React foam midsole with a large-volume Max Air unit nestled under the heel.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "atmos x LeBron 18 Low 'Sakura'",
@@ -909,7 +902,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Basketball",
                             Color = "Orange",
                             CoverImage = "Little-Posite-One-GS-Twilight-Pulse-1.png",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1630),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1676),
                             Description = "The Nike Little Posite One GS ‘Twilight Pulse’ dresses Penny Hardaway’s signature shoe with a matte black finish on the molded synthetic upper. Metallic blue accents deliver contrasting color on the eyestay and collar trim, as does the bright orange shank plate integrated into the translucent sole unit. A mesh tongue and heel inlay provide breathable comfort while the attached pull loops are included for easy on and off.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Little Posite One GS 'Twilight Pulse'",
@@ -924,7 +917,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Basketball",
                             Color = "Blue",
                             CoverImage = "little-posite-one-xx-royal-1.png",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1738),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1724),
                             Description = "Nike released a grade school exclusive to celebrate the 20th-anniversary of the Nike Air Foamposite One. The Little Posite One XX GS 'Royal' features a shiny Royal Blue Foamposite shell with black suede details on the eyestay and collar. The sneaker also boasts a carbon fiber midfoot arch, a mini white Swoosh on the forefoot, an icy blue translucent outsole, and a mesh inner sleeve for breathability and comfort.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Little Posite One XX GS 'Royal'",
@@ -939,7 +932,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Basketball",
                             Color = "White",
                             CoverImage = "kyrie-5-ep-have-a-nike-day-1.png",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1787),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1773),
                             Description = "A special edition of Kyrie Irving’s fifth model in his signature line, the Nike Kyrie 5 basketball shoe was one of the sneakers selected to be part of Nike’s celebratory 'Have A Nike Day' collection. Released in June 2019, the shoe is comprised of an engineered mesh upper for breathable, natural movement. The exterior is fitted with denim overlays, multicolored accents and Nike’s retro smiley face logo.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Kyrie 5 'Have A Nike Day'",
@@ -954,7 +947,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Basketball",
                             Color = "White",
                             CoverImage = "zoom-kd-12-wolf-grey-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1835),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1876),
                             Description = "Doused in a 'Wolf Grey' colorway, the July 2019 Nike's Zoom KD 12 features a breathable and lightweight mesh upper with Flywire for lock-down, emulating the 'worn-in' feel NBA star Kevin Durant prefers. The shoe eliminates the more-typical strobel layer between the upper by stitching an iridescent, full-length Zoom Air unit directly to the upper increasing energy-return and spring on the court.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Zoom KD 12 'Wolf Grey'",
@@ -969,7 +962,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Red",
                             CoverImage = "supreme-x-the-north-face-faux-fur-nuptse-jacket-red-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(1881),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(1932),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Supreme x The North Face Faux Fur Nuptse Jacket 'Red'",
@@ -984,7 +977,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Red",
                             CoverImage = "supreme-x-nike-half-zip-hooded-sweatshirt-white-2.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2003),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2052),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Supreme x Nike Half Zip Hooded Sweatshirt 'White'",
@@ -999,7 +992,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Multi-Color",
                             CoverImage = "supreme-saint-michael-fleece-jacket-white-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2052),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2102),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Supreme Saint Michael Fleece Jacket 'White'",
@@ -1014,7 +1007,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Gold",
                             CoverImage = "supreme-x-the-north-face-cargo-jacket-gold.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2099),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2150),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Supreme x The North Face Cargo Jacket 'Gold'",
@@ -1029,7 +1022,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Black",
                             CoverImage = "supreme-x-the-north-face-s-logo-mountain-jacket-black-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2211),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2197),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Supreme x The North Face S Logo Mountain Jacket 'Black'",
@@ -1044,7 +1037,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Tops",
                             Color = "Black",
                             CoverImage = "fear-of-god-essentials-kids-short-sleeve-polo-stretch-limo.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2266),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2244),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Fear of God Essentials Kids Short-Sleeve Polo 'Stretch Limo'",
@@ -1059,7 +1052,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Black",
                             CoverImage = "fear-of-god-essentials-kids-pullover-hoodie-stretch-limo.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2337),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2315),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Fear of God Essentials Kids Pullover Hoodie 'Stretch Limo'",
@@ -1074,7 +1067,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Bottoms",
                             Color = "Black",
                             CoverImage = "fear-of-god-essentials-kids-sweatpant-stretch-limo.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2385),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2403),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Fear of God Essentials Kids Sweatpant 'Stretch Limo'",
@@ -1089,7 +1082,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Accessories",
                             Color = "Brown",
                             CoverImage = "fear-of-god-essentials-rc-9fifty-cap-black-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2451),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2472),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Fear of God Essentials RC 9FIFTY Cap 'Black'",
@@ -1104,7 +1097,7 @@ namespace WebApplication1.Data.Migrations
                             Category = "Outerwear",
                             Color = "Fear of God Essentials",
                             CoverImage = "fear-of-god-essentials-x-mr-porter-exclusive-hoodie-vicunia.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2524),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2543),
                             Description = "",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Fear of God Essentials Kids x Mr. Porter Exclusive Hoodie 'Vicunia'",
@@ -2019,7 +2012,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2622),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2633),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -2028,7 +2021,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2625),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2634),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -2037,7 +2030,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2626),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2635),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -2046,7 +2039,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2627),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2640),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -2055,7 +2048,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2692),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2640),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -2064,7 +2057,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2693),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2641),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -2073,7 +2066,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2694),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2642),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 3,
                             Quantity = 100,
@@ -2082,7 +2075,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2695),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2642),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 3,
                             Quantity = 100,
@@ -2091,7 +2084,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2696),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2643),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 3,
                             Quantity = 100,
@@ -2100,7 +2093,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2697),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2644),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 4,
                             Quantity = 100,
@@ -2109,7 +2102,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 11,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2697),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2645),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 4,
                             Quantity = 100,
@@ -2118,7 +2111,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 12,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2698),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2645),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 4,
                             Quantity = 100,
@@ -2127,7 +2120,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 13,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2699),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2646),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 5,
                             Quantity = 100,
@@ -2136,7 +2129,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 14,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2700),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2647),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 5,
                             Quantity = 100,
@@ -2145,7 +2138,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 15,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2701),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2647),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 5,
                             Quantity = 100,
@@ -2154,7 +2147,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 16,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2701),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2648),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 6,
                             Quantity = 100,
@@ -2163,7 +2156,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 17,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2702),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2649),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 6,
                             Quantity = 100,
@@ -2172,7 +2165,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 18,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2703),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2649),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 6,
                             Quantity = 100,
@@ -2181,7 +2174,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 19,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2704),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2650),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 7,
                             Quantity = 100,
@@ -2190,7 +2183,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 20,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2705),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2651),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 7,
                             Quantity = 100,
@@ -2199,7 +2192,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 21,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2705),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2651),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 7,
                             Quantity = 100,
@@ -2208,7 +2201,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 22,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2706),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2653),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 8,
                             Quantity = 100,
@@ -2217,7 +2210,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 23,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2707),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2654),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 8,
                             Quantity = 100,
@@ -2226,7 +2219,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 24,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2707),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2654),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 8,
                             Quantity = 100,
@@ -2235,7 +2228,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 25,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2709),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2655),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 9,
                             Quantity = 100,
@@ -2244,7 +2237,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 26,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2710),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2656),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 9,
                             Quantity = 100,
@@ -2253,7 +2246,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 27,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2711),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2657),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 9,
                             Quantity = 100,
@@ -2262,7 +2255,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 28,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2711),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2658),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 10,
                             Quantity = 100,
@@ -2271,7 +2264,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 29,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2712),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2658),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 10,
                             Quantity = 100,
@@ -2280,7 +2273,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 30,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2713),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2659),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 10,
                             Quantity = 100,
@@ -2289,7 +2282,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 31,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2713),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2660),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 11,
                             Quantity = 100,
@@ -2298,7 +2291,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 32,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2714),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2662),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 11,
                             Quantity = 100,
@@ -2307,7 +2300,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 33,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2715),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2663),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 11,
                             Quantity = 100,
@@ -2316,7 +2309,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 34,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2715),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2663),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 12,
                             Quantity = 100,
@@ -2325,7 +2318,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 35,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2716),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2664),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 12,
                             Quantity = 100,
@@ -2334,7 +2327,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 36,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2717),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2702),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 12,
                             Quantity = 100,
@@ -2343,7 +2336,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 37,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2718),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2703),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 13,
                             Quantity = 100,
@@ -2352,7 +2345,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 38,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2721),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2704),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 13,
                             Quantity = 100,
@@ -2361,7 +2354,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 39,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2722),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2705),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 13,
                             Quantity = 110,
@@ -2370,7 +2363,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 40,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2722),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2706),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 14,
                             Quantity = 100,
@@ -2379,7 +2372,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 41,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2724),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2706),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 14,
                             Quantity = 100,
@@ -2388,7 +2381,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 42,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2724),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2707),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 14,
                             Quantity = 110,
@@ -2397,7 +2390,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 43,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2725),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2708),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 15,
                             Quantity = 100,
@@ -2406,7 +2399,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 44,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2726),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2710),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 15,
                             Quantity = 100,
@@ -2415,7 +2408,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 45,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2726),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2710),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 15,
                             Quantity = 110,
@@ -2424,7 +2417,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 46,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2727),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2711),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 16,
                             Quantity = 100,
@@ -2433,7 +2426,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 47,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2728),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2712),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 16,
                             Quantity = 100,
@@ -2442,7 +2435,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 48,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2728),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2712),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 16,
                             Quantity = 110,
@@ -2451,7 +2444,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 49,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2729),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2713),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 17,
                             Quantity = 100,
@@ -2460,7 +2453,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 50,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2730),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2714),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 17,
                             Quantity = 100,
@@ -2469,7 +2462,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 51,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2731),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2714),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 17,
                             Quantity = 110,
@@ -2478,7 +2471,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 52,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2731),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2715),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 18,
                             Quantity = 100,
@@ -2487,7 +2480,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 53,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2732),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2717),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 18,
                             Quantity = 100,
@@ -2496,7 +2489,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 54,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2733),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2718),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 18,
                             Quantity = 110,
@@ -2505,7 +2498,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 55,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2734),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2720),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 19,
                             Quantity = 100,
@@ -2514,7 +2507,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 56,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2734),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2721),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 19,
                             Quantity = 100,
@@ -2523,7 +2516,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 57,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2735),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2721),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 19,
                             Quantity = 110,
@@ -2532,7 +2525,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 58,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2736),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2723),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 20,
                             Quantity = 100,
@@ -2541,7 +2534,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 59,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2736),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2725),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 20,
                             Quantity = 100,
@@ -2550,7 +2543,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 60,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2737),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2726),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 20,
                             Quantity = 110,
@@ -2559,7 +2552,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 61,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2738),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2726),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 21,
                             Quantity = 100,
@@ -2568,7 +2561,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 62,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2738),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2727),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 21,
                             Quantity = 100,
@@ -2577,7 +2570,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 63,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2739),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2728),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 21,
                             Quantity = 110,
@@ -2586,7 +2579,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 64,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2740),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2728),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 22,
                             Quantity = 100,
@@ -2595,7 +2588,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 65,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2741),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2730),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 22,
                             Quantity = 100,
@@ -2604,7 +2597,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 66,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2741),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2731),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 22,
                             Quantity = 155,
@@ -2613,7 +2606,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 67,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2742),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2731),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 23,
                             Quantity = 100,
@@ -2622,7 +2615,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 68,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2743),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2732),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 23,
                             Quantity = 100,
@@ -2631,7 +2624,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 69,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2744),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2733),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 23,
                             Quantity = 155,
@@ -2640,7 +2633,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 70,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2746),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2734),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 24,
                             Quantity = 100,
@@ -2649,7 +2642,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 71,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2746),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2735),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 24,
                             Quantity = 100,
@@ -2658,7 +2651,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 72,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2747),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2736),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 24,
                             Quantity = 155,
@@ -2667,7 +2660,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 73,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2748),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2737),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 25,
                             Quantity = 100,
@@ -2676,7 +2669,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 74,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2749),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2737),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 25,
                             Quantity = 100,
@@ -2685,7 +2678,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 75,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2749),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2738),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 25,
                             Quantity = 155,
@@ -2694,7 +2687,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 76,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2750),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2739),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 26,
                             Quantity = 100,
@@ -2703,7 +2696,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 77,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2752),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2739),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 26,
                             Quantity = 100,
@@ -2712,7 +2705,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 78,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2753),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2740),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 27,
                             Quantity = 100,
@@ -2721,7 +2714,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 79,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2754),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2742),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 27,
                             Quantity = 100,
@@ -2730,7 +2723,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 80,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2755),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2744),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 27,
                             Quantity = 100,
@@ -2739,7 +2732,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 81,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2755),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2744),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 28,
                             Quantity = 100,
@@ -2748,7 +2741,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 82,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2756),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2746),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 28,
                             Quantity = 100,
@@ -2757,7 +2750,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 83,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2757),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2747),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 29,
                             Quantity = 100,
@@ -2766,7 +2759,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 84,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2757),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2748),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 29,
                             Quantity = 100,
@@ -2775,7 +2768,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 85,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2758),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2750),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 29,
                             Quantity = 100,
@@ -2784,7 +2777,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 86,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2759),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2751),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 30,
                             Quantity = 100,
@@ -2793,7 +2786,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 87,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2760),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2753),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 30,
                             Quantity = 100,
@@ -2802,7 +2795,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 88,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2761),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2754),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 30,
                             Quantity = 100,
@@ -2811,7 +2804,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 89,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2762),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2755),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 31,
                             Quantity = 100,
@@ -2820,7 +2813,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 90,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2763),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2756),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 32,
                             Quantity = 100,
@@ -2829,7 +2822,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 91,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2763),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2757),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 32,
                             Quantity = 100,
@@ -2838,7 +2831,7 @@ namespace WebApplication1.Data.Migrations
                         new
                         {
                             Id = 92,
-                            CreatedAt = new DateTime(2022, 3, 2, 22, 56, 0, 419, DateTimeKind.Local).AddTicks(2764),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2758),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 32,
                             Quantity = 100,
@@ -2866,6 +2859,744 @@ namespace WebApplication1.Data.Migrations
                     b.HasKey("ProductInventoryId", "EffectTime");
 
                     b.ToTable("ProductPrices", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            ProductInventoryId = 1,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2790),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2789),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 350.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 2,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2791),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2791),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 385.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 3,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2793),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2792),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 326.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 4,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2794),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2793),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 540.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 5,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2796),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2796),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 675.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 6,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2797),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2797),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 568.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 7,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2798),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2798),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 229.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 8,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2799),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2799),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 221.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 9,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2800),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2800),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 223.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 10,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2801),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2801),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 342.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 11,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2802),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2802),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 311.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 12,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2803),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2803),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 280.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 13,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2804),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2804),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 319.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 14,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2805),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2805),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 318.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 15,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2806),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2806),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 318.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 16,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2839),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2838),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 325.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 17,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2840),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2840),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 331.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 18,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2841),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2841),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 300.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 19,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2842),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2842),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 222.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 20,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2843),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2843),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 236.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 21,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2844),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2844),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 240.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 22,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2845),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2845),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 145.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 23,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2846),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2846),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 166.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 24,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2847),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2847),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 141.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 25,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2848),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2848),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 110.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 26,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2849),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2849),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 200.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 27,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2850),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2850),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 200.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 28,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2851),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2851),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 189.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 29,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2852),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2852),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 110.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 30,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2853),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2853),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 110.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 31,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2854),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2854),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 209.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 32,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2855),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2855),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 210.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 33,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2856),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2856),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 210.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 34,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2857),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2857),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 390.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 35,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2858),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2858),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 466.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 36,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2860),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2860),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 410.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 37,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2861),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2861),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 146.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 38,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2863),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2862),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 140.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 39,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2864),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2864),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 410.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 40,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2865),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2865),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 209.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 41,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2866),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2866),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 198.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 42,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2867),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2867),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 226.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 43,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2868),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2868),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 177.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 44,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2869),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2869),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 140.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 45,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2870),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2870),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 166.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 46,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2871),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2870),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 150.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 47,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2872),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2871),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 102.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 48,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2874),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2874),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 229.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 49,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2875),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2875),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 280.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 50,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2876),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2876),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 280.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 51,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2877),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2877),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 280.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 52,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2878),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2878),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 237.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 53,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2879),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2879),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 202.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 54,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2880),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2880),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 185.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 55,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2881),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2881),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 120.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 56,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2882),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2882),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 75.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 57,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2883),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2883),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 100.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 58,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2884),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2884),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 259.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 59,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2885),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2885),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 244.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 60,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2886),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2886),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 250.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 61,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2888),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2887),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 483.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 62,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2889),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2888),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 415.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 63,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2890),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2889),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 564.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 64,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2891),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2890),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 200.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 65,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2892),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2891),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 230.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 66,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2893),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2892),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 155.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 67,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2894),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2893),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 745.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 68,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2895),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2894),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 740.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 69,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2896),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2895),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 1718.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 70,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2897),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2896),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 250.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 71,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2898),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2897),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 200.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 72,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2899),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2898),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 360.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 73,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2900),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2899),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 235.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 74,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2901),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2900),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 300.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 75,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2902),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2901),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 384.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 76,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2903),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2902),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 775.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 77,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2904),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2903),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 2000.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 78,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2905),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2904),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 780.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 79,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2906),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2905),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 729.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 80,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2907),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2906),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 895.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 81,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2908),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2907),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 100.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 82,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2909),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2908),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 100.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 83,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2910),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2909),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 150.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 84,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2911),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2911),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 159.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 85,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2912),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2912),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 137.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 86,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2914),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2913),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 150.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 87,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2915),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2914),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 124.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 88,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2916),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2915),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 120.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 89,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2917),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2916),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 69.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 90,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2918),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2917),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 203.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 91,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2919),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2918),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 201.0
+                        },
+                        new
+                        {
+                            ProductInventoryId = 92,
+                            EffectTime = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2920),
+                            CreatedAt = new DateTime(2022, 3, 2, 23, 58, 37, 954, DateTimeKind.Local).AddTicks(2919),
+                            ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Price = 194.0
+                        });
                 });
 
             modelBuilder.Entity("WebApplication1.Entities.User", b =>
@@ -2881,10 +3612,12 @@ namespace WebApplication1.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -2896,10 +3629,12 @@ namespace WebApplication1.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
@@ -2917,26 +3652,35 @@ namespace WebApplication1.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CartSessionId");
 
-                    b.ToTable("User");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
 
                     b.HasData(
                         new
                         {
                             Id = new Guid("096149b4-92aa-4d5f-89ab-579244023ae6"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "09854b86-71c3-4da9-9b7d-8c63e50cb5c4",
+                            ConcurrencyStamp = "75b07713-cf07-4338-97db-b24629a7920f",
                             Email = "superadmin@superadmin.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEAXe5PIFZyGavmzLFdqMQysTj5bTjdXc3FFSxVi2uGso2l+mpxx5a+Xi0WBmlXq7TA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEACW2JN9xFmmHGdFhXqeyssshykwjxBk0K1teNCIKlbgpjavjvPvEWdEUtw5La4w+g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5a5605c8-f7e3-49f7-b93f-144f0325f2d3",
+                            SecurityStamp = "32b4c956-ffdc-452b-b67a-ea266fe3d4d7",
                             TwoFactorEnabled = false,
                             UserName = "superAdmin"
                         },
@@ -2944,13 +3688,13 @@ namespace WebApplication1.Data.Migrations
                         {
                             Id = new Guid("218a643e-c736-4680-b8fc-6464f3e4b963"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "345c7829-3da1-48f3-ac38-21672b723cd0",
+                            ConcurrencyStamp = "dd852cc4-6004-4d1a-a0fe-8f33dc47d3e8",
                             Email = "admin@admin.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEJzpRlT5HwLlkGxhD20EF5kQQHK7L6yi5qTU/BoeZSzeu9SYZwjzD6oaRfEi6o5Y7A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJynlQWTRYDpdA6NvWnQ4gBtU9CcZvGrqGNsH492HH9DRSwGp1K80MdyXjV3AJEJvw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d72914a3-6216-4fd2-baa2-52418338ed4c",
+                            SecurityStamp = "e7ba0df3-d74a-4213-9ca3-9ce2bbd12687",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -2958,13 +3702,13 @@ namespace WebApplication1.Data.Migrations
                         {
                             Id = new Guid("b9685628-aa98-4a0f-9a97-f872a932f211"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a461b262-e751-4c15-ac8e-6c1ade09ca7e",
+                            ConcurrencyStamp = "7d92b731-6c5f-4b97-9de1-89f0f9e7570f",
                             Email = "user@user.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEIJX2TDJPKMb2H0HIb1uLjTapk7QvMOX6JX493hvv1Ktay4Y/1RwjGBTm8m7skNVOA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJHTHfuMjEq80eL5SMglT18kBjDNm5RN72v0SHGbYHx3WLdILhwLWgvX6+4gCzcVEw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "021b5d92-32a9-4d0c-b5df-848d64632129",
+                            SecurityStamp = "e957887c-b0b3-49a7-bea5-2d2f3a12ddea",
                             TwoFactorEnabled = false,
                             UserName = "defaultuser"
                         },
@@ -2972,13 +3716,13 @@ namespace WebApplication1.Data.Migrations
                         {
                             Id = new Guid("3ebc9915-5931-471b-8cdb-a1b5b10b6088"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1ae2f0b6-6f2f-49c3-9381-ed2847f1b560",
+                            ConcurrencyStamp = "c1515f13-ccb6-4b84-8584-c0ceb53b851e",
                             Email = "customer1@customer1.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAECI8RhRNwC8e0Y+de8R9WOjBr2pPW6mKKXPtstQiXWB30G3XkOJeJmMEzxhILKfwtg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN3MpoyaWjA3L0L7v3zTaQK5ON1lzJCyIxam3MpXvNs4AyzAJ58OT97AviVHzCRadw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "df6b42b4-c0d6-4e88-a29d-acf47db5d19e",
+                            SecurityStamp = "c5e76584-2b29-474c-8caf-952ae78c17d2",
                             TwoFactorEnabled = false,
                             UserName = "customer1"
                         },
@@ -2986,13 +3730,13 @@ namespace WebApplication1.Data.Migrations
                         {
                             Id = new Guid("fa12454e-ebc4-4eb8-9290-93dddcc94bde"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "bfc34a68-8b6d-4d20-ae3f-d9f18c767faa",
+                            ConcurrencyStamp = "1537bfd4-9e3e-4115-8fbe-a57bc0257f6a",
                             Email = "customer2@customer2.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEC7+xGwfvTE9v/1tON1mTFJJJCpVecxm0CebmZ+IXNOaWmhHYoRdp4ZPmkiyvMxZvQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPwSBF+olHKBuqcxw9nFJ2RrvIjjEJMyBHcEswA/yalmCxY8Rt5syltMsH596J0eTg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b79eaaaa-9e0f-47ee-9d5d-215a8e5c6e20",
+                            SecurityStamp = "cde366bc-072b-4e3a-80c2-62cd8d85a747",
                             TwoFactorEnabled = false,
                             UserName = "customer2"
                         },
@@ -3000,13 +3744,13 @@ namespace WebApplication1.Data.Migrations
                         {
                             Id = new Guid("f408ea82-601a-4573-9a68-c0e31fd87623"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1a0ce531-5ff3-42fe-9ad5-afafce0b3d2d",
+                            ConcurrencyStamp = "2e4d8735-6ed8-430c-80f8-d6592fac2352",
                             Email = "customer3@customer3.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEIXjG4jpB5DNnJna+UkKYpR1VYvHBjkiRXWR4JZRfXhZZe6HK5QpRaYLHHNYeaNZ5Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJXnnWmLVmCPkl//GTHoHwEZwkZ+IGtYZakAWI0bkwW+sv5uYxFdJ+0tpQ5vBi6/gg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "389ec77a-70d7-4d20-8e79-025e6b8fb675",
+                            SecurityStamp = "372cbc7e-38b3-4873-acb7-05019e9dd6dd",
                             TwoFactorEnabled = false,
                             UserName = "customer3"
                         });
@@ -3108,51 +3852,51 @@ namespace WebApplication1.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WebApplication1.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WebApplication1.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WebApplication1.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("WebApplication1.Entities.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace WebApplication1.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -44,7 +44,12 @@ namespace WebApplication1.Data
             builder.ApplyConfiguration(new UserShippingAddressConfiguration());
             builder.ApplyConfiguration(new WantedProductConfiguration());
 
-            builder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new { x.UserId, x.RoleId });
+            builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
+            builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(x => new { x.UserId, x.RoleId });
+            builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins").HasKey(x => x.UserId);
+            builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens").HasKey(x => x.UserId);
+            builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims").HasKey(x => x.Id);
+
             builder.Seed();
         }
     }
