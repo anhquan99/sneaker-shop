@@ -2,7 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Entities;
 using WebApplication1.Entities.Configurations;
-//using WebApplication1.Entities.Configurations;
+using WebApplication1.Data.Seeding;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebApplication1.Data
 {
@@ -42,6 +43,9 @@ namespace WebApplication1.Data
             builder.ApplyConfiguration(new UserPaymentConfiguration());
             builder.ApplyConfiguration(new UserShippingAddressConfiguration());
             builder.ApplyConfiguration(new WantedProductConfiguration());
+
+            builder.Entity<IdentityUserRole<Guid>>().ToTable("UserRoles").HasKey(x => new {x.UserId, x.RoleId});
+            builder.Seed();
         }
     }
 }

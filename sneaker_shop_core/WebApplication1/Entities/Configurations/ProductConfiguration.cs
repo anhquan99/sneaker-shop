@@ -12,7 +12,7 @@ namespace WebApplication1.Entities.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).IsRequired();
-            builder.Property(x => x.Wallpaper).IsRequired();
+            builder.Property(x => x.CoverImage).IsRequired();
             builder.Property(x => x.Releasedate).IsRequired();
             builder.Property(x => x.Color).IsRequired();
             builder.Property(x => x.Category).IsRequired();
