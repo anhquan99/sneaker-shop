@@ -2465,7 +2465,7 @@ a .Fact_Details:hover {
     display: inline-block;
     position: relative;
     color: rgb(129, 129, 129);
-    text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+    text-decoration: underline rgba(0, 0, 0, 0);
     transition: text-decoration-color 300ms;
     overflow: hidden;
 }

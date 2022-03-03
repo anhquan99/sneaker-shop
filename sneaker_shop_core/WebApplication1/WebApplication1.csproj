@@ -34,7 +34,6 @@
     <Folder Include="Infrastructure\RequestModels\" />
     <Folder Include="Repository\" />
     <Folder Include="Service\" />
-    <Folder Include="Views\Shared\" />
     <Folder Include="wwwroot\font\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>

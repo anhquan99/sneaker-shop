@@ -1,5 +1,5 @@
 - [ ] Burger tab:
-	- [ ] Brand: Category menu
+	- [x] Brand: Category menu
 	- [ ] Login/Logout/Register
 	- [ ] Wants: User wanted product
 	- [ ] Shop all: List product by release date

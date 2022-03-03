@@ -2,15 +2,56 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+    ViewData["Title"] = "Log in vs login";
 }
 
-<h1>@ViewData["Title"]</h1>
+    <div class="PageLayout_PageAligment" onload="getLoginForm('LoginForm','RegisterForm')">
+        <div class="Hero_Wrapper LoginView_Hero">
+            <div class="Hero_FirstPane">
+                <div class="Hero_HeroPane">
+                    <div class="Hero_HeroPaneContent LoginView_HeroPaneContent"><img alt="Red Jordan 1s" src="~/images/login.jpg"
+                            class="LoginView_Jordans"></div>
+                </div>
+            </div>
+            <div class="Hero_SecondPane">
+                <form class="LoginForm" id="LoginForm">
+                    <div class="Hero_HeroPane LoginForm_HeroPane">
+                        <div class="Hero_HeroPaneContent LoginForm_HeroPaneContent">
+                            <header class="LoginForm_Header">
+                                <h1 class="LoginForm_Title">Log In</h1>
+                                <p class="LoginForm_Subtitle">You need to be logged in
+                                    to continue.</p><a onclick="showFormWithAnimation('LoginForm','RegisterForm')" class="LoginForm_CreateAccountButton"
+                                    asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+                            </header>
+                            <main class="LoginForm_Main">
+                                <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input id="username"
+                                            label="Email or Username" name="username" type="email" autocomplete=""
+                                            aria-label="Email or Username" class="MaterialInput_Input" value=""><span
+                                            class="MaterialInput_LabelCopy">Email or Username</span></label></div>
+                                <div class="LoginForm_InputWrapper">
+                                    <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input id="password"
+                                                label="Password" name="password" type="password" autocomplete=""
+                                                aria-label="Password" class="MaterialInput_Input" value=""><span class="MaterialInput_LabelCopy">Password</span></label></div><button
+                                        type="button" class="LoginForm_ForgotPasswordButton"><span>Forgot</span></button>
+                                </div>
+                            </main>
+                        </div>
+                        <div class="LoginForm_Error"></div>
+                        <nav class="Hero_HeroPaneLoginActions"><span class="Hero_Border"><button disabled="" type="submit"
+                                    class="GoatButton_Wrapper Hero_Button">Log
+                                    In</button></span></nav>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+@*<h1>@ViewData["Title"]</h1>
 <div class="row">
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
+                <h2>AQaccount to log in.</h2>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
@@ -83,3 +124,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+*@

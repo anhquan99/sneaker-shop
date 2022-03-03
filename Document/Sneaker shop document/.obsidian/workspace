@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Customer/Search/Search.md",
+            "file": "Customer/Home/Home.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Customer/Search/Search.md",
+                "file": "Customer/Home/Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,9 +89,9 @@
   },
   "active": "fe853624b915f8f9",
   "lastOpenFiles": [
+    "Customer/Home/Home.md",
     "Customer/Search/Search.md",
     "Customer/Product/Product.md",
-    "Customer/Home/Home.md",
     "Customer/Checkout/Checkout.md",
     "Customer/URL.md",
     "Customer/Search/SearchByApparel.md",

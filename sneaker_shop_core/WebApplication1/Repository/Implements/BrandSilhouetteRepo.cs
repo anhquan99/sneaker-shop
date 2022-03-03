@@ -3,9 +3,9 @@ using WebApplication1.Entities;
 
 namespace WebApplication1.Repository.Implements
 {
-    public class BrandSilhouetteService : BaseRepo<BrandSilhouette, string>
+    public class BrandSilhouetteRepo : BaseRepo<BrandSilhouette, string>
     {
-        public BrandSilhouetteService(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public BrandSilhouetteRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
         {
         }
         public async override Task<BrandSilhouette> Update(BrandSilhouette t)

@@ -58,14 +58,9 @@
                             </g>
                           </svg>
                           <h3 class="MenuHeader_Title">Brands</h3>
-                        </label></div>
+                        </div>
                     </li>
-                    <li class="MenuItem_ListItem Label">
-                      <div class="AnimatedUnderlineText "><a href="#"><label><span></span>Acne Studios</span></label></a></div>
-                    </li>
-                    <li class="MenuItem_ListItem Label">
-                      <div class="AnimatedUnderlineText "><a href="#"><label><span></span>Adidas</span></label></a></div>
-                    </li>
+                    @await Component.InvokeAsync("BrandList")
               </li>
             </ul>
           </nav>
@@ -83,8 +78,9 @@
           <!-- login -->
           <li class="MenuItem_ListItem ">
             <div class="Label Access">
-              <div class="UserLogin_Wrapper"><a data-qa="log_in" class="UserLogin_Link" href="#">Log In</a><a class="UserLogin_Link"
-                  href="#">Sign Up</a></div>
+              <div class="UserLogin_Wrapper">
+                  <a data-qa="log_in" class="UserLogin_Link"  asp-area="Identity" asp-page="/Account/Login">Log In</a>
+                  <a class="UserLogin_Link"  asp-area="Identity" asp-page="/Account/Register">Sign Up</a></div>
 
             </div>
 
@@ -631,6 +627,7 @@
   </div>
   </nav>
   <!-- body -->
+  @RenderBody()
   <footer>
     <div class="Footer_MoblieApp"></div>
     <div class="Footer_Newsletter">

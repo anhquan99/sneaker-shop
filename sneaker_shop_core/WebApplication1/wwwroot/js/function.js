@@ -1,6 +1,5 @@
 function openNav(navId) {
     var slideBar = document.getElementById(navId);
-    console.log(slideBar);
     slideBar.style.zIndex = "1";
     slideBar.style.opacity = "1";
     slideBar.style.transform = "none";
