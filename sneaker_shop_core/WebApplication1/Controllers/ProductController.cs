@@ -11,9 +11,12 @@ namespace WebApplication1.Controllers
             _logger = logger;   
         }
         [Route("Detail/{ProductName}")]
-        public IActionResult ProductDetail(string ProductName)
+        public async Task<IActionResult> ProductDetail(string ProductName)
         {
-            _logger.LogWarning(0, "ProductName: " + ProductName);
+            return View();
+        }
+        public async Task<IActionResult> List(string type)
+        {
             return View();
         }
 

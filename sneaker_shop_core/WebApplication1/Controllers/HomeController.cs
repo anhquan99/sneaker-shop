@@ -15,5 +15,17 @@ namespace WebApplication1.Controllers
             _logger.LogInformation("Wait for hot reload");
             return View();
         }
+        public async Task<IActionResult> Discover()
+        {
+            return View();
+        }
+        public async Task<IActionResult> ShopAll()
+        {
+            return View();
+        }
+        public async Task<IActionResult> MostWanted()
+        {
+            return View();
+        }
     }
 }
