@@ -4,7 +4,7 @@ namespace WebApplication1.Controllers
 {
     public class CheckoutController : Controller
     {
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }

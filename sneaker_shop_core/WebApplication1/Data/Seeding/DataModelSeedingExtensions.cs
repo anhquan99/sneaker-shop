@@ -2818,7 +2818,7 @@ namespace WebApplication1.Data.Seeding
                 {
                     Id = new Guid(adminGuid),
                     UserName = "admin",
-                    PasswordHash = hasher.HashPassword(null, "password"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssword123"),
                     Email = "admin@admin.com",
                     SecurityStamp = Guid.NewGuid().ToString(),
                 },
@@ -2826,7 +2826,7 @@ namespace WebApplication1.Data.Seeding
                 {
                     Id = new Guid(defaultUserGuid),
                     UserName = "defaultuser",
-                    PasswordHash = hasher.HashPassword(null, "password"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssword123"),
                     Email = "user@user.com",
                     SecurityStamp = Guid.NewGuid().ToString(),
                 },
@@ -2834,7 +2834,7 @@ namespace WebApplication1.Data.Seeding
                 {
                     Id = new Guid(customer1Guid),
                     UserName = "customer1",
-                    PasswordHash = hasher.HashPassword(null, "password"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssword123"),
                     Email = "customer1@customer1.com",
                     SecurityStamp = Guid.NewGuid().ToString(),
                 },
@@ -2842,7 +2842,7 @@ namespace WebApplication1.Data.Seeding
                 {
                     Id = new Guid(customer2Guid),
                     UserName = "customer2",
-                    PasswordHash = hasher.HashPassword(null, "password"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssword123"),
                     Email = "customer2@customer2.com",
                     SecurityStamp = Guid.NewGuid().ToString(),
                 },
@@ -2850,7 +2850,7 @@ namespace WebApplication1.Data.Seeding
                 {
                     Id = new Guid(customer3Guid),
                     UserName = "customer3",
-                    PasswordHash = hasher.HashPassword(null, "password"),
+                    PasswordHash = hasher.HashPassword(null, "P@ssword123"),
                     Email = "customer3@customer3.com",
                     SecurityStamp = Guid.NewGuid().ToString(),
                 });

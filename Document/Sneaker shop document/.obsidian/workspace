@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Customer/Product/ProductListByBrand.md",
+            "file": "Customer/Home/Home.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Customer/Product/ProductListByBrand.md",
+                "file": "Customer/Home/Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "fe853624b915f8f9",
   "lastOpenFiles": [
+    "Customer/Home/Home.md",
+    "Customer/Product/Product.md",
+    "Customer/Search/Search.md",
+    "Customer/Product/ProductDetail.md",
     "Customer/Product/ProductListByBrand.md",
     "Customer/Product/ProductListByMostWanted.md",
-    "Customer/Product/Product.md",
-    "Customer/Home/Home.md",
     "Customer/URL.md",
     "home.md",
-    "Customer/Search/Search.md",
     "Customer/Checkout/Checkout.md",
-    "Customer/Search/SearchByApparel.md",
-    "Customer/Search/SearchBySneaker.md"
+    "Customer/Search/SearchByApparel.md"
   ]
 }

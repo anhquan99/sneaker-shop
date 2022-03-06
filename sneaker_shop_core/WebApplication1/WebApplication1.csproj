@@ -32,10 +32,12 @@
   <ItemGroup>
     <Folder Include="Infrastructure\ViewModels\" />
     <Folder Include="Infrastructure\RequestModels\" />
-    <Folder Include="Repository\" />
     <Folder Include="Service\" />
     <Folder Include="wwwroot\font\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
-
+	<ItemGroup>
+		<!-- extends watching group to include *.cshtml files -->
+		<Watch Include="**\*.cshtml" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+	</ItemGroup>
 </Project>

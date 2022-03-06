@@ -44,11 +44,7 @@ namespace WebApplication1.Data
             builder.ApplyConfiguration(new UserShippingAddressConfiguration());
             builder.ApplyConfiguration(new WantedProductConfiguration());
 
-            builder.Entity<IdentityUserClaim<string>>().ToTable("UserClaims");
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(x => new { x.UserId, x.RoleId });
-            builder.Entity<IdentityUserLogin<string>>().ToTable("UserLogins").HasKey(x => x.UserId);
-            builder.Entity<IdentityUserToken<string>>().ToTable("UserTokens").HasKey(x => x.UserId);
-            builder.Entity<IdentityRoleClaim<string>>().ToTable("RoleClaims").HasKey(x => x.Id);
 
             builder.Seed();
         }

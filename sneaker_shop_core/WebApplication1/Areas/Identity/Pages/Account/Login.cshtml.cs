@@ -105,9 +105,8 @@ namespace WebApplication1.Areas.Identity.Pages.Account
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-
+            _logger.LogError(Input.Email + " " + Input.Password);
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-
             if (ModelState.IsValid)
             {
                 // This doesn't count login failures towards account lockout
@@ -129,6 +128,7 @@ namespace WebApplication1.Areas.Identity.Pages.Account
                 }
                 else
                 {
+                    _logger.LogError("Failed");
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return Page();
                 }

@@ -13,101 +13,94 @@
                 </div>
             </div>
             <div class="Hero_SecondPane">
-                <form class="RegisterForm_Form" id="RegisterForm">
+                <form class="RegisterForm_Form" id="RegisterForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                     <div class="Hero_HeroPane RegisterForm_HeroPane">
                         <div class="Hero_HeroPaneContent RegisterForm_HeroPaneContent">
                             <header class="RegisterForm_Header">
                                 <h1 class="RegisterForm_Title">Sign Up</h1> 
                             </header>
                             <main class="RegisterForm_Main">
-                                <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input
-                                            autocomplete="name" id="full-name" label="Full Name" name="name" type="text"
-                                            aria-label="Full Name" class="MaterialInput_Input" value=""><span class="MaterialInput_LabelCopy">Full
-                                            Name</span></label></div>
-                                <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input id="email"
-                                            label="Email" name="username" type="email" autocomplete="" aria-label="Email"
-                                            class="MaterialInput_Input" value=""><span class="
-                                            MaterialInput_LabelCopy">Email</span></label></div>
-                                <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input data-qa="register_password_input"
+@*                                <div class="MaterialInput_Content">
+                                    <label class="MaterialInput_Label">
+                                        <input asp-for="Input.UserName"
+                                         autocomplete="name" id="UserName" label="Username" name="UserName" type="text"
+                                            aria-label="Username" class="MaterialInput_Input" value="" onchange="fillForm()">
+                                                <span class="MaterialInput_LabelCopy">Username</span>
+                                    </label>
+                                 </div>*@
+                                <div class="MaterialInput_Content">
+                                    <label class="MaterialInput_Label">
+                                        <input id="email" asp-for="Input.Email"
+                                            id="email" label="Email" name="email" type="email" autocomplete="" aria-label="Email"
+                                            class="MaterialInput_Input" value="" onchange="fillForm()">
+                                                <span class="MaterialInput_LabelCopy">Email</span>
+                                    </label>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                 </div>
+                                <div class="MaterialInput_Content">
+                                    <label class="MaterialInput_Label">
+                                        <input asp-for="Input.Password"
                                             id="password" label="Password" name="password" type="password" autocomplete=""
-                                            aria-label="Password" class="MaterialInput_Input" value=""><span class="
-                                            MaterialInput_LabelCopy">Password</span></label></div>
-                                <div class="MaterialInput_Content"><label class="MaterialInput_Label"><input data-qa="register_confirm_password_input"
+                                            aria-label="Password" class="MaterialInput_Input" value="" onchange="fillForm()">
+                                            <span class="MaterialInput_LabelCopy">Password</span>
+                                    </label>
+                                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                </div>
+                                <div class="MaterialInput_Content">
+                                    <label class="MaterialInput_Label">
+                                        <input asp-for="Input.ConfirmPassword"
                                             id="confirm-password" label="Confirm Password" name="confirmPassword" type="password"
                                             autocomplete="" aria-label="Confirm Password" class="MaterialInput_Input"
-                                            value=""><span class="
-                                            MaterialInput_LabelCopy">Confirm
-                                            Password</span></label></div>
-                                <div class="RegisterForm_Terms"><span><span>By creating an account you
-                                            agree to our</span> <a data-qa="terms_link" href="#">Terms</a> <span>and</span>
-                                        <a data-qa="privacy_link" href="#">Privacy</a></span></div>
+                                            value="" onchange="fillForm()">
+                                            <span class="MaterialInput_LabelCopy">Confirm Password</span>
+                                    </label>
+                                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                </div>
+                                <div class="RegisterForm_Terms">
+                                    <span>
+                                        <span>By creating an account you
+                                            agree to our</span> 
+                                            <a  href="#">Terms</a> 
+                                            <span>and</span>
+                                        <a href="#">Privacy</a>
+                                    </span>
+                                </div>
                             </main>
                         </div>
-                        <nav class="Hero_HeroPaneLoginActions"><a class="Hero_Link" asp-area="Identity" asp-page="/Account/Login"><button onclick="showFormWithAnimation('RegisterForm','LoginForm')"
-                                    type="button" class="GoatButton_Wrapper Hero_Button">Back</button></a><span class="Hero_Border"><button
-                                    disabled="" type="submit" class="GoatButton_Wrapper Hero_Button">Sign
-                                    Up</button></span></nav>
+                        <div class="LoginForm_Error">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                        </div>
+                        <nav class="Hero_HeroPaneLoginActions">
+                            <a class="Hero_Link" asp-area="Identity" asp-page="/Account/Login">
+                                <button type="button" class="GoatButton_Wrapper Hero_Button">Back</button>
+                                </a>
+                                <span class="Hero_Border">
+                                    <button id="submitBtn" disabled="" type="submit" class="GoatButton_Wrapper Hero_Button">Sign
+                                    Up</button>
+                                </span>
+                        </nav>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-@*<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-floating">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                <label asp-for="Input.Email"></label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-floating">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.Password"></label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" />
-                <label asp-for="Input.ConfirmPassword"></label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
+    <script>
+        function fillForm(){
+            var email = document.getElementById("email");
+            var password = document.getElementById("password");
+            var confirmPassword = document.getElementById("confirm-password");
+            var submitBtn = document.getElementById("submitBtn");
+            console.log("Fillform");
+            if(email.value.length != 0
+                    && password.value.length != 0
+                    && confirmPassword.value.length != 0){
+                submitBtn.disabled = false;
             }
-        </section>
-    </div>
-</div>
-
+            else{
+                submitBtn.disable = true;
+            }
+        }
+    </script>
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}*@
+<partial name="_ValidationScriptsPartial" />
+}
