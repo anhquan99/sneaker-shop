@@ -1,7 +1,7 @@
 ﻿namespace WebApplication1.Repository.Interfaces
 {
-    public interface IProductRepository
+    public interface IProductRepository : ICRUDRepository<Product, int>
     {
-        public Task<List<Product>> getMostWanted();
+        public Task<IQueryable<Product>> getByReleaseDate(string type);
     }
 }

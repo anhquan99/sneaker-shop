@@ -20,10 +20,10 @@ namespace WebApplication1.Controllers
         //{
         //    return View();
         //}
-        //public async Task<IActionResult> ShopAll()
-        //{
-        //    return View();
-        //}
+        public async Task<IActionResult> ShopAll()
+        {
+            return View();
+        }
         //public async Task<IActionResult> MostWanted()
         //{
         //    return View();
