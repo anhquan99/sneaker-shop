@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class OrderRepo : BaseRepo<Order, int>
     {
-        public OrderRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public OrderRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

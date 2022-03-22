@@ -6,15 +6,26 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ICRUDRepository<Product, int> _repo;
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IProductRepository _repo;
+        public HomeController(ILogger<HomeController> logger, IProductRepository repo)
         {
             _logger = logger;
+            _repo = repo;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            _logger.LogInformation("Wait for hot reload");
-            return View();
+            try
+            {
+                ViewBag.Title = "NASH";
+                ViewBag.NewReleaseData = _repo.getByReleaseDate("all").Take(20).ToList();
+                ViewBag.Trending = _repo.getTreding().Take(20).ToList();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+                return RedirectToAction("", "Error", new { message = ex.Message });
+            }
         }
         //public async Task<IActionResult> Discover()
         //{

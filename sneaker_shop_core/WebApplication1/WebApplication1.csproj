@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\ViewModels\" />
     <Folder Include="Infrastructure\RequestModels\" />
     <Folder Include="Service\" />
     <Folder Include="wwwroot\font\" />
@@ -39,5 +38,15 @@
 	<ItemGroup>
 		<!-- extends watching group to include *.cshtml files -->
 		<Watch Include="**\*.cshtml" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="Views\Shared\Index.cshtml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Watch Remove="Views\Shared\Components\ProductCard\Default.cshtml" />
+	  <Watch Remove="Views\Shared\Index.cshtml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="Views\Shared\Components\ProductCard\Default.cshtml" />
 	</ItemGroup>
 </Project>

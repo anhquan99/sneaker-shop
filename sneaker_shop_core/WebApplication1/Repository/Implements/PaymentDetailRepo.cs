@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class PaymentDetailRepo : BaseRepo<PaymentDetail, int>
     {
-        public PaymentDetailRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public PaymentDetailRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

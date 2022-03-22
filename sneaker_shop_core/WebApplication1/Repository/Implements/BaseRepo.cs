@@ -9,12 +9,10 @@ namespace WebApplication1.Repository.Implements
 
         protected readonly ApplicationDbContext dbContext;
         protected DbSet<T> entitySet;
-        protected readonly ILogger _logger;
-        public BaseRepo(ApplicationDbContext dbContext, ILogger logger)
+        public BaseRepo(ApplicationDbContext dbContext)
         {
             this.dbContext = dbContext;
             entitySet = dbContext.Set<T>();
-            this._logger = logger;  
         }
 
         public async Task<T> Create(T t)

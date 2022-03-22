@@ -1,60 +1,53 @@
 ﻿using WebApplication1.Data;
 using WebApplication1.Entities;
+using WebApplication1.Infrastructure.Enums;
+using WebApplication1.Infrastructure.Extensions;
 
 namespace WebApplication1.Repository.Implements
 {
     public class ProductRepo : BaseRepo<Product, int>, IProductRepository
     {
-        public ProductRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public ProductRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 
         public IQueryable<Product> getByMostWanted()
         {
-            try
-            {
-                var result = entitySet.OrderByDescending(x => x.WantedProducts.Count);
-                return result;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-                return null;
-            }
+            return entitySet.OrderByDescending(x => x.WantedProducts.Count);
         }
 
         public IQueryable<Product> getByReleaseDate(string type)
         {
-            try
+            if(type.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
-                var result = entitySet.OrderBy(x => x.Releasedate);
-                return result;
+                return entitySet.OrderBy(x => x.Releasedate).Where(IQueryableExtensions.isSneaker());
+
             }
-            catch (Exception ex)
+            else if(type.Equals(ProductTypesEnum.Apparel.getEnumDescription(), StringComparison.OrdinalIgnoreCase))
             {
-                _logger.LogError(ex.Message, ex);
-                return null;
+                return entitySet.OrderBy(x => x.Releasedate).Where(IQueryableExtensions.isApparel());
             }
+            else
+            {
+                return entitySet.OrderBy(x => x.Releasedate);
+            }
+        }
+
+        public IQueryable<Product> getTreding()
+        {
+            return entitySet.OrderBy(x => x.Releasedate).ThenBy(x => x.WantedProducts.Count);
         }
 
         public async override Task<Product> Update(Product t)
         {
-            try
+            var result = entitySet.Where(x => x.Id == t.Id).FirstOrDefault();
+            if (result == null)
             {
-                var result = entitySet.Where(x => x.Id == t.Id).FirstOrDefault();
-                if (result == null)
-                {
-                    return null;
-                }
-                result = t;
-                await dbContext.SaveChangesAsync();
-                return result;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
                 return null;
             }
+            result = t;
+            await dbContext.SaveChangesAsync();
+            return result;
         }
     }
 }

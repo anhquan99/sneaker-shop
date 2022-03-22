@@ -37,21 +37,6 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<BrandSilhouetteRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<CartSessionRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<DiscountRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<OrderItemRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<OrderRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<PaymentDetailRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<ProductImageRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<ProductInventoryRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<ProductPriceRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<ProductRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<UserPaymentRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<UserRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<UserShippingAddressRepo>>());
-builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<WantedProductRepo>>());
-
 
 builder.Services.AddScoped<ICRUDRepository<BrandSilhouette, string>, BrandSilhouetteRepo>();
 builder.Services.AddScoped<ICRUDRepository<CartItem, int>, CartItemRepo>();
@@ -63,7 +48,7 @@ builder.Services.AddScoped<ICRUDRepository<PaymentDetail, int>, PaymentDetailRep
 builder.Services.AddScoped<ICRUDRepository<ProductImage, int>, ProductImageRepo>();
 builder.Services.AddScoped<ICRUDRepository<ProductInventory, int>, ProductInventoryRepo>();
 builder.Services.AddScoped<ICRUDRepository<ProductPrice, int>, ProductPriceRepo>();
-builder.Services.AddScoped<ICRUDRepository<Product, int>, ProductRepo>();
+builder.Services.AddScoped<IProductRepository, ProductRepo>();
 builder.Services.AddScoped<ICRUDRepository<UserPayment, int>, UserPaymentRepo>();
 builder.Services.AddScoped<ICRUDRepository<User, Guid>, UserRepo>();
 builder.Services.AddScoped<ICRUDRepository<UserShippingAddress, Guid>, UserShippingAddressRepo>();

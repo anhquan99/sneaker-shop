@@ -4,5 +4,6 @@
     {
         public IQueryable<Product> getByReleaseDate(string type);
         public IQueryable<Product> getByMostWanted();
+        public IQueryable<Product> getTreding();
     }
 }

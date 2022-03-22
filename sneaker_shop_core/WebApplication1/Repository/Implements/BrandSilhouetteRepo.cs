@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class BrandSilhouetteRepo : BaseRepo<BrandSilhouette, string>
     {
-        public BrandSilhouetteRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public BrandSilhouetteRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
         public async override Task<BrandSilhouette> Update(BrandSilhouette t)

@@ -6,7 +6,7 @@ namespace WebApplication1.Repository.Implements
     public class ProductInventoryRepo : BaseRepo<ProductInventory
         , int>
     {
-        public ProductInventoryRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public ProductInventoryRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
         public async override Task<ProductInventory> Update(ProductInventory t)

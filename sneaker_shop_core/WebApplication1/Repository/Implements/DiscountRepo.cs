@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class DiscountRepo : BaseRepo<Discount, int>
     {
-        public DiscountRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public DiscountRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

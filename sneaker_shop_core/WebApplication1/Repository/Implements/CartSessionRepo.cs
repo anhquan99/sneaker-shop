@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class CartSessionRepo : BaseRepo<CartSession, int>
     {
-        public CartSessionRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public CartSessionRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
 

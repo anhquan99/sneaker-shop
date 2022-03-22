@@ -3,12 +3,12 @@
     [ViewComponent(Name = "ProductCard")]
     public class ProductCardViewComponent : ViewComponent
     {
-        private readonly ICRUDRepository<Product, int> _repo;
-        public ProductCardViewComponent(ICRUDRepository<Product, int> repo)
+        private readonly IProductRepository _repo;
+        public ProductCardViewComponent(IProductRepository repo)
         {
             _repo = repo;
         }
-        public IViewComponentResult Invoke()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             return View();
         }

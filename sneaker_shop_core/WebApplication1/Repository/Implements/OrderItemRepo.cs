@@ -5,7 +5,7 @@ namespace WebApplication1.Repository.Implements
 {
     public class OrderItemRepo : BaseRepo<OrderItem, int>
     {
-        public OrderItemRepo(ApplicationDbContext dbContext, ILogger logger) : base(dbContext, logger)
+        public OrderItemRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
         public async override Task<OrderItem> Update(OrderItem t)
