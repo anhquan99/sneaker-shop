@@ -19,59 +19,27 @@ namespace WebApplication1.Repository.Implements
 
         public async Task<T> Create(T t)
         {
-            try
-            {
-                await entitySet.AddAsync(t);
-                await dbContext.SaveChangesAsync();
-                return t;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-                return null;
-            }
+            await entitySet.AddAsync(t);
+            await dbContext.SaveChangesAsync();
+            return t;
         }
 
         public async Task<bool> Delete(T t)
         {
-            try
-            {
-                entitySet.Remove(t);
-                await dbContext.SaveChangesAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-                return false;
-            }
+            entitySet.Remove(t);
+            await dbContext.SaveChangesAsync();
+            return true;
         }
 
         public async Task<List<T>> findAll()
         {
-            try
-            {
-                return await entitySet.ToListAsync();
-            }
-            catch(Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-                return null;
-            }
+            return await entitySet.ToListAsync();
+
         }
 
         public async Task<T> findById(T id)
         {
-            try
-            {
-                return await entitySet.FindAsync(id);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
-                return null;
-            }
-
+            return await entitySet.FindAsync(id);
         }
 
         public abstract Task<T> Update(T t);

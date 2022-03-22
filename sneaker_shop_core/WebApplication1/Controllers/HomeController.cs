@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        //private readonly ICRUDRepository<>
+        private readonly ICRUDRepository<Product, int> _repo;
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -20,10 +20,10 @@ namespace WebApplication1.Controllers
         //{
         //    return View();
         //}
-        public async Task<IActionResult> ShopAll()
-        {
-            return View();
-        }
+        //public async Task<IActionResult> ShopAll()
+        //{
+        //    return View();
+        //}
         //public async Task<IActionResult> MostWanted()
         //{
         //    return View();

@@ -11,22 +11,14 @@ namespace WebApplication1.Repository.Implements
 
         public async override Task<PaymentDetail> Update(PaymentDetail t)
         {
-            try
+            var result = entitySet.Where(x => x.Id == t.Id).FirstOrDefault();
+            if (result == null)
             {
-                var result = entitySet.Where(x => x.Id == t.Id).FirstOrDefault();
-                if (result == null)
-                {
-                    return null;
-                }
-                result = t;
-                await dbContext.SaveChangesAsync();
-                return result;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.Message, ex);
                 return null;
             }
+            result = t;
+            await dbContext.SaveChangesAsync();
+            return result;
         }
     }
 }

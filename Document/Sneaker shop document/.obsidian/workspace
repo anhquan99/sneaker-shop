@@ -90,6 +90,7 @@
   "active": "fe853624b915f8f9",
   "lastOpenFiles": [
     "Customer/Home/Home.md",
+    "Customer/Checkout/Checkout.md",
     "Customer/Product/Product.md",
     "Customer/Search/Search.md",
     "Customer/Product/ProductDetail.md",
@@ -97,7 +98,6 @@
     "Customer/Product/ProductListByMostWanted.md",
     "Customer/URL.md",
     "home.md",
-    "Customer/Checkout/Checkout.md",
     "Customer/Search/SearchByApparel.md"
   ]
 }
