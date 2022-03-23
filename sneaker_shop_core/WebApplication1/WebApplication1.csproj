@@ -40,13 +40,19 @@
 		<Watch Include="**\*.cshtml" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Content Remove="Views\Shared\Components\ProductCard\ProductCardRanking.cshtml" />
+	  <Content Remove="Views\Shared\Components\ProductCard\ProductCardWithNewRelease.cshtml" />
 	  <Content Remove="Views\Shared\Index.cshtml" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Watch Remove="Views\Shared\Components\ProductCard\Default.cshtml" />
+	  <Watch Remove="Views\Shared\Components\ProductCard\ProductCardRanking.cshtml" />
+	  <Watch Remove="Views\Shared\Components\ProductCard\ProductCardWithNewRelease.cshtml" />
 	  <Watch Remove="Views\Shared\Index.cshtml" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Include="Views\Shared\Components\ProductCard\Default.cshtml" />
+	  <None Include="Views\Shared\Components\ProductCard\ProductCardRanking.cshtml" />
+	  <None Include="Views\Shared\Components\ProductCard\ProductCardWithNewRelease.cshtml" />
 	</ItemGroup>
 </Project>

@@ -9,9 +9,22 @@ namespace WebApplication1.ViewComponents
         {
             _repo = repo;
         }
-        public async Task<IViewComponentResult> InvokeAsync(ProductCardViewModel data)
+        public IViewComponentResult Invoke(ProductCardViewModel data, string cardType)
         {
-            return View(data);
+
+            if(cardType.Equals("Ranking", StringComparison.OrdinalIgnoreCase))
+            {
+                return View("ProductCardRanking", data);
+            }
+            else if(cardType.Equals("NewRelease", StringComparison.OrdinalIgnoreCase))
+            {
+                return View("ProductCardWithNewRelease", data);
+
+            }
+            else
+            {
+                return View(data);
+            }
         }
     }
 }

@@ -187,7 +187,7 @@ namespace WebApplication1.Data.Seeding
                 },
                 new Product()
                 {
-                    Name = " ",
+                    Name = "Air Jordan 1 Retro High OG PS 'Seafoam'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("08-13-2021"),
                     BrandSilhouetteID = "Air Jordan",
@@ -195,7 +195,7 @@ namespace WebApplication1.Data.Seeding
                     Color = "Green",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
                     UserType = EnumExtensionMethods.getEnumDescription(UserTypesEnum.Youth),
-                    CoverImage = "air-jordan-1-retro-high-og-ps-seafoam-1",
+                    CoverImage = "air-jordan-1-retro-high-og-ps-seafoam-1.jpeg",
                     Description = "Crafted for little kids, the Air Jordan 1 Retro High OG PS ‘Seafoam’ updates the iconic silhouette with a two-tone palette geared for the warm weather months. The upper is constructed from clean white leather with contrasting nubuck overlays in a pale green finish. The same pastel hue is repeated on the signature Swoosh, Nike branded tongue tag and durable rubber outsole. Woven white laces are outlined in reddish bronze for an unexpected pop of contrasting color.",
                     Id = 10,
                 },
@@ -2332,42 +2332,42 @@ namespace WebApplication1.Data.Seeding
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-1",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-1.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-2",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-2.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-3",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-3.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-4",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-4.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-5",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-5.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-6",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-6.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-7",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-7.jpeg",
                   ProductId = 10
               },
               new ProductImage()
               {
-                  Image = "air-jordan-1-retro-high-og-ps-seafoam-8",
+                  Image = "air-jordan-1-retro-high-og-ps-seafoam-8.jpeg",
                   ProductId = 10
               },
               new ProductImage()

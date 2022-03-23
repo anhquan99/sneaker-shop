@@ -78,7 +78,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseMiddleware<GlobalExceptionHandler>();
+//app.UseMiddleware<GlobalExceptionHandler>();
 
 app.MapRazorPages();
 
