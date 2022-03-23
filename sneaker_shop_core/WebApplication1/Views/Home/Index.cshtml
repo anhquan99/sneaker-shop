@@ -23,7 +23,7 @@ Layout = "~/Pages/Shared/_Layout.cshtml";
                 <div class="Grid_Wrapper">
                 @foreach(var i in ViewBag.NewRelease)
                 {
-                    @await Component.InvokeAsync("ProductCard", new{cardType = "", data = i});
+                    @await Component.InvokeAsync("ProductCard", new{data = i, cardType = "new"});
                 }
                 </div>
                 </ul>
@@ -42,7 +42,7 @@ Layout = "~/Pages/Shared/_Layout.cshtml";
                 <!-- product list -->
                 @foreach(var i in ViewBag.Trending)
                 {
-                    @await Component.InvokeAsync("ProductCard", new{cardType = "", data = i});
+                    @await Component.InvokeAsync("ProductCard", new {data = i, cardType = "Ranking"});
                 }
                 <!-- end product -->
                     </div>

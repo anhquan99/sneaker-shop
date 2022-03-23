@@ -9,22 +9,28 @@ namespace WebApplication1.ViewComponents
         {
             _repo = repo;
         }
-        public IViewComponentResult Invoke(ProductCardViewModel data, string cardType)
+        public IViewComponentResult Invoke(object data, string cardType = "")
         {
-
-            if(cardType.Equals("Ranking", StringComparison.OrdinalIgnoreCase))
+            if(data.GetType().Equals(typeof(ProductCardViewModel)) || data.GetType().Equals(typeof(ProductCardRankingViewModel)))
             {
-                return View("ProductCardRanking", data);
-            }
-            else if(cardType.Equals("NewRelease", StringComparison.OrdinalIgnoreCase))
-            {
-                return View("ProductCardWithNewRelease", data);
-
+                if (cardType.Equals("ranking", StringComparison.OrdinalIgnoreCase))
+                {
+                    return View("ProductCardWithRanking", data);
+                }
+                if (cardType.Equals("NewRelease", StringComparison.OrdinalIgnoreCase))
+                {
+                    return View("ProductCardWithNewRelease", data);
+                }
+                else
+                {
+                    return View(data);
+                }
             }
             else
             {
-                return View(data);
+                throw new Exception("Class unrecognized");
             }
+
         }
     }
 }

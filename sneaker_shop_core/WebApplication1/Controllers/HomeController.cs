@@ -21,10 +21,11 @@ namespace WebApplication1.Controllers
                 NewRelease.Add(new ProductCardViewModel(i));
             }
             ViewBag.NewRelease = NewRelease;
-            var Trending = new List<ProductCardViewModel>();
-            foreach(var i in _repo.getTreding().Take(20))
+            var Trending = new List<ProductCardRankingViewModel>();
+            int index = 1;
+            foreach (var i in _repo.getTreding().Take(20))
             {
-                Trending.Add(new ProductCardViewModel(i));
+                Trending.Add(new ProductCardRankingViewModel( i, index++));
             }
             ViewBag.Trending = Trending;
             return View();

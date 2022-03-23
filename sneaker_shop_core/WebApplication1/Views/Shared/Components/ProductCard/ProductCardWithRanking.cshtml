@@ -1,15 +1,13 @@
-﻿@model WebApplication1.Infrastructure.ViewModels.ProductCardViewModel
+﻿@model WebApplication1.Infrastructure.ViewModels.ProductCardRankingViewModel
 <div class="Grid_CellWrapper">
     <div class="Grid_CellContent">
         <a href="#" >
             <div>
                 <div class="ProductTemplateGridCell_GridCell grid-cell">
                     <div class="ProductTemplateGridCellMetaDataRow_Wrapper">
-                        <div class="GridCellReleaseDateIndicator_Label">
-                            <span class="GridCellReleaseDateIndicator_Indicator"></span>
-                            <div class="GridCellReleaseDateIndicator_AnimatedTextBox">
-                                <span class="GridCellReleaseDateIndicator_AnimatedText_Left">New</span>
-                                <span class="GridCellReleaseDateIndicator_AnimatedText_Right">@Model.ReleaseDate</span>
+                        <div class="HeaderButton">
+                            <div class="ReleaseDate">
+                                <span class="ProductTemplateGridCellMetaDataRow_Number">@Model.rank</span>
                             </div>
                         </div>
                     </div>
