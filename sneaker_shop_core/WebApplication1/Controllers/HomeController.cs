@@ -14,18 +14,20 @@ namespace WebApplication1.Controllers
         }
         public IActionResult Index()
         {
-            try
+            ViewBag.Title = "NASH";
+            var NewRelease= new List<ProductCardViewModel>();
+            foreach(var i in _repo.getByReleaseDate("all").Take(20))
             {
-                ViewBag.Title = "NASH";
-                ViewBag.NewReleaseData = _repo.getByReleaseDate("all").Take(20).ToList();
-                ViewBag.Trending = _repo.getTreding().Take(20).ToList();
-                return View();
+                NewRelease.Add(new ProductCardViewModel(i));
             }
-            catch (Exception ex)
+            ViewBag.NewRelease = NewRelease;
+            var Trending = new List<ProductCardViewModel>();
+            foreach(var i in _repo.getTreding().Take(20))
             {
-                _logger.LogError(ex.Message, ex);
-                return RedirectToAction("", "Error", new { message = ex.Message });
+                Trending.Add(new ProductCardViewModel(i));
             }
+            ViewBag.Trending = Trending;
+            return View();
         }
         //public async Task<IActionResult> Discover()
         //{

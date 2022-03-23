@@ -1,62 +1,60 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Pages/Shared/_Layout.cshtml";
+ViewData["Title"] = "Index";
+Layout = "~/Pages/Shared/_Layout.cshtml";
 }
-    <div class="PageLayout_PageAlignment">
-        <div class="HomeHeroSection_Container">
-            <img src="./images/jordan4.jpg" style="width:100%;">
-            <div class="HomeHeroSection_Content">
-                <h2>Air Jordam 4 Retro 'White Oreo'</h2>
-            </div>
-            <a aria-label="Link to  - Air Jordan 4 Retro 'White Oreo'" class="HomeHeroSection_ClickableOverlay" href="#"></a>
-        </div>
-        <div class="ModuleSection ProductsYouMayLike_Wrapper">
-            <div class="ModuleSectionHeader_Wrapper">
-                <h3 class="ModuleSectionTitle">New Release</h3>
-                <a class="ButtonLink_Button ModuleSectionHeader_DesktopButton" href="#"><span>See All</span></a>
-            </div>
-             <div class="ShopAllGrid_InfiniteHitsWrapper">
-                 <div class="InfiniteHits_Wrapper">
-                     <ul class="InfiniteHits_List">
-                         <!-- product list -->
-                        <div class="Grid_Wrapper">
-                        @for(int i = 0; i < 20; i++)
-                        {
-                            @await Component.InvokeAsync("ProductCard");
-                        }
-                        </div>
-                     </ul>
-                 </div>
-             </div>
-        </div>
-        <div class="ModuleSection ProductsYouMayLike_Wrapper">
-            <div class="ModuleSectionHeader_Wrapper">
-                <h3 class="ModuleSectionTitle">Top 20 Trending</h3>
-                <a class="ButtonLink_Button ModuleSectionHeader_DesktopButton" href="#"><span>See All</span></a>
-            </div>
-             <div class="ShopAllGrid_InfiniteHitsWrapper">
-                 <div class="InfiniteHits_Wrapper">
-                     <ul class="InfiniteHits_List">
-                         <div class="Grid_Wrapper">
-                        <!-- product list -->
-                        @for(int i = 0; i < 20; i++)
-                        {
-                            @await Component.InvokeAsync("ProductCard");
-                        }
-                        <!-- end product -->
-                         </div>
-                     </ul>
-                 </div>
-             </div>
-        </div>
-        <div class="align-center-justify-center full-width" style="height: 90px;">
-            <p onclick="backToTop()" class="plainmedium10caps  underline-hover pointer" style="margin: 0;margin-right: 6px;">BACK
-                TO TOP</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer "
-                style="transform: rotate(0deg);">
-                <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
-                    stroke-width="1.5"></polyline>
-            </svg>
-        </div>
 
+<div class="HomeHeroSection_Container">
+    <img src="./images/jordan4.jpg" style="width:100%;">
+    <div class="HomeHeroSection_Content">
+        <h2>Air Jordam 4 Retro 'White Oreo'</h2>
     </div>
+    <a aria-label="Link to  - Air Jordan 4 Retro 'White Oreo'" class="HomeHeroSection_ClickableOverlay" href="#"></a>
+</div>
+<div class="ModuleSection ProductsYouMayLike_Wrapper">
+    <div class="ModuleSectionHeader_Wrapper">
+        <h3 class="ModuleSectionTitle">New Release</h3>
+        <a class="ButtonLink_Button ModuleSectionHeader_DesktopButton" href="#"><span>See All</span></a>
+    </div>
+        <div class="ShopAllGrid_InfiniteHitsWrapper">
+            <div class="InfiniteHits_Wrapper">
+                <ul class="InfiniteHits_List">
+                    <!-- product list -->
+                <div class="Grid_Wrapper">
+                @foreach(var i in ViewBag.NewRelease)
+                {
+                    @await Component.InvokeAsync("ProductCard", i);
+                }
+                </div>
+                </ul>
+            </div>
+        </div>
+</div>
+<div class="ModuleSection ProductsYouMayLike_Wrapper">
+    <div class="ModuleSectionHeader_Wrapper">
+        <h3 class="ModuleSectionTitle">Top 20 Trending</h3>
+        <a class="ButtonLink_Button ModuleSectionHeader_DesktopButton" href="#"><span>See All</span></a>
+    </div>
+        <div class="ShopAllGrid_InfiniteHitsWrapper">
+            <div class="InfiniteHits_Wrapper">
+                <ul class="InfiniteHits_List">
+                    <div class="Grid_Wrapper">
+                <!-- product list -->
+                @foreach(var i in ViewBag.Trending)
+                {
+                    @await Component.InvokeAsync("ProductCard", i);
+                }
+                <!-- end product -->
+                    </div>
+                </ul>
+            </div>
+        </div>
+</div>
+<div class="align-center-justify-center full-width" style="height: 90px;">
+    <p onclick="backToTop()" class="plainmedium10caps  underline-hover pointer" style="margin: 0;margin-right: 6px;">BACK
+        TO TOP</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer "
+        style="transform: rotate(0deg);">
+        <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
+            stroke-width="1.5"></polyline>
+    </svg>
+</div>

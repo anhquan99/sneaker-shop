@@ -5,6 +5,7 @@ using WebApplication1.Data;
 using WebApplication1.Entities;
 using WebApplication1.Repository.Interfaces;
 using WebApplication1.Repository.Implements;
+using WebApplication1.Infrastructure.MiddleWare;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,7 +37,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
     options.SlidingExpiration = true;
 });
-
+builder.Services.AddSingleton<ILogger>(provider => provider.GetRequiredService<ILogger<GlobalExceptionHandler>>());
 
 builder.Services.AddScoped<ICRUDRepository<BrandSilhouette, string>, BrandSilhouetteRepo>();
 builder.Services.AddScoped<ICRUDRepository<CartItem, int>, CartItemRepo>();
@@ -72,11 +73,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseMiddleware<GlobalExceptionHandler>();
 
 app.MapRazorPages();
 

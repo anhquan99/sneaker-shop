@@ -1,4 +1,5 @@
-﻿namespace WebApplication1.ViewComponents
+﻿
+namespace WebApplication1.ViewComponents
 {
     [ViewComponent(Name = "ProductCard")]
     public class ProductCardViewComponent : ViewComponent
@@ -8,9 +9,9 @@
         {
             _repo = repo;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(ProductCardViewModel data)
         {
-            return View();
+            return View(data);
         }
     }
 }

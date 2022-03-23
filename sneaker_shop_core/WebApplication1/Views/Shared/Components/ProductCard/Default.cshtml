@@ -1,4 +1,5 @@
-﻿<div class="Grid_CellWrapper">
+﻿@model WebApplication1.Infrastructure.ViewModels.ProductCardViewModel
+<div class="Grid_CellWrapper">
     <div class="Grid_CellContent">
         <a href="#" title="Air Jordan 4 Retro 'Red Thunder'" >
             <div>
@@ -8,15 +9,15 @@
                             <span class="GridCellReleaseDateIndicator_Indicator"></span>
                             <div class="GridCellReleaseDateIndicator_AnimatedTextBox">
                                 <span class="GridCellReleaseDateIndicator_AnimatedText_Left">New</span>
-                                <span class="GridCellReleaseDateIndicator_AnimatedText_Right">Jan 16</span>
+                                <span class="GridCellReleaseDateIndicator_AnimatedText_Right">@Model.ReleaseDate</span>
                             </div>
                         </div>
                     </div>
                     <div class="ConstructorProductBeacon_ProductBeaconDiv"></div>
                     <button class="ProductWantButton_Button">Want</button>
-                    <img src="./images/jordan4.png" alt="Air Jordan 4" class="ProductTemplateGridCellImage_Image sc-htpNat">
+                    <img src="/utility/@Model.Image" alt="Air Jordan 4" class="ProductTemplateGridCellImage_Image sc-htpNat">
                     <div class="ProductTemplateGridCell_DataContainer">
-                        <h2 class="ProductTemplateGridCell_BaseText">Air Jordan 4 Retro OG 'Fire Red' 2020</h2>
+                        <h2 class="ProductTemplateGridCell_BaseText">@Model.Name</h2>
                         <div class="ProductTemplatePriceDisplay_Wrapper">
                             <p class="ProductTemplatePriceDisplay_Price">
                                 $250
