@@ -12,142 +12,164 @@ namespace WebApplication1.Data.Seeding
         public static void Seed(this ModelBuilder modelBuilder)
         {
             #region brandsilhoutte
+            var adidas = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                Icon = "adidas.png",
+                NameId = "Adidas",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Story = "Adi Dassler founded adidas in 1949 in Herzogenaurach, Germany. Building on the reputation of the brand’s spiked running shoes and football cleats, Dassler turned adidas into a global icon, redefining sneakers and apparel in the process. Today, adidas is considered one of the world’s most influential brands, responsible for the Stan Smith, Yeezy sneakers and more."
+            };
+            var nike = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Nike",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Icon = "nike.png",
+                Story = "Founded by Bill Bowerman and Phil Knight in 1964, Nike is synonymous with performance and innovation. Alongside its apparel offerings, the sportswear giant is responsible for a number of iconic sneakers, including the Air Force 1, the Air Max franchise and more. Today, Nike is among the world’s most recognized brands, identified by its wordmark and Swoosh logo."
+            };
+            var jordan = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan",
+                Icon = "jordan.png",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Story = "In 1984, Nike unveiled the Air Jordan 1, a basketball sneaker designed by Peter Moore for a young Michael Jordan. The iconic silhouette transcended sneakers and sports, altering the trajectory of style forever. Today, Michael Jordan’s namesake brand continues to inspire sportswear and style movements around the world through new releases, retro drops and unexpected collaborations."
+            };
+            var supreme = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Supreme",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Story = "Founded by James Jebbia in 1994, Supreme is a New York-based skate brand known for its subcultural references and controversial graphics. Today, Supreme is considered one of style’s most influential voices, blurring the lines between streetwear and luxury through collaborations with artists, fashion houses and sneaker brands."
+            };
+            var yezzy = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Story = "In late 2013, Kanye West and adidas announced their forthcoming partnership. In 2015, the two delivered on this news, arriving in the form of Yeezy Season 1, a collection of sneakers and apparel debuted at New York Fashion Week. Since the first collection, Yeezy has influenced style movements worldwide."
+            };
+            var fog = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Fear of God Essentials",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
+                Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding."
+            };
+            var yezzy700 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy 700",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var yezzyKnit = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy Knit Runner",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var yezzyFoam = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy Foam Runner",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var yezzy450 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy 450",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var yezzy350 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Yeezy 350",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var jordan1 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan 1",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var jordan4 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan 4",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var jordan5 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan 5",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var jordan6 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan 6",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var jordan11 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Air Jordan 11",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var ultra4d = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Ultra 4D",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var leborn18 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "LeBron 18",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var littleOne = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Little Posite One",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var kyrie5 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Kyrie 5",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
+            var kd12 = new BrandSilhouette()
+            {
+                CreatedAt = DateTime.Now,
+                NameId = "Zoom KD 12",
+                Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+            };
             modelBuilder.Entity<BrandSilhouette>().HasData(
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    Icon = "adidas.png",
-                    NameId = "Adidas",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Story = "Adi Dassler founded adidas in 1949 in Herzogenaurach, Germany. Building on the reputation of the brand’s spiked running shoes and football cleats, Dassler turned adidas into a global icon, redefining sneakers and apparel in the process. Today, adidas is considered one of the world’s most influential brands, responsible for the Stan Smith, Yeezy sneakers and more."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Nike",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Icon = "nike.png",
-                    Story = "Founded by Bill Bowerman and Phil Knight in 1964, Nike is synonymous with performance and innovation. Alongside its apparel offerings, the sportswear giant is responsible for a number of iconic sneakers, including the Air Force 1, the Air Max franchise and more. Today, Nike is among the world’s most recognized brands, identified by its wordmark and Swoosh logo."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan",
-                    Icon = "jordan.png",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Story = "In 1984, Nike unveiled the Air Jordan 1, a basketball sneaker designed by Peter Moore for a young Michael Jordan. The iconic silhouette transcended sneakers and sports, altering the trajectory of style forever. Today, Michael Jordan’s namesake brand continues to inspire sportswear and style movements around the world through new releases, retro drops and unexpected collaborations."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Supreme",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Story = "Founded by James Jebbia in 1994, Supreme is a New York-based skate brand known for its subcultural references and controversial graphics. Today, Supreme is considered one of style’s most influential voices, blurring the lines between streetwear and luxury through collaborations with artists, fashion houses and sneaker brands."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Story = "In late 2013, Kanye West and adidas announced their forthcoming partnership. In 2015, the two delivered on this news, arriving in the form of Yeezy Season 1, a collection of sneakers and apparel debuted at New York Fashion Week. Since the first collection, Yeezy has influenced style movements worldwide."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Fear of God Essentials",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
-                    Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding."
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy Boost 700",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy Knit Runner",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy Foam Runner",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy 450",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Yeezy Boost 350",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan 1",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan 4",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan 5",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan 6",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Air Jordan 11",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Ultra 4D",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "LeBron 18",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Little Posite One",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Kyrie 5",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
-                new BrandSilhouette()
-                {
-                    CreatedAt = DateTime.Now,
-                    NameId = "Zoom KD 12",
-                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
-                },
+               adidas,
+               nike,
+               supreme,
+               ultra4d,
+               jordan,
+               yezzy,
+               fog,
+               yezzy350,
+               yezzy450,
+               yezzy700,
+               yezzyFoam,
+               yezzyKnit,
+               jordan1,
+               jordan11,
+               jordan4,
+               jordan5,
+               jordan6,
+               littleOne,
+               leborn18,
+               kd12,
+               kyrie5
+
             );
             #endregion
             #region product
@@ -157,7 +179,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Yeezy Boost 700 V2 'Mauve'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("09-26-2021"),
-                    BrandSilhouetteID = "Yeezy",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Boots),
                     Color = "Tan",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -171,7 +192,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Yeezy Knit Runner 'Sulfur'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("09-24-2021"),
-                    BrandSilhouetteID = "Yeezy",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Sulfur",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -185,7 +205,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Yeezy Foam Runner 'Ochre'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("09-19-2021"),
-                    BrandSilhouetteID = "Yeezy",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Yellow",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -199,7 +218,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Yeezy 450 'Dark Slate'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("06-27-2021"),
-                    BrandSilhouetteID = "Yeezy",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -213,7 +231,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Yeezy Boost 350 V2 'Mono Cinder'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("06-25-2021"),
-                    BrandSilhouetteID = "Yeezy",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -227,7 +244,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 1 Retro High OG 'University Blue'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("03-07-2021"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Blue",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -241,7 +257,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 4 Retro 'Lightning' 2021'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("08-29-2021"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Yellow",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -255,7 +270,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 5 Retro 'Raging Bull' 2021'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("04-11-2021"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Red",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -269,7 +283,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 11 Retro 'Bred' 2019",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("12-15-2019"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Red",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -283,7 +296,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 1 Retro High OG PS 'Seafoam'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("08-13-2021"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Green",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -297,7 +309,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Air Jordan 1 Retro High OG 'Dark Marina Blue'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("02-17-2022"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Blue",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -311,7 +322,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Travis Scott x Air Jordan 6 Retro 'British Khaki'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("05-01-2021"),
-                    BrandSilhouetteID = "Air Jordan",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.LifeStyle),
                     Color = "Tan",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -319,14 +329,13 @@ namespace WebApplication1.Data.Seeding
                     CoverImage = "Travis-Scott-x-Air-Jordan-6-Retro-'British-Khaki'-1.jpeg",
                     Description = "The stash pouch makes a repeat appearance on the lateral collar, while new zippered detailing is added to the medial side. Mismatched Nike Air and Cactus Jack branding adorns the heel of the left and right shoe, with additional graphics on the midsole, outsole, tongue and lace lock.",
                     Id = 12,
-                  
+
                 },
                 new Product()
                 {
                     Name = "Ultra 4D 'OG'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("08-14-2020"),
-                    BrandSilhouetteID = "Adidas",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Running),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -340,7 +349,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Ultra 4D 5.0 'Carbon'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("12-13-2020"),
-                    BrandSilhouetteID = "Adidas",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Running),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -354,7 +362,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Ultra 4D 'Grey Pink Gradient'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("02-27-2021"),
-                    BrandSilhouetteID = "Adidas",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Running),
                     Color = "Grey",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -368,7 +375,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Ultra 4D 'Chalk White'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("12-15-2020"),
-                    BrandSilhouetteID = "Adidas",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Running),
                     Color = "White",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -382,7 +388,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Ultra 4D 'Lemon Twist'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("12-04-2021"),
-                    BrandSilhouetteID = "Adidas",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Running),
                     Color = "Cream",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -396,7 +401,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "atmos x LeBron 18 Low 'Sakura'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("04-24-2021"),
-                    BrandSilhouetteID = "Nike",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Basketball),
                     Color = "Cream",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -410,7 +414,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Little Posite One GS 'Twilight Pulse'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("09-02-2018"),
-                    BrandSilhouetteID = "Nike",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Basketball),
                     Color = "Orange",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -424,7 +427,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Little Posite One XX GS 'Royal'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("09-02-2018"),
-                    BrandSilhouetteID = "Nike",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Basketball),
                     Color = "Blue",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -438,7 +440,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Kyrie 5 'Have A Nike Day'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("06-09-2019"),
-                    BrandSilhouetteID = "Nike",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Basketball),
                     Color = "White",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -452,7 +453,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Zoom KD 12 'Wolf Grey'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("06-08-2019"),
-                    BrandSilhouetteID = "Nike",
                     Category = EnumExtensionMethods.getEnumDescription(SneakerCategoriesEnum.Basketball),
                     Color = "White",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Sneaker),
@@ -466,7 +466,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Supreme x The North Face Faux Fur Nuptse Jacket 'Red'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2020"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Red",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -480,7 +479,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Supreme x Nike Half Zip Hooded Sweatshirt 'White'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("03-12-2021"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Red",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -494,7 +492,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Supreme Saint Michael Fleece Jacket 'White'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("04-02-2021"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Multi-Color",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -508,7 +505,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Supreme x The North Face Cargo Jacket 'Gold'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-01-2020"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Gold",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -522,7 +518,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Supreme x The North Face S Logo Mountain Jacket 'Black'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-01-2020"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -536,7 +531,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Fear of God Essentials Kids Short-Sleeve Polo 'Stretch Limo'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2021"),
-                    BrandSilhouetteID = "Fear of God Essentials",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Tops),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -550,7 +544,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Fear of God Essentials Kids Pullover Hoodie 'Stretch Limo'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2021"),
-                    BrandSilhouetteID = "Fear of God Essentials",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -564,7 +557,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Fear of God Essentials Kids Sweatpant 'Stretch Limo'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2021"),
-                    BrandSilhouetteID = "Fear of God Essentials",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Bottoms),
                     Color = "Black",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -578,7 +570,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Fear of God Essentials RC 9FIFTY Cap 'Black'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2021"),
-                    BrandSilhouetteID = "Fear of God Essentials",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Accessories),
                     Color = "Brown",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -592,7 +583,6 @@ namespace WebApplication1.Data.Seeding
                     Name = "Fear of God Essentials Kids x Mr. Porter Exclusive Hoodie 'Vicunia'",
                     CreatedAt = DateTime.Now,
                     Releasedate = DateTime.Parse("01-12-2021"),
-                    BrandSilhouetteID = "Supreme",
                     Category = EnumExtensionMethods.getEnumDescription(ApperalCategoriesEnum.Outerwear),
                     Color = "Fear of God Essentials",
                     Type = EnumExtensionMethods.getEnumDescription(ProductTypesEnum.Apparel),
@@ -602,6 +592,106 @@ namespace WebApplication1.Data.Seeding
                     Id = 32,
                 }
             );
+            #endregion
+            #region product-brandsilhouette
+            modelBuilder.Entity<Product>()
+                .HasMany(x => x.BrandSilhouette)
+                .WithMany(x => x.Products)
+                .UsingEntity(x => x.ToTable("BrandSilhouetteProduct")
+                .HasData(
+                    new[]
+                    {
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 1},
+                        new {BrandSilhouetteNameId = yezzy.NameId, ProductsId = 1},
+                        new {BrandSilhouetteNameId = yezzy700.NameId, ProductsId = 1},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 2},
+                        new {BrandSilhouetteNameId = yezzy.NameId, ProductsId = 2},
+                        new {BrandSilhouetteNameId = yezzyKnit.NameId, ProductsId = 2},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 3},
+                        new {BrandSilhouetteNameId = yezzy.NameId, ProductsId = 3},
+                        new {BrandSilhouetteNameId = yezzyFoam.NameId, ProductsId = 3},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 4},
+                        new {BrandSilhouetteNameId = yezzy.NameId, ProductsId = 4},
+                        new {BrandSilhouetteNameId = yezzy450.NameId, ProductsId = 4},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 5},
+                        new {BrandSilhouetteNameId = yezzy.NameId, ProductsId = 5},
+                        new {BrandSilhouetteNameId = yezzy350.NameId, ProductsId = 5},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 6},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 6},
+                        new {BrandSilhouetteNameId = jordan1.NameId, ProductsId = 6},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 7},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 7},
+                        new {BrandSilhouetteNameId = jordan4.NameId, ProductsId = 7},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 8},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 8},
+                        new {BrandSilhouetteNameId = jordan5.NameId, ProductsId = 8},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 9},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 9},
+                        new {BrandSilhouetteNameId = jordan11.NameId, ProductsId = 9},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 10},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 10},
+                        new {BrandSilhouetteNameId = jordan1.NameId, ProductsId = 10},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 11},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 11},
+                        new {BrandSilhouetteNameId = jordan1.NameId, ProductsId = 11},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 12},
+                        new {BrandSilhouetteNameId = jordan.NameId, ProductsId = 12},
+                        new {BrandSilhouetteNameId = jordan6.NameId, ProductsId = 12},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 13},
+                        new {BrandSilhouetteNameId = ultra4d.NameId, ProductsId = 13},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 14},
+                        new {BrandSilhouetteNameId = ultra4d.NameId, ProductsId = 14},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 15},
+                        new {BrandSilhouetteNameId = ultra4d.NameId, ProductsId = 15},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 16},
+                        new {BrandSilhouetteNameId = ultra4d.NameId, ProductsId = 16},
+
+                        new {BrandSilhouetteNameId = adidas.NameId, ProductsId = 17},
+                        new {BrandSilhouetteNameId = ultra4d.NameId, ProductsId = 17},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 18},
+                        new {BrandSilhouetteNameId = leborn18.NameId, ProductsId = 18},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 19},
+                        new {BrandSilhouetteNameId = littleOne.NameId, ProductsId = 19},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 20},
+                        new {BrandSilhouetteNameId = littleOne.NameId, ProductsId = 20},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 21},
+                        new {BrandSilhouetteNameId = kyrie5.NameId, ProductsId = 21},
+
+                        new {BrandSilhouetteNameId = nike.NameId, ProductsId = 22},
+                        new {BrandSilhouetteNameId = kd12.NameId, ProductsId = 22},
+
+                        new {BrandSilhouetteNameId = supreme.NameId, ProductsId = 23},
+                        new {BrandSilhouetteNameId = supreme.NameId, ProductsId = 24},
+                        new {BrandSilhouetteNameId = supreme.NameId, ProductsId = 25},
+                        new {BrandSilhouetteNameId = supreme.NameId, ProductsId = 26},
+                        new {BrandSilhouetteNameId = supreme.NameId, ProductsId = 27},
+
+                        new {BrandSilhouetteNameId = fog.NameId, ProductsId = 28},
+                        new {BrandSilhouetteNameId = fog.NameId, ProductsId = 29},
+                        new {BrandSilhouetteNameId = fog.NameId, ProductsId = 30},
+                        new {BrandSilhouetteNameId = fog.NameId, ProductsId = 31},
+                        new {BrandSilhouetteNameId = fog.NameId, ProductsId = 32},
+                    }
+            ));
             #endregion
             #region product inventory
             modelBuilder.Entity<ProductInventory>().HasData(
@@ -1621,7 +1711,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 40,
-                    Price =  209,
+                    Price = 209,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1642,7 +1732,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 43,
-                    Price =  177,
+                    Price = 177,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1665,7 +1755,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 46,
-                    Price =  150,
+                    Price = 150,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1688,7 +1778,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 49,
-                    Price =  280,
+                    Price = 280,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1712,14 +1802,14 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 52,
-                    Price =  237,
+                    Price = 237,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
 
                 new ProductPrice()
                 {
-                    ProductInventoryId= 53,
+                    ProductInventoryId = 53,
                     Price = 202,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
@@ -1735,7 +1825,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 55,
-                    Price =  120,
+                    Price = 120,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1759,7 +1849,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 58,
-                    Price =  259,
+                    Price = 259,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1784,7 +1874,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 61,
-                    Price =  483,
+                    Price = 483,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1808,7 +1898,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 64,
-                    Price =  200,
+                    Price = 200,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1831,7 +1921,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 67,
-                    Price =  745,
+                    Price = 745,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1854,8 +1944,8 @@ namespace WebApplication1.Data.Seeding
 
                 new ProductPrice()
                 {
-                    ProductInventoryId= 70,
-                    Price =  250,
+                    ProductInventoryId = 70,
+                    Price = 250,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1878,7 +1968,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 73,
-                    Price =  235,
+                    Price = 235,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1902,7 +1992,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 76,
-                    Price =  775,
+                    Price = 775,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1918,7 +2008,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 78,
-                    Price =  780,
+                    Price = 780,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1940,7 +2030,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 81,
-                    Price =  100,
+                    Price = 100,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1956,7 +2046,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 83,
-                    Price =  150,
+                    Price = 150,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -1980,7 +2070,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 86,
-                    Price =  150,
+                    Price = 150,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -2009,7 +2099,7 @@ namespace WebApplication1.Data.Seeding
                 new ProductPrice()
                 {
                     ProductInventoryId = 90,
-                    Price =  203,
+                    Price = 203,
                     CreatedAt = DateTime.Now,
                     EffectTime = DateTime.Now,
                 },
@@ -2122,7 +2212,8 @@ namespace WebApplication1.Data.Seeding
               {
                   Image = "yeezy-knit-runner-sulfur-10.jpeg",
                   ProductId = 2
-              },
+              }
+              ,
               new ProductImage()
               {
                   Image = "yeezy-foam-runner-ochre-1.jpg",

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApplication1.Data;
 
@@ -11,9 +12,10 @@ using WebApplication1.Data;
 namespace WebApplication1.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220324083211_test-new-update")]
+    partial class testnewupdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,39 +36,7 @@ namespace WebApplication1.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("BrandSilhouetteProduct", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            BrandSilhouetteNameId = "Adidas",
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            BrandSilhouetteNameId = "Yeezy",
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            BrandSilhouetteNameId = "Yeezy 700",
-                            ProductsId = 1
-                        },
-                        new
-                        {
-                            BrandSilhouetteNameId = "Adidas",
-                            ProductsId = 2
-                        },
-                        new
-                        {
-                            BrandSilhouetteNameId = "Yeezy",
-                            ProductsId = 2
-                        },
-                        new
-                        {
-                            BrandSilhouetteNameId = "Yeezy Knit Runner",
-                            ProductsId = 2
-                        });
+                    b.ToTable("BrandSilhouetteProduct");
                 });
 
             modelBuilder.Entity("DiscountProduct", b =>
@@ -81,7 +51,7 @@ namespace WebApplication1.Migrations
 
                     b.HasIndex("ProductsId");
 
-                    b.ToTable("DiscountProduct", (string)null);
+                    b.ToTable("DiscountProduct");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
@@ -115,21 +85,21 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = new Guid("b610dd6a-d83e-4937-9e7c-700512654ca2"),
-                            ConcurrencyStamp = "922c6ea6-8a80-4536-8ad7-78ee321ab5d9",
+                            ConcurrencyStamp = "7c58db01-cca3-4c73-82b7-faee6c68c195",
                             Name = "SuperAdmin",
                             NormalizedName = "superadmin"
                         },
                         new
                         {
                             Id = new Guid("0151bf94-13d6-4cb7-a815-43cdb359413b"),
-                            ConcurrencyStamp = "6ee12b66-8a42-439e-b93f-342b3130ca0c",
+                            ConcurrencyStamp = "b2d48680-a7c3-4ac4-8e3c-34aa9e258ade",
                             Name = "admin",
                             NormalizedName = "admin"
                         },
                         new
                         {
                             Id = new Guid("bb64cbe4-5757-40ea-8533-980a148e3369"),
-                            ConcurrencyStamp = "d65dc015-cf89-468a-bbb1-b03dd3525c2e",
+                            ConcurrencyStamp = "5e2ed465-f628-4453-859d-e01d67f50758",
                             Name = "user",
                             NormalizedName = "user"
                         });
@@ -311,7 +281,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Adidas",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6352),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6579),
                             Icon = "adidas.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Adi Dassler founded adidas in 1949 in Herzogenaurach, Germany. Building on the reputation of the brand’s spiked running shoes and football cleats, Dassler turned adidas into a global icon, redefining sneakers and apparel in the process. Today, adidas is considered one of the world’s most influential brands, responsible for the Stan Smith, Yeezy sneakers and more.",
@@ -320,7 +290,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Nike",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6554),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6828),
                             Icon = "nike.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Founded by Bill Bowerman and Phil Knight in 1964, Nike is synonymous with performance and innovation. Alongside its apparel offerings, the sportswear giant is responsible for a number of iconic sneakers, including the Air Force 1, the Air Max franchise and more. Today, Nike is among the world’s most recognized brands, identified by its wordmark and Swoosh logo.",
@@ -329,7 +299,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Supreme",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6590),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6867),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "Founded by James Jebbia in 1994, Supreme is a New York-based skate brand known for its subcultural references and controversial graphics. Today, Supreme is considered one of style’s most influential voices, blurring the lines between streetwear and luxury through collaborations with artists, fashion houses and sneaker brands.",
                             Type = "Brand"
@@ -337,14 +307,14 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Ultra 4D",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6880),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7078),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6576),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6852),
                             Icon = "jordan.png",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In 1984, Nike unveiled the Air Jordan 1, a basketball sneaker designed by Peter Moore for a young Michael Jordan. The iconic silhouette transcended sneakers and sports, altering the trajectory of style forever. Today, Michael Jordan’s namesake brand continues to inspire sportswear and style movements around the world through new releases, retro drops and unexpected collaborations.",
@@ -353,7 +323,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Yeezy",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6604),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6881),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In late 2013, Kanye West and adidas announced their forthcoming partnership. In 2015, the two delivered on this news, arriving in the form of Yeezy Season 1, a collection of sneakers and apparel debuted at New York Fashion Week. Since the first collection, Yeezy has influenced style movements worldwide.",
                             Type = "Brand"
@@ -361,7 +331,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Fear of God Essentials",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6619),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6895),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding.",
                             Type = "Brand"
@@ -369,98 +339,98 @@ namespace WebApplication1.Migrations
                         new
                         {
                             NameId = "Yeezy 350",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6762),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6995),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Yeezy 450",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6702),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6981),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Yeezy 700",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6632),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6909),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Yeezy Foam Runner",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6688),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6967),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Yeezy Knit Runner",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6674),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(6953),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan 1",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6777),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7009),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan 11",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6867),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7064),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan 4",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6791),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7022),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan 5",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6838),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7037),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Air Jordan 6",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6853),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7050),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Little Posite One",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6909),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7106),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "LeBron 18",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6895),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7092),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Zoom KD 12",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6936),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7133),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         },
                         new
                         {
                             NameId = "Kyrie 5",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(6923),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7119),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Type = "Silhouette"
                         });
@@ -641,7 +611,7 @@ namespace WebApplication1.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("paymentDetails", (string)null);
+                    b.ToTable("paymentDetails");
                 });
 
             modelBuilder.Entity("WebApplication1.Entities.Product", b =>
@@ -701,7 +671,7 @@ namespace WebApplication1.Migrations
                             Category = "Boots",
                             Color = "Tan",
                             CoverImage = "yeezy-boost-700-mauve-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(7097),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7331),
                             Description = "The adidas Yeezy Boost 700 V2 ‘Mauve’ brings back a popular colorway first seen on a Yeezy Boost 700 release from 2018. The sneaker’s titular hue is executed on a textured mesh upper with arcing no-sew skins along the quarter panel and greenish-grey suede overlays throughout. Responsive cushioning comes courtesy of a full-length drop-in Boost midsole, housed within a sculpted polyurethane carrier. Underfoot, a herringbone-traction rubber outsole provides optimal grip.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Boost 700 V2 'Mauve'",
@@ -715,7 +685,7 @@ namespace WebApplication1.Migrations
                             Category = "LifeStyle",
                             Color = "Sulfur",
                             CoverImage = "yeezy-knit-runner-sulfur-1.jpeg",
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(7383),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7575),
                             Description = "The adidas Yeezy Knit Runner ‘Sulfur’ delivers the debut colorway of Kanye West’s sock-like silhouette, which launched exclusively through the artist’s Yeezy Supply site. The fully knit build, rendered in a neutral tan shade with a contrasting mustard yellow finish throughout the majority of the upper, utilizes slip-on construction devoid of exterior branding. Embellishments are limited to sizing information stamped on the lateral collar. The sneaker rides on a durable rubber outsole in a matching yellow finish, featuring a modified herringbone tread and adidas branding under the heel.",
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Yeezy Knit Runner 'Sulfur'",
@@ -865,7 +835,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8170),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7786),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -874,7 +844,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8174),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7788),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -883,7 +853,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8175),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7789),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 1,
                             Quantity = 100,
@@ -892,7 +862,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8176),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7790),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -901,7 +871,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8177),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7790),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -910,7 +880,7 @@ namespace WebApplication1.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8177),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7791),
                             ModifiledAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             ProductId = 2,
                             Quantity = 100,
@@ -943,48 +913,48 @@ namespace WebApplication1.Migrations
                         new
                         {
                             ProductInventoryId = 1,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8194),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8194),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7807),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7806),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 350.0
                         },
                         new
                         {
                             ProductInventoryId = 2,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8196),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8195),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7808),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7807),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 385.0
                         },
                         new
                         {
                             ProductInventoryId = 3,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8197),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8197),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7809),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7809),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 326.0
                         },
                         new
                         {
                             ProductInventoryId = 4,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8198),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8198),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7810),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7810),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 540.0
                         },
                         new
                         {
                             ProductInventoryId = 5,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8199),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8199),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7811),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7811),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 675.0
                         },
                         new
                         {
                             ProductInventoryId = 6,
-                            EffectTime = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8200),
-                            CreatedAt = new DateTime(2022, 3, 24, 15, 53, 25, 396, DateTimeKind.Local).AddTicks(8200),
+                            EffectTime = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7812),
+                            CreatedAt = new DateTime(2022, 3, 24, 15, 32, 11, 32, DateTimeKind.Local).AddTicks(7812),
                             ModifiedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Price = 568.0
                         });
@@ -1065,13 +1035,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("096149b4-92aa-4d5f-89ab-579244023ae6"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eed9308f-4b06-4b70-b035-4f75d5db2b04",
+                            ConcurrencyStamp = "d0bb455d-da12-4724-9076-e4e6ae4a9e50",
                             Email = "superadmin@superadmin.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEANkqix16RVsDqIUFpNzVpE9k33eKhkKKHd+3RULNd2+rS3n4e68tojOxdzAnxmJsw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGH2xeIszbvbtgIavr2B/C2SbMeHKAUgR935BGpIZfRJOkkd/5Dvno2n5fl0e5kfZw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7873bad0-8e6a-4597-9249-892e246fce0c",
+                            SecurityStamp = "2586945e-f3e1-4bf4-b662-63fd05a78a94",
                             TwoFactorEnabled = false,
                             UserName = "superAdmin"
                         },
@@ -1079,13 +1049,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("218a643e-c736-4680-b8fc-6464f3e4b963"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d486343d-eeab-4903-8c8e-a7a8abb5c790",
+                            ConcurrencyStamp = "c0fb2d20-6344-4b7f-b6b8-8476ff3fadf8",
                             Email = "admin@admin.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEIf7yL1L+2kSpnvr+9+cPUp2nnJxS9Y5fzp+iqSMMen+xzwOYHiQLMScCsYpr/1YCA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEP10bDYrJ3Eu+OeXLeIaTfV5JW/hTH75dBOLjhubhrVzrm2Pg8Pyt7D7e99AT1yEFQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "656bad44-c1a4-40c5-825a-404c8bb205c1",
+                            SecurityStamp = "9e1cd35b-e2be-4ec6-b683-f2aabf8b13c4",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         },
@@ -1093,13 +1063,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("b9685628-aa98-4a0f-9a97-f872a932f211"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c268ca20-07b9-497e-a185-b81e339ed035",
+                            ConcurrencyStamp = "651eb5e1-f6a1-407b-8cf3-a3b2d541a2aa",
                             Email = "user@user.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEN7DBfCZVxsyIztg+bH+574U0zk2ngza478LWYfeo3urFM2jhAgtkb38pJCxq0DyJw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEVQawNyWhr+aUVtAz+tIhc9dk3Lk877m1ov6t+/5MGCksEkk+ZCy9em2SRin/99RQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "18e0c6e0-de81-4c8e-b853-b322ce8b3ad5",
+                            SecurityStamp = "a5215d40-8721-40ba-ad89-3d6f65069da3",
                             TwoFactorEnabled = false,
                             UserName = "defaultuser"
                         },
@@ -1107,13 +1077,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("3ebc9915-5931-471b-8cdb-a1b5b10b6088"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c163be85-6502-4e4f-bb68-0679f4b896b6",
+                            ConcurrencyStamp = "98f4ba13-f020-429e-9d92-26300194c3d7",
                             Email = "customer1@customer1.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEJAndRP03PfV3t6FgqcvD7Aardo6oStj/n6XHrlViR9i7tPylHlmI/fqLxMeZyQe7g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEIn70DEOkwLLn/T6S2NwS0jo3oZgo+UIR1NPxCe/dj9Z+JcPLCUcdHU3asgW/enPA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "05904173-dd4d-4db2-bebb-9cc6b34ee521",
+                            SecurityStamp = "0d9e2070-60fa-48d6-a8eb-77d82f9d497c",
                             TwoFactorEnabled = false,
                             UserName = "customer1"
                         },
@@ -1121,13 +1091,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("fa12454e-ebc4-4eb8-9290-93dddcc94bde"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "12867106-b437-4eea-8ddc-004dc3bd57ce",
+                            ConcurrencyStamp = "fb594e2f-62d9-4feb-84d6-94580e4868c8",
                             Email = "customer2@customer2.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEGHxmitiahfyrExXy61ZOZZR8GrqYPbv6a8Qsq2y6IfucTFkPMuHAIxK6nPkBlSm5Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBcdE7Dd1q+CIpeIgJ93rkAl9sXSIWYFhzt+DA89NcOWGhB1qQILrRHZLtTXFys83Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "91e3239b-a881-453f-a167-2311d3237e23",
+                            SecurityStamp = "b1155695-4dbf-4d7f-85ce-0b69e13e4ab7",
                             TwoFactorEnabled = false,
                             UserName = "customer2"
                         },
@@ -1135,13 +1105,13 @@ namespace WebApplication1.Migrations
                         {
                             Id = new Guid("f408ea82-601a-4573-9a68-c0e31fd87623"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7d73a39c-b935-40bb-a3ed-e7f5853aa385",
+                            ConcurrencyStamp = "4f70daa6-e8cf-4ba9-bfc3-7b6d25d1668d",
                             Email = "customer3@customer3.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAEAACcQAAAAEDk/T3h+UjHOuvfF+cONLP3CFVngbxk+T0M1mnQLslLXBZ/7RI2Eej04l2Sa8SJ7+w==",
+                            PasswordHash = "AQAAAAEAACcQAAAAED3KifVa0XZKmWJRTFc+64n9rJe/nhYuuInc/TqJiNWb/2xQK3Z7/omdsDoYkFgPZA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0d2d1951-5e13-4ab4-88da-06b8ac8552f3",
+                            SecurityStamp = "65bc81ce-45b1-45b4-84c8-1a46e920d613",
                             TwoFactorEnabled = false,
                             UserName = "customer3"
                         });

@@ -12,6 +12,7 @@ namespace WebApplication1.Entities.Configurations
 
             builder.Property(x => x.Type).IsRequired();
             builder.Property(x => x.CreatedAt).IsRequired();
+            builder.HasMany(x => x.Products).WithMany(x => x.BrandSilhouette);
         }
     }
 }

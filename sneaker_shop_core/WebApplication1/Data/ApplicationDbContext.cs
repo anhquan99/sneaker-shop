@@ -27,6 +27,11 @@ namespace WebApplication1.Data
         public DbSet<UserPayment> userPayments { get; set; }
         public DbSet<UserShippingAddress> userShippingAddresses { get; set; }
         public DbSet<WantedProduct> wantedProducts { get; set; }    
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -45,7 +50,6 @@ namespace WebApplication1.Data
             builder.ApplyConfiguration(new WantedProductConfiguration());
 
             builder.Entity<IdentityUserRole<string>>().ToTable("UserRoles").HasKey(x => new { x.UserId, x.RoleId });
-
             builder.Seed();
         }
     }
