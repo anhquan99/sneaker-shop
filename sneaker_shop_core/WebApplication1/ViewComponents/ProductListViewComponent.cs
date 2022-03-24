@@ -4,7 +4,7 @@
     public class ProductListViewComponent : ViewComponent
     {
         
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
             return View("ProductListWithBrand");
         }

@@ -30,17 +30,5 @@ namespace WebApplication1.Controllers
             ViewBag.Trending = Trending;
             return View();
         }
-        //public async Task<IActionResult> Discover()
-        //{
-        //    return View();
-        //}
-        //public async Task<IActionResult> ShopAll()
-        //{
-        //    return View();
-        //}
-        //public async Task<IActionResult> MostWanted()
-        //{
-        //    return View();
-        //}
     }
 }

@@ -2,7 +2,7 @@
 
 namespace WebApplication1.Controllers
 {
-    [Route("/Product")]
+    [Route("Product")]
     public class ProductController : Controller
     {
         private readonly ILogger<ProductController> _logger;    
@@ -11,11 +11,12 @@ namespace WebApplication1.Controllers
             _logger = logger;   
         }
         [Route("Detail/{ProductName}")]
-        public async Task<IActionResult> ProductDetail(string ProductName)
+        public IActionResult ProductDetail([FromRoute] string ProductName)
         {
             return View();
         }
-        public async Task<IActionResult> List(string type)
+        [Route("Brand/{brand}")]
+        public IActionResult ListByBrand([FromRoute] string brand)
         {
             return View();
         }

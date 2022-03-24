@@ -18,12 +18,14 @@ namespace WebApplication1.Data.Seeding
                     CreatedAt = DateTime.Now,
                     Icon = "adidas.png",
                     NameId = "Adidas",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Story = "Adi Dassler founded adidas in 1949 in Herzogenaurach, Germany. Building on the reputation of the brand’s spiked running shoes and football cleats, Dassler turned adidas into a global icon, redefining sneakers and apparel in the process. Today, adidas is considered one of the world’s most influential brands, responsible for the Stan Smith, Yeezy sneakers and more."
                 },
                 new BrandSilhouette()
                 {
                     CreatedAt = DateTime.Now,
                     NameId = "Nike",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Icon = "nike.png",
                     Story = "Founded by Bill Bowerman and Phil Knight in 1964, Nike is synonymous with performance and innovation. Alongside its apparel offerings, the sportswear giant is responsible for a number of iconic sneakers, including the Air Force 1, the Air Max franchise and more. Today, Nike is among the world’s most recognized brands, identified by its wordmark and Swoosh logo."
                 },
@@ -32,29 +34,120 @@ namespace WebApplication1.Data.Seeding
                     CreatedAt = DateTime.Now,
                     NameId = "Air Jordan",
                     Icon = "jordan.png",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Story = "In 1984, Nike unveiled the Air Jordan 1, a basketball sneaker designed by Peter Moore for a young Michael Jordan. The iconic silhouette transcended sneakers and sports, altering the trajectory of style forever. Today, Michael Jordan’s namesake brand continues to inspire sportswear and style movements around the world through new releases, retro drops and unexpected collaborations."
                 },
                 new BrandSilhouette()
                 {
                     CreatedAt = DateTime.Now,
                     NameId = "Supreme",
-                    Icon = "",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Story = "Founded by James Jebbia in 1994, Supreme is a New York-based skate brand known for its subcultural references and controversial graphics. Today, Supreme is considered one of style’s most influential voices, blurring the lines between streetwear and luxury through collaborations with artists, fashion houses and sneaker brands."
                 },
                 new BrandSilhouette()
                 {
                     CreatedAt = DateTime.Now,
                     NameId = "Yeezy",
-                    Icon = "",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Story = "In late 2013, Kanye West and adidas announced their forthcoming partnership. In 2015, the two delivered on this news, arriving in the form of Yeezy Season 1, a collection of sneakers and apparel debuted at New York Fashion Week. Since the first collection, Yeezy has influenced style movements worldwide."
                 },
                 new BrandSilhouette()
                 {
                     CreatedAt = DateTime.Now,
                     NameId = "Fear of God Essentials",
-                    Icon = "",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Brand),
                     Story = "In 2018, Jerry Lorenzo launched Fear of God Essentials, a pared-back version of Fear of God. Each seasonal collection brings the line’s concept into sharper focus, uniting elevated sportswear basics with subdued shades and minimal branding."
-                }
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Yeezy Boost 700",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Yeezy Knit Runner",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Yeezy Foam Runner",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Yeezy 450",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Yeezy Boost 350",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Air Jordan 1",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Air Jordan 4",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Air Jordan 5",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Air Jordan 6",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Air Jordan 11",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Ultra 4D",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "LeBron 18",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Little Posite One",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Kyrie 5",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
+                new BrandSilhouette()
+                {
+                    CreatedAt = DateTime.Now,
+                    NameId = "Zoom KD 12",
+                    Type = EnumExtensionMethods.getEnumDescription(BrandSilhouetteEnum.Silhouette),
+                },
             );
             #endregion
             #region product

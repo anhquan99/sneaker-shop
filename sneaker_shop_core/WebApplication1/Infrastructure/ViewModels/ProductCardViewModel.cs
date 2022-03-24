@@ -4,7 +4,7 @@
     {
         public string Name { get; set; }
         public string Image { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string ReleaseDate { get; set; }
         public ProductCardViewModel(Product product)
         {

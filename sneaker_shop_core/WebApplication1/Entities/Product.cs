@@ -14,8 +14,7 @@
         public string Type { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
-        public string BrandSilhouetteID { get; set; }
-        public virtual BrandSilhouette BrandSilhouette { get; set; }
+        public virtual List<BrandSilhouette> BrandSilhouette { get; set; }
         public virtual List<Discount> Discount { get; set; }
         public virtual List<ProductImage> ProductImages { get; set; }
         public virtual List<ProductInventory> ProductInventory { get; set; }
