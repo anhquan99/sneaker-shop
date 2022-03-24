@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebApplication1.ViewComponents;
 
 namespace WebApplication1.Controllers
 {
@@ -30,5 +31,14 @@ namespace WebApplication1.Controllers
             ViewBag.Trending = Trending;
             return View();
         }
+        [Route("ShopAll")]
+        public IActionResult ShopAll()
+        {
+            return ViewComponent("ProductList");
+        }
+        //public IActionResult Discover()
+        //{
+
+        //}
     }
 }

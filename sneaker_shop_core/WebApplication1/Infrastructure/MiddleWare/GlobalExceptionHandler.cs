@@ -1,4 +1,6 @@
-﻿namespace WebApplication1.Infrastructure.MiddleWare
+﻿using WebApplication1.Infrastructure.Exceptions;
+
+namespace WebApplication1.Infrastructure.MiddleWare
 {
     public class GlobalExceptionHandler 
     {
@@ -14,6 +16,10 @@
             try
             {
                 await _next(context);
+            }
+            catch(RecodNotFoundException ex)
+            {
+                context.Response.Redirect($"/CustomError?message=Record not found {ex.recordID }");
             }
             catch (Exception ex)
             {

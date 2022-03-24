@@ -1,4 +1,5 @@
-﻿using WebApplication1.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
 using WebApplication1.Entities;
 using WebApplication1.Infrastructure.Enums;
 using WebApplication1.Infrastructure.Extensions;
@@ -9,6 +10,14 @@ namespace WebApplication1.Repository.Implements
     {
         public ProductRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
+        }
+
+        public async Task<Product> findByName(string name)
+        {
+            return await entitySet.Include("ProductImages")
+                .Include("BrandSilhouette")
+                .Where(x => x.Name == name)
+                .FirstOrDefaultAsync();
         }
 
         public IQueryable<Product> getByMostWanted()

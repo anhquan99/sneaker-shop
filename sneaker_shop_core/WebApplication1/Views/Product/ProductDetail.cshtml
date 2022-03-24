@@ -1,244 +1,491 @@
-﻿@{
-ViewData["Title"] = "Index";
+﻿@model ProductViewModel
+@{
 Layout = "~/Pages/Shared/_Layout.cshtml";
 }
-<div class="Hero_Wrapper ProductTemplatePage_Hero">
-    <div class="Hero_FirstPane">
-        <div class="ProductTemplatePage_ReleaseIndicator">
-            <div class="GridCellReleaseDateIndicator_Label"><span></span></div>
-        </div>
-        <div class="ProductImageCarousel_Wrapper goat-scroll">
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/1.jpeg" ></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/2.jpeg" >
+    <div class="PageLayout_PageAlignment">
+        <div class="Hero_Wrapper ProductTemplatePage_Hero">
+            <div class="Hero_FirstPane">
+                <div class="ProductTemplatePage_ReleaseIndicator">
+                    <div class="GridCellReleaseDateIndicator_Label"><span></span></div>
+                </div>
+                <div class="ProductImageCarousel_Wrapper goat-scroll">
+                @foreach(var i in Model.Images)
+                {
+                    <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="@Model.Name"
+                            sizes="30vw" src="/utility/@i" ></div>
+                }
             </div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/3.jpeg" ></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/4.jpeg"></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/5.jpeg" class="sc-htpNat "></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/6.jpeg" class="sc-htpNat "></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/7.jpeg" class="sc-htpNat "></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/8.jpeg" class="sc-htpNat "></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/9.jpeg" class="sc-htpNat "></div>
-            <div class="ProductImageCarousel_DesktopImageWrapper"><img alt="Nike atmos x LeBron 18 Low 'Sakura'"
-                    sizes="30vw" src="./images/lebron18/10.jpeg" class="sc-htpNat "></div>
-        </div>
-        <nav class="ProductTemplateBreadcrumbs_Wrapper"><a class="ProductTemplateBreadcrumbs_Crumb ProductTemplateBreadcrumbs_BrandCrumb"
-                href="#"> Nike</a><span> / </span><a class="ProductTemplateBreadcrumbs_Crumb" href="#">LeBron
-                18</a><span class="ProductTemplateBreadcrumbs_ProductName">
-                / atmos x LeBron 18 Low 'Sakura'</span></nav>
-    </div>
-    <div class="Hero_SecondPane">
-        <div class="Hero_HeroPane ProductTitlePane_Container">
-            <div class="Hero_HeroPaneContent"><button class="ProductWantButton_Button">Want</button>
-                <h1 class="ProductTitlePane_Title">atmos
-                    x LeBron 18 Low 'Sakura'</h1>
+                <nav class="ProductTemplateBreadcrumbs_Wrapper">
+                @foreach(var i in Model.Brand)
+                {
+                    <a class="ProductTemplateBreadcrumbs_Crumb ProductTemplateBreadcrumbs_BrandCrumb" href="#"> @i</a>
+                    <span> / </span>
+                }
+                @if(Model.Silhouette is not null)
+                {
+                    <a class="ProductTemplateBreadcrumbs_Crumb" href="#">@Model.Silhouette</a>
+                }
+                    <span class="ProductTemplateBreadcrumbs_ProductName">/ @Model.Name</span>
+                </nav>
             </div>
-            <nav class="Hero_HeroPaneActions"><span class="Hero_Border"><button type="button" class="nashButton_Wrapper Hero_Button ProductTitlePaneActions_LeftHeroButton">
-                        <div class="ProductTitlePaneActions_ButtonTextWrapper AnimatedUnderlineText"><a href="#">
-                                Buy New &nbsp;-&nbsp; $200
-                            </a>
-                        </div>
-                    </button></span><span class="Hero_Border"><button type="button" class="nashButton_Wrapper Hero_Button ProductTitlePaneActions_LeftHeroButton">
-                        <div class="ProductTitlePaneActions_ButtonTextWrapper AnimatedUnderlineText"><a href="#">
-                                Buy Used &nbsp;-&nbsp; $200
-                            </a>
-                        </div>
-                    </button></span></nav>
-        </div>
-    </div>
-</div>
-<div class="DetailsArrow_Wrapper" onclick="scrollToDetail()"><button class="DetailsArrow_Button"><span>Details</span><svg
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer DetailsArrow_Arrow"
-            style="transform: rotate(-180deg);">
-            <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
-                stroke-width="1.5"></polyline>
-        </svg></button></div>
-<div class="ProductStory_Wrapper" id="ProductDetail">
-    <h2 class="ProductStory_Title">Product Details</h2>
-    <p class="ProductStory_Story">
-        Designed in partnership with the influential Tokyo-based retailer, the atmos x Nike LeBron 18 Low
-        ‘Cherry Blossom’ showcases a spring-ready design, highlighted by a Swoosh formed with pink
-        embroidered florals. The pastel hue is repeated on the sneaker’s molded eyelets and TPU heel
-        counter, as well as a multicolor geometric print that enlivens the textile upper. The low-top sits
-        on a cushy React foam midsole with a large-volume Max Air unit nestled under the heel.
-    </p>
-</div>
-<div class="Divider_Dash"></div>
-<div class="ModuleSection NutritionalFacts_Wrapper">
-    <div class="SideScrollingCarousel_Carousel NutritionalFacts_Carousel hide-scroll" id="ProductNutritional">
-        <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
-                <div class="Fact_Wrapper">
-                    <div class="Fact_Details"><span class="Fact_Label">Brand</span><span class="Fact_Value">
-                            Nike</span></div>
+            <div class="Hero_SecondPane">
+                <div class="Hero_HeroPane " id="ProductTitlePane_Container">
+                    <div class="Hero_HeroPaneContent"><button class="ProductWantButton_Button">Want</button>
+                        <h1 class="ProductTitlePane_Title">@Model.Name</h1>
+                    </div>
+                    <nav class="Hero_HeroPaneActions">
+                        <span class="Hero_Border">
+                            <button type="button" onclick="showFormWithAnimation('ProductTitlePane_Container','ProductSizeListPane_Container')" class="nashButton_Wrapper Hero_Button ProductPriceBtn">
+                                <div class="ProductTitlePaneActions_ButtonTextWrapper">
+                                    <a href="#">Buy &nbsp;-&nbsp; $200</a>
+                                </div>
+                            </button>
+                        </span>
+                    </nav>
                 </div>
-            </a></div>
-        <div class="NutritionalFacts_FactWrapper">
-            <div class="Fact_Wrapper">
-                <div class="Fact_Details"><span class="Fact_Label">Release
-                        Date</span><span class="Fact_Value">2021-04-24</span></div>
+                <div class="Hero_HeroPane goat-scroll"  id="ProductSizeListPane_Container">
+                    <p class="ProductTitlePane_Title ProductTitlePane_SizeTitle">Size</p>
+                    <div class="ProductSizeList goat-scroll">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              1
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              39
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                          <div class="card text-center">
+                            <div class="card-header">
+                              99
+                            </div>
+                            <div class="card-body">
+                              <p class="card-text">$200</p>
+                              <button href="#" class="btn btn-dark">Select</button>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="SeletedProductListInfo">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card mb-3">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="./images/jordan4.png" class="img-fluid rounded-start" alt="...">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <nav class="Hero_HeroPaneActions AddToCartBtn"><span class="Hero_Border"><button onclick="showFormWithAnimationFlex('ProductSizeListPane_Container','ProductTitlePane_Container')" type="button" class="nashButton_Wrapper Hero_Button ProductPriceBtn">
+                            <div class="ProductTitlePaneActions_ButtonTextWrapper"><a href="#">
+                                    BACK
+                                </a>
+                            </div>
+                            </button>
+                        </button></span>
+                        <span class="Hero_Border"><button type="button" class="nashButton_Wrapper Hero_Button ProductPriceBtn">
+                            <div class="ProductTitlePaneActions_ButtonTextWrapper"><a href="#">
+                                    ADD TO CART
+                                </a>
+                            </div>
+                            </button>
+                        </button></span>
+                    </nav>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
-                <div class="Fact_Wrapper">
-                    <div class="Fact_Details"><span class="Fact_Label">Main
-                            Color</span><span class="Fact_Value">Pink</span></div>
-                </div>
-            </a></div>
-        <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
-                <div class="Fact_Wrapper">
-                    <div class="Fact_Details"><span class="Fact_Label">Silhouette</span><span class="Fact_Value">LeBron
-                            18</span></div>
-                </div>
-            </a></div>
-        <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
-                <div class="Fact_Wrapper">
-                    <div class="Fact_Details"><span class="Fact_Label">Category</span><span class="Fact_Value">Basketball</span></div>
-                </div>
-            </a></div>
-    </div>
-</div>
-<div class="Divider_Dash"></div>
-<div class="ModuleSection ProductsYouMayLike_Wrapper">
-    <div class="ModuleSectionHeader_Wrapper">
-        <h3 class="ModuleSectionTitle">You may also like</h3>
-    </div>
-    <div class="ModuleSectionContent">
-        <div class="SideScrollingCarousel_Navigation"><button onclick="scrollXRight('ProductRelative')" class="LeftRightButtons_NavigationButton LeftRightButtons_LeftButtonStyled"><svg
-                    version="1.1" xlmns="http://www.w3.org/2000/svg" xlmnsxlink="http://www.w3.org/1999/xlink"
-                    class="" width="4px" height="8px" viewBox="0 0 11 17">
-                    <title>Left Caret</title>
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
-                        <g transform="translate(-77.000000, -50.000000)" stroke="#0b0b0b" stroke-width="2">
-                            <polyline transform="translate(83.038462, 58.500000) rotate(-180.000000) translate(-83.038462, -58.500000)"
-                                points="79 51 87.0769231 58.7039082 79 66"></polyline>
-                        </g>
-                    </g>
-                </svg></button><button onclick="scrollXLeft('ProductRelative')" class="LeftRightButtons_NavigationButton LeftRightButtons_RightButtonStyled"><svg
-                    version="1.1" xlmns="http://www.w3.org/2000/svg" xlmnsxlink="http://www.w3.org/1999/xlink"
-                    class="" width="4px" height="8px" viewBox="0 0 11 17">
-                    <title>Right Caret</title>
-                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                        <g transform="translate(-118.000000, -50.000000)" stroke="#0b0b0b" stroke-width="2">
-                            <polyline transform="translate(123.038462, 58.500000) rotate(-360.000000) translate(-123.038462, -58.500000) "
-                                points="119 51 127.076923 58.7039082 119 66"></polyline>
-                        </g>
-                    </g>
+        <div class="DetailsArrow_Wrapper" onclick="scrollToDetail()"><button class="DetailsArrow_Button"><span>Details</span><svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer DetailsArrow_Arrow"
+                    style="transform: rotate(-180deg);">
+                    <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
+                        stroke-width="1.5"></polyline>
                 </svg></button></div>
-        <div class="SideScrollingCarousel_Carousel " id="ProductRelative"><a class="ProductTemplateCarouselItem_Wrapper"
-                href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw" src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/053/769/509/original/758357_00.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">LeBron 18 Low
-                            'LeBronold Palmer'</div>
-                    </div>
-                </div>
-            </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/045/282/415/original/694874_00.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">LeBron 18 'Sisterhood'</div>
-                    </div>
-                </div>
-            </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/053/925/754/original/763858_00.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            'Viotech'</div>
-                    </div>
-                </div>
-            </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
-            <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
-                    src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
-                    class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
-                <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
-                    <div class="ProductTemplateCarouselItem_ProductDetails">
-                        <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
-                            EP 'Sakura'</div>
-                    </div>
-                </div>
-            </a>
+        <div class="ProductStory_Wrapper" id="ProductDetail">
+            <h2 class="ProductStory_Title">Product Details</h2>
+            <p class="ProductStory_Story">
+                @Model.Description
+            </p>
         </div>
-        <div class="FauxScrollbar_Track">
+        <div class="Divider_Dash"></div>
+        <div class="ModuleSection NutritionalFacts_Wrapper">
+            <div class="SideScrollingCarousel_Carousel NutritionalFacts_Carousel hide-scroll" id="ProductNutritional">
+                <div class="NutritionalFacts_FactWrapper">
+                    <a class="FactLinkWrapper_StyledLink" href="#">
+                        <div class="Fact_Wrapper">
+                            <div class="Fact_Details">
+                                <span class="Fact_Label">Brand</span>
+                                <span class="Fact_Value">
+                                @foreach(var i in Model.Brand)
+                                {
+                                    @i
+                                }
+                            </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="NutritionalFacts_FactWrapper">
+                    <div class="Fact_Wrapper">
+                        <div class="Fact_Details"><span class="Fact_Label">Release
+                                Date</span><span class="Fact_Value">@Model.ReleaseDate</span></div>
+                    </div>
+                </div>
+                <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
+                        <div class="Fact_Wrapper">
+                            <div class="Fact_Details"><span class="Fact_Label">Main
+                                    Color</span><span class="Fact_Value">@Model.Color</span></div>
+                        </div>
+                    </a></div>
+                <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
+                        <div class="Fact_Wrapper">
+                            <div class="Fact_Details"><span class="Fact_Label">Silhouette</span><span class="Fact_Value">@Model.Silhouette</span></div>
+                        </div>
+                    </a></div>
+                <div class="NutritionalFacts_FactWrapper"><a class="FactLinkWrapper_StyledLink" href="#">
+                        <div class="Fact_Wrapper">
+                            <div class="Fact_Details"><span class="Fact_Label">Category</span><span class="Fact_Value">@Model.Category</span></div>
+                        </div>
+                    </a></div>
+            </div>
         </div>
-    </div>
-</div>
+        <div class="Divider_Dash"></div>
+        <div class="ModuleSection ProductsYouMayLike_Wrapper">
+            <div class="ModuleSectionHeader_Wrapper">
+                <h3 class="ModuleSectionTitle">You may also like</h3>
+            </div>
+            <div class="ModuleSectionContent">
+                <div class="SideScrollingCarousel_Navigation"><button onclick="scrollXRight('ProductRelative')" class="LeftRightButtons_NavigationButton LeftRightButtons_LeftButtonStyled"><svg
+                            version="1.1" xlmns="http://www.w3.org/2000/svg" xlmnsxlink="http://www.w3.org/1999/xlink"
+                            class="" width="4px" height="8px" viewBox="0 0 11 17">
+                            <title>Left Caret</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="1">
+                                <g transform="translate(-77.000000, -50.000000)" stroke="#0b0b0b" stroke-width="2">
+                                    <polyline transform="translate(83.038462, 58.500000) rotate(-180.000000) translate(-83.038462, -58.500000)"
+                                        points="79 51 87.0769231 58.7039082 79 66"></polyline>
+                                </g>
+                            </g>
+                        </svg></button><button onclick="scrollXLeft('ProductRelative')" class="LeftRightButtons_NavigationButton LeftRightButtons_RightButtonStyled"><svg
+                            version="1.1" xlmns="http://www.w3.org/2000/svg" xlmnsxlink="http://www.w3.org/1999/xlink"
+                            class="" width="4px" height="8px" viewBox="0 0 11 17">
+                            <title>Right Caret</title>
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-118.000000, -50.000000)" stroke="#0b0b0b" stroke-width="2">
+                                    <polyline transform="translate(123.038462, 58.500000) rotate(-360.000000) translate(-123.038462, -58.500000) "
+                                        points="119 51 127.076923 58.7039082 119 66"></polyline>
+                                </g>
+                            </g>
+                        </svg></button></div>
+                <div class="SideScrollingCarousel_Carousel " id="ProductRelative"><a class="ProductTemplateCarouselItem_Wrapper"
+                        href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw" src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/053/769/509/original/758357_00.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">LeBron 18 Low
+                                    'LeBronold Palmer'</div>
+                            </div>
+                        </div>
+                    </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/045/282/415/original/694874_00.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">LeBron 18 'Sisterhood'</div>
+                            </div>
+                        </div>
+                    </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/053/925/754/original/763858_00.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    'Viotech'</div>
+                            </div>
+                        </div>
+                    </a><a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="ProductTemplateCarouselItem_Wrapper" href="#"><img alt="" sizes="(min-width: 640px) 20vw, 50vw"
+                            src="https://image.goat.com/crop/750/attachments/product_template_pictures/images/055/150/830/original/CV7564_101.png.png"
+                            class="sc-htpNat ProductTemplateCarouselItem_ProductImage">
+                        <div class="ProductTemplateCarouselItem_ProductDetailsContainer">
+                            <div class="ProductTemplateCarouselItem_ProductDetails">
+                                <div class="ProductTemplateCarouselItem_ProductName">atmos x LeBron 18 Low
+                                    EP 'Sakura'</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="FauxScrollbar_Track">
+                </div>
+            </div>
+        </div>
         
-<div class="align-center-justify-center full-width" style="height: 90px;">
-    <p onclick="backToTop()" class="plainmedium10caps  underline-hover pointer" style="margin: 0;margin-right: 6px;">BACK
-        TO TOP</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer "
-        style="transform: rotate(0deg);">
-        <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
-            stroke-width="1.5"></polyline>
-    </svg>
-</div>
+        <div class="align-center-justify-center full-width" style="height: 90px;">
+            <p onclick="backToTop()" class="plainmedium10caps  underline-hover pointer" style="margin: 0;margin-right: 6px;">BACK
+                TO TOP</p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.33 5" width="10px" height="10px" class="arrow pointer "
+                style="transform: rotate(0deg);">
+                <polyline points="1.17 4.25 4.17 1.25 7.17 4.25" fill="none" stroke="#0b0b0b" stroke-miterlimit="10"
+                    stroke-width="1.5"></polyline>
+            </svg>
+        </div>
+
+    </div>
