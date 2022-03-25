@@ -4,9 +4,13 @@
     public class ProductListViewComponent : ViewComponent
     {
         
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(ProductListViewModel data, string type = "")
         {
-            return View("ProductListWithBrand");
+            if (type.Equals("Brand", StringComparison.OrdinalIgnoreCase))
+            {
+                return View("ProductListWithBrand", data);
+            }
+            return View(data);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace WebApplication1.ViewComponents
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            List<BrandSilhouette> data = await _repo.findAll();
+            List<BrandSilhouette> data = _repo.findAll().ToList();
             return View(data);
         }
     }

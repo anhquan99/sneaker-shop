@@ -11,6 +11,18 @@ namespace WebApplication1.Repository.Implements
         public ProductRepo(ApplicationDbContext dbContext) : base(dbContext)
         {
         }
+        public override IQueryable<Product> findAll()
+        {
+            return this.entitySet.OrderBy(x => x.Releasedate);
+        }
+
+        public IQueryable<Product> findByBrandSilhouette(string brand)
+        {
+            return entitySet
+                .Where(x => x.BrandSilhouette
+                .Any(y => y.NameId
+                    .Equals(brand)));
+        }
 
         public async Task<Product> findByName(string name)
         {

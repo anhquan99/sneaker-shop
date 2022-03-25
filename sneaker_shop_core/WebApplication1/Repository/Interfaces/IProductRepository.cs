@@ -6,5 +6,6 @@
         public IQueryable<Product> getByMostWanted();
         public IQueryable<Product> getTreding();
         public Task<Product> findByName(string name);
+        public IQueryable<Product> findByBrandSilhouette(string brand);
     }
 }

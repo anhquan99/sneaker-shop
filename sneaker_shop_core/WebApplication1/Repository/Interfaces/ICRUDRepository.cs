@@ -3,8 +3,8 @@
     public interface ICRUDRepository<T, Y>
         where T : class
     {
-        public Task<List<T>> findAll();
-        public Task<T> findById(T id);
+        public IQueryable<T> findAll();
+        public Task<T> findById(Y id);
         public Task<T> Create(T t);
         public Task<T> Update(T t);
         public Task<bool> Delete(T t);

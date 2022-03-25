@@ -2,8 +2,8 @@
 	- [x] Brand: Category menu
 	- [x] Login/Logout/Register
 	- [ ] Wants: User wanted product
-	- [ ] Shop all: List product by release date
-	- [ ] Discover: List product by most wanted
+	- [x] Shop all: List product by release date
+	- [x] Discover: List product by most wanted
 - [ ] Search tab:
 	- [ ] Search by sneaker
 	- [ ] Search by apparel

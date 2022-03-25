@@ -29,13 +29,12 @@ namespace WebApplication1.Repository.Implements
             return true;
         }
 
-        public async Task<List<T>> findAll()
+        public virtual IQueryable<T> findAll()
         {
-            return await entitySet.ToListAsync();
-
+            return entitySet;
         }
 
-        public async Task<T> findById(T id)
+        public async Task<T> findById(Y id)
         {
             return await entitySet.FindAsync(id);
         }

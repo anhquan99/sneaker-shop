@@ -1,16 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Infrastructure.Exceptions;
+using WebApplication1.Infrastructure.Extensions;
 
 namespace WebApplication1.Controllers
 {
     [Route("Product")]
     public class ProductController : Controller
     {
-        private readonly ILogger<ProductController> _logger;   
         private readonly IProductRepository _productRepo;
-        public ProductController(ILogger<ProductController> logger, IProductRepository productRepository)
+        public ProductController(IProductRepository productRepository)
         {
-            _logger = logger;   
             _productRepo = productRepository;
         }
         [Route("Detail/{ProductName}")]
@@ -24,11 +23,7 @@ namespace WebApplication1.Controllers
             var result = new ProductViewModel(product);
             return View(result);
         }
-        [Route("Brand/{brand}")]
-        public IActionResult ListByBrand([FromRoute] string brand)
-        {
-            return View();
-        }
+        
 
 
     }

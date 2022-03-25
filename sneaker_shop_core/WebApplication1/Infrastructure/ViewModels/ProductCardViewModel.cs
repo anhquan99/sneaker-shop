@@ -10,7 +10,14 @@
         {
             this.Name = product.Name;
             this.Image = product.CoverImage;
-            this.ReleaseDate = product.Releasedate.ToString("dd MMMM");
+            if(product.Releasedate.Year > DateTime.Now.Year)
+            {
+                this.ReleaseDate = product.Releasedate.ToString("dd MMMM yyyy");
+            }
+            else
+            {
+                this.ReleaseDate = product.Releasedate.ToString("dd MMMM");
+            }
         }
     }
 }
